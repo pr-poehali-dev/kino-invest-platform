@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -71,6 +72,7 @@ const faqItems = [
 ];
 
 export default function Index() {
+  const navigate = useNavigate();
   const [selectedGenre, setSelectedGenre] = useState<string>("all");
   const [selectedStage, setSelectedStage] = useState<string>("all");
 
@@ -94,7 +96,10 @@ export default function Index() {
             <a href="#education" className="text-foreground hover:text-primary transition-colors">Обучение</a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">Контакты</a>
           </div>
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button 
+            className="bg-primary text-primary-foreground hover:bg-primary/90"
+            onClick={() => navigate('/login')}
+          >
             Войти
           </Button>
         </div>
@@ -117,7 +122,11 @@ export default function Index() {
             Станьте частью создания кино и получайте долю от кассовых сборов, стриминга и международных продаж
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6">
+            <Button 
+              size="lg" 
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6"
+              onClick={() => navigate('/login')}
+            >
               <Icon name="TrendingUp" className="mr-2" size={20} />
               Стать инвестором
             </Button>
@@ -168,6 +177,7 @@ export default function Index() {
                 key={project.id} 
                 className="overflow-hidden hover:scale-105 transition-all duration-300 bg-card border-border hover:border-primary cursor-pointer group"
                 style={{ animationDelay: `${index * 100}ms` }}
+                onClick={() => navigate(`/project/${project.id}`)}
               >
                 <div className="relative h-[400px] overflow-hidden">
                   <img 
@@ -201,7 +211,10 @@ export default function Index() {
                         {(project.minInvestment / 1000000).toFixed(1)} млн ₽
                       </p>
                     </div>
-                    <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                    <Button 
+                      className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                      onClick={(e) => { e.stopPropagation(); navigate(`/project/${project.id}`); }}
+                    >
                       Подробнее
                     </Button>
                   </div>
