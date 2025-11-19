@@ -258,13 +258,30 @@ export default function Index() {
               Хотите узнать больше о платформе или получить доступ к закрытым презентациям проектов?
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                <Icon name="Mail" className="mr-2" size={20} />
-                Написать нам
+              <Button 
+                size="lg" 
+                className="bg-[#25D366] hover:bg-[#20BA5A] text-white"
+                onClick={() => window.open('https://wa.me/79991234567?text=Здравствуйте!%20Хочу%20узнать%20больше%20о%20CineInvest', '_blank')}
+              >
+                <Icon name="MessageCircle" className="mr-2" size={20} />
+                WhatsApp
               </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                <Icon name="Calendar" className="mr-2" size={20} />
-                Заказать презентацию
+              <Button 
+                size="lg" 
+                className="bg-[#0088cc] hover:bg-[#0077b3] text-white"
+                onClick={() => window.open('https://t.me/cineinvest_support', '_blank')}
+              >
+                <Icon name="Send" className="mr-2" size={20} />
+                Telegram
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                onClick={() => window.location.href = 'mailto:info@cineinvest.ru?subject=Запрос информации о CineInvest'}
+              >
+                <Icon name="Mail" className="mr-2" size={20} />
+                Email
               </Button>
             </div>
           </div>
@@ -293,14 +310,33 @@ export default function Index() {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Контакты</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <Icon name="Mail" size={16} />
-                  <span>info@cineinvest.ru</span>
+              <ul className="space-y-2">
+                <li>
+                  <button 
+                    onClick={() => window.location.href = 'mailto:info@cineinvest.ru'}
+                    className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Icon name="Mail" size={16} />
+                    <span>info@cineinvest.ru</span>
+                  </button>
                 </li>
-                <li className="flex items-center gap-2">
-                  <Icon name="Phone" size={16} />
-                  <span>+7 (495) 123-45-67</span>
+                <li>
+                  <button 
+                    onClick={() => window.open('https://wa.me/79991234567', '_blank')}
+                    className="flex items-center gap-2 text-muted-foreground hover:text-[#25D366] transition-colors"
+                  >
+                    <Icon name="MessageCircle" size={16} />
+                    <span>WhatsApp</span>
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => window.open('https://t.me/cineinvest_support', '_blank')}
+                    className="flex items-center gap-2 text-muted-foreground hover:text-[#0088cc] transition-colors"
+                  >
+                    <Icon name="Send" size={16} />
+                    <span>Telegram</span>
+                  </button>
                 </li>
               </ul>
             </div>

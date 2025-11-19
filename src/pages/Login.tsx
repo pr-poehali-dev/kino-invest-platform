@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,15 +8,20 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Icon from '@/components/ui/icon';
 
+const NOTIFY_REGISTRATION_URL = 'https://functions.poehali.dev/6d9e2e70-45dd-4bac-af65-f1d069ab9210';
+
 export default function Login() {
   const navigate = useNavigate();
+  const { toast } = useToast();
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [registerData, setRegisterData] = useState({
     name: '',
     email: '',
     password: '',
-    phone: ''
+    phone: '',
+    type: 'Физическое лицо'
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,14 +32,52 @@ export default function Login() {
     navigate('/dashboard');
   };
 
-  const handleRegister = (e: React.FormEvent) => {
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
-    localStorage.setItem('investor', JSON.stringify({
-      name: registerData.name,
-      email: registerData.email,
-      phone: registerData.phone
-    }));
-    navigate('/dashboard');
+    setIsSubmitting(true);
+
+    try {
+      // Сохраняем инвестора локально
+      localStorage.setItem('investor', JSON.stringify({
+        name: registerData.name,
+        email: registerData.email,
+        phone: registerData.phone
+      }));
+
+      // Отправляем уведомление на email
+      try {
+        await fetch(NOTIFY_REGISTRATION_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: registerData.name,
+            email: registerData.email,
+            phone: registerData.phone,
+            type: registerData.type
+          })
+        });
+      } catch (emailError) {
+        console.log('Email notification failed:', emailError);
+        // Не показываем ошибку пользователю, уведомление не критично
+      }
+
+      toast({
+        title: "Регистрация успешна! ✅",
+        description: `Добро пожаловать, ${registerData.name}!`,
+      });
+
+      navigate('/dashboard');
+    } catch (error) {
+      toast({
+        title: "Ошибка регистрации",
+        description: "Попробуйте позже или свяжитесь с поддержкой",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -145,9 +189,22 @@ export default function Login() {
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                    <Icon name="UserPlus" className="mr-2" size={18} />
-                    Зарегистрироваться
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Icon name="Loader2" className="mr-2 animate-spin" size={18} />
+                        Регистрация...
+                      </>
+                    ) : (
+                      <>
+                        <Icon name="UserPlus" className="mr-2" size={18} />
+                        Зарегистрироваться
+                      </>
+                    )}
                   </Button>
                 </form>
               </CardContent>
