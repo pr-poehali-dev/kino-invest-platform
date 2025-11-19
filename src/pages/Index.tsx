@@ -1,11 +1,9 @@
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Icon from '@/components/ui/icon';
 
 const projects = [
@@ -73,14 +71,15 @@ const faqItems = [
 
 export default function Index() {
   const navigate = useNavigate();
-  const [selectedGenre, setSelectedGenre] = useState<string>("all");
-  const [selectedStage, setSelectedStage] = useState<string>("all");
 
-  const filteredProjects = projects.filter(project => {
-    const genreMatch = selectedGenre === "all" || project.genre === selectedGenre;
-    const stageMatch = selectedStage === "all" || project.stage === selectedStage;
-    return genreMatch && stageMatch;
-  });
+  const handleProjectClick = (projectId: number) => {
+    const investor = localStorage.getItem('investor');
+    if (investor) {
+      navigate(`/project/${projectId}`);
+    } else {
+      navigate('/login');
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -145,39 +144,13 @@ export default function Index() {
             <p className="text-muted-foreground text-lg">Выберите проект для инвестиций</p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
-            <Select value={selectedGenre} onValueChange={setSelectedGenre}>
-              <SelectTrigger className="w-full sm:w-[200px]">
-                <SelectValue placeholder="Жанр" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">Все жанры</SelectItem>
-                <SelectItem value="Драма">Драма</SelectItem>
-                <SelectItem value="Боевик">Боевик</SelectItem>
-                <SelectItem value="Мелодрама">Мелодрама</SelectItem>
-              </SelectContent>
-            </Select>
-
-            <Select value={selectedStage} onValueChange={setSelectedStage}>
-              <SelectTrigger className="w-full sm:w-[200px]">
-                <SelectValue placeholder="Стадия" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">Все стадии</SelectItem>
-                <SelectItem value="Development">Разработка</SelectItem>
-                <SelectItem value="Pre-production">Пре-продакшн</SelectItem>
-                <SelectItem value="Production">Съёмки</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project, index) => (
+            {projects.map((project, index) => (
               <Card 
                 key={project.id} 
                 className="overflow-hidden hover:scale-105 transition-all duration-300 bg-card border-border hover:border-primary cursor-pointer group"
                 style={{ animationDelay: `${index * 100}ms` }}
-                onClick={() => navigate(`/project/${project.id}`)}
+                onClick={() => handleProjectClick(project.id)}
               >
                 <div className="relative h-[400px] overflow-hidden">
                   <img 
@@ -204,20 +177,12 @@ export default function Index() {
                     <span className="text-muted-foreground">{project.genre}</span>
                   </div>
                   <Separator />
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <p className="text-xs text-muted-foreground">Минимальный чек</p>
-                      <p className="text-lg font-bold text-primary">
-                        {(project.minInvestment / 1000000).toFixed(1)} млн ₽
-                      </p>
-                    </div>
-                    <Button 
-                      className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
-                      onClick={(e) => { e.stopPropagation(); navigate(`/project/${project.id}`); }}
-                    >
-                      Подробнее
-                    </Button>
-                  </div>
+                  <Button 
+                    className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                    onClick={(e) => { e.stopPropagation(); handleProjectClick(project.id); }}
+                  >
+                    Узнать больше
+                  </Button>
                 </CardContent>
               </Card>
             ))}
