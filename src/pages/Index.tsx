@@ -261,7 +261,7 @@ export default function Index() {
               <Button 
                 size="lg" 
                 className="bg-[#25D366] hover:bg-[#20BA5A] text-white"
-                onClick={() => window.open('https://wa.me/79991234567?text=Здравствуйте!%20Хочу%20узнать%20больше%20о%20CineInvest', '_blank')}
+                onClick={() => window.open('https://wa.me/79818636699?text=Здравствуйте!%20Хочу%20узнать%20больше%20о%20CineInvest', '_blank')}
               >
                 <Icon name="MessageCircle" className="mr-2" size={20} />
                 WhatsApp
@@ -269,7 +269,7 @@ export default function Index() {
               <Button 
                 size="lg" 
                 className="bg-[#0088cc] hover:bg-[#0077b3] text-white"
-                onClick={() => window.open('https://t.me/cineinvest_support', '_blank')}
+                onClick={() => window.open('https://t.me/Izmailova8888', '_blank')}
               >
                 <Icon name="Send" className="mr-2" size={20} />
                 Telegram
@@ -278,7 +278,7 @@ export default function Index() {
                 size="lg" 
                 variant="outline" 
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                onClick={() => window.location.href = 'mailto:info@cineinvest.ru?subject=Запрос информации о CineInvest'}
+                onClick={() => window.location.href = 'mailto:jab@yandex.ru?subject=Запрос информации о CineInvest'}
               >
                 <Icon name="Mail" className="mr-2" size={20} />
                 Email
@@ -313,16 +313,16 @@ export default function Index() {
               <ul className="space-y-2">
                 <li>
                   <button 
-                    onClick={() => window.location.href = 'mailto:info@cineinvest.ru'}
+                    onClick={() => window.location.href = 'mailto:jab@yandex.ru'}
                     className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                   >
                     <Icon name="Mail" size={16} />
-                    <span>info@cineinvest.ru</span>
+                    <span>jab@yandex.ru</span>
                   </button>
                 </li>
                 <li>
                   <button 
-                    onClick={() => window.open('https://wa.me/79991234567', '_blank')}
+                    onClick={() => window.open('https://wa.me/79818636699', '_blank')}
                     className="flex items-center gap-2 text-muted-foreground hover:text-[#25D366] transition-colors"
                   >
                     <Icon name="MessageCircle" size={16} />
@@ -331,7 +331,7 @@ export default function Index() {
                 </li>
                 <li>
                   <button 
-                    onClick={() => window.open('https://t.me/cineinvest_support', '_blank')}
+                    onClick={() => window.open('https://t.me/Izmailova8888', '_blank')}
                     className="flex items-center gap-2 text-muted-foreground hover:text-[#0088cc] transition-colors"
                   >
                     <Icon name="Send" size={16} />
