@@ -134,31 +134,157 @@ const Production = () => {
               ОБОРУДОВАНИЕ
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-[#1B263B] mb-4 uppercase">
-              Наш парк станков
+              Парк станков по механообработке
             </h2>
-            <div className="w-20 h-1 bg-[#CD7F32] mx-auto" />
+            <div className="w-20 h-1 bg-[#CD7F32] mx-auto mb-6" />
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Все оборудование оснащено ЧПУ (числовым программным управлением) и магазинами подачи и замены инструмента
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {[
-              { name: 'OKUMA LB-3000', type: 'Токарный с ЧПУ', count: '3 шт' },
-              { name: 'DMG MORI NVX5100', type: 'Фрезерный 5-осевой', count: '2 шт' },
-              { name: 'HAAS VF-4', type: 'Обрабатывающий центр', count: '4 шт' },
-              { name: 'Mazak Integrex', type: 'Токарно-фрезерный', count: '2 шт' },
-              { name: 'Mitutoyo CNC', type: 'КИМ', count: '1 шт' },
-              { name: 'Studer S33', type: 'Круглошлифовальный', count: '2 шт' },
-              { name: 'TOS WD130', type: 'Горизонтально-расточной', count: '1 шт' },
-              { name: 'Makino V55', type: 'Вертикально-фрезерный', count: '3 шт' }
-            ].map((machine, idx) => (
-              <div key={idx} className="bg-white border-2 border-gray-200 hover:border-[#3B82F6] p-6 transition-all hover:shadow-lg group">
-                <div className="flex items-start justify-between mb-3">
-                  <Icon name="Cpu" size={32} className="text-[#3B82F6] group-hover:scale-110 transition-transform" />
-                  <span className="text-xs font-bold text-[#CD7F32] bg-[#CD7F32]/10 px-2 py-1 rounded">{machine.count}</span>
+          <div className="max-w-7xl mx-auto space-y-12">
+            <div>
+              <h3 className="text-2xl font-black text-[#1B263B] mb-6 uppercase flex items-center gap-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#1E3A8A] to-[#3B82F6] rounded-lg flex items-center justify-center">
+                  <Icon name="Box" size={24} className="text-white" />
                 </div>
-                <h3 className="text-lg font-black text-[#1B263B] mb-1">{machine.name}</h3>
-                <p className="text-sm text-gray-600">{machine.type}</p>
+                Фрезерные обрабатывающие центры
+              </h3>
+              <div className="bg-white border-2 border-gray-200 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-[#1E3A8A] text-white">
+                      <tr>
+                        <th className="px-6 py-4 text-left text-sm font-bold uppercase">Модель станка</th>
+                        <th className="px-6 py-4 text-center text-sm font-bold uppercase">Количество осей</th>
+                        <th className="px-6 py-4 text-left text-sm font-bold uppercase">Размеры (Ш×В×Д), мм</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 font-bold text-[#1B263B]">OKUMA MB-46 VAE</td>
+                        <td className="px-6 py-4 text-center text-[#3B82F6] font-bold">4</td>
+                        <td className="px-6 py-4 text-gray-600">460×500×750</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 font-bold text-[#1B263B]">OKUMA MB-46 VBE</td>
+                        <td className="px-6 py-4 text-center text-[#3B82F6] font-bold">4</td>
+                        <td className="px-6 py-4 text-gray-600">460×500×750</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 font-bold text-[#1B263B]">OKUMA MX-55 VA</td>
+                        <td className="px-6 py-4 text-center text-[#3B82F6] font-bold">4</td>
+                        <td className="px-6 py-4 text-gray-600">500×600×1400</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 font-bold text-[#1B263B]">OKUMA MU-400 VA</td>
+                        <td className="px-6 py-4 text-center text-[#CD7F32] font-bold">5</td>
+                        <td className="px-6 py-4 text-gray-600">300×450×300</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 font-bold text-[#1B263B]">OKUMA MX-55 VB</td>
+                        <td className="px-6 py-4 text-center text-[#3B82F6] font-bold">3</td>
+                        <td className="px-6 py-4 text-gray-600">450×560×1050</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 font-bold text-[#1B263B]">OKUMA MB-55 VB</td>
+                        <td className="px-6 py-4 text-center text-[#3B82F6] font-bold">3</td>
+                        <td className="px-6 py-4 text-gray-600">560×560×1300</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-            ))}
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-black text-[#1B263B] mb-6 uppercase flex items-center gap-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#CD7F32] to-[#D4822B] rounded-lg flex items-center justify-center">
+                  <Icon name="Circle" size={24} className="text-white" />
+                </div>
+                Токарные станки с ЧПУ
+              </h3>
+              <div className="bg-white border-2 border-gray-200 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-[#CD7F32] text-white">
+                      <tr>
+                        <th className="px-6 py-4 text-left text-sm font-bold uppercase">Модель станка</th>
+                        <th className="px-6 py-4 text-center text-sm font-bold uppercase">Макс. Ø обработки, мм</th>
+                        <th className="px-6 py-4 text-left text-sm font-bold uppercase">Макс. длина обработки, мм</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 font-bold text-[#1B263B]">OKUMA LB-300 MY</td>
+                        <td className="px-6 py-4 text-center text-[#CD7F32] font-bold">Ø320</td>
+                        <td className="px-6 py-4 text-gray-600">650</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 font-bold text-[#1B263B]">OKUMA LB-35/2000</td>
+                        <td className="px-6 py-4 text-center text-[#CD7F32] font-bold">Ø470</td>
+                        <td className="px-6 py-4 text-gray-600">2000</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 font-bold text-[#1B263B]">OKUMA LB-35/1500</td>
+                        <td className="px-6 py-4 text-center text-[#CD7F32] font-bold">Ø470</td>
+                        <td className="px-6 py-4 text-gray-600">1500</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-black text-[#1B263B] mb-6 uppercase flex items-center gap-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#1E3A8A] to-[#3B82F6] rounded-lg flex items-center justify-center">
+                  <Icon name="Grid3x3" size={24} className="text-white" />
+                </div>
+                Прочие станки
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white border-2 border-gray-200 hover:border-[#3B82F6] p-6 transition-all hover:shadow-lg">
+                  <div className="flex items-start gap-4">
+                    <Icon name="Cpu" size={40} className="text-[#3B82F6]" />
+                    <div>
+                      <h4 className="text-xl font-black text-[#1B263B] mb-2">КИМ Mitutoyo CNC</h4>
+                      <p className="text-sm text-gray-600 mb-3">Координатно-измерительная машина</p>
+                      <div className="space-y-1 text-sm text-gray-600">
+                        <div className="flex items-center gap-2">
+                          <Icon name="Check" size={16} className="text-[#3B82F6]" />
+                          <span>Точность измерений: ±0.002 мм</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Icon name="Check" size={16} className="text-[#3B82F6]" />
+                          <span>3D сканирование деталей</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white border-2 border-gray-200 hover:border-[#CD7F32] p-6 transition-all hover:shadow-lg">
+                  <div className="flex items-start gap-4">
+                    <Icon name="Disc" size={40} className="text-[#CD7F32]" />
+                    <div>
+                      <h4 className="text-xl font-black text-[#1B263B] mb-2">Круглошлифовальные</h4>
+                      <p className="text-sm text-gray-600 mb-3">Прецизионная обработка</p>
+                      <div className="space-y-1 text-sm text-gray-600">
+                        <div className="flex items-center gap-2">
+                          <Icon name="Check" size={16} className="text-[#CD7F32]" />
+                          <span>Studer S33 — 2 шт</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Icon name="Check" size={16} className="text-[#CD7F32]" />
+                          <span>Шероховатость до Ra 0.2</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
