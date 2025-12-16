@@ -70,3 +70,68 @@
     font-family: "Roboto Mono", monospace;
   }
 }
+
+@layer utilities {
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s infinite linear;
+    background-size: 200% 100%;
+  }
+
+  @keyframes shine {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  .shine-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shine-effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    animation: shine 3s infinite;
+  }
+
+  @keyframes glow-pulse {
+    0%,
+    100% {
+      box-shadow:
+        0 0 20px rgba(139, 115, 85, 0.5),
+        0 0 40px rgba(160, 130, 109, 0.3);
+    }
+    50% {
+      box-shadow:
+        0 0 30px rgba(139, 115, 85, 0.8),
+        0 0 60px rgba(160, 130, 109, 0.5),
+        0 0 80px rgba(218, 165, 32, 0.3);
+    }
+  }
+
+  .glow-gold {
+    animation: glow-pulse 2s infinite;
+  }
+}

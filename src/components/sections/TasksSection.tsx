@@ -116,9 +116,9 @@ const TasksSection = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
-            <div className="relative bg-white/5 backdrop-blur-sm border-2 border-[#4A90A4] p-8 group hover:bg-[#4A90A4]/20 transition-all">
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#4A90A4]" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#4A90A4]" />
+            <div className="relative bg-white/5 backdrop-blur-sm border-2 border-[#4A90A4] p-8 group hover:bg-[#4A90A4]/20 hover:shadow-[0_0_30px_rgba(74,144,164,0.5)] transition-all">
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#4A90A4] group-hover:border-[#6BC1E0]" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#4A90A4] group-hover:border-[#6BC1E0]" />
               
               <div className="text-5xl font-black text-[#4A90A4] mb-4">01</div>
               <div className="text-5xl mb-4">📐</div>
@@ -143,7 +143,7 @@ const TasksSection = () => {
               <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#8B7355]" />
               <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#8B7355]" />
               
-              <div className="text-5xl font-black text-[#8B7355] mb-4">02</div>
+              <div className="text-5xl font-black text-[#D4AF37] group-hover:text-[#FFD700] mb-4">02</div>
               <div className="text-5xl mb-4">🔧</div>
               <h3 className="text-2xl font-black text-white mb-3 uppercase">Оснащаем</h3>
               <ul className="space-y-2 text-sm text-gray-300">
@@ -162,11 +162,11 @@ const TasksSection = () => {
               </ul>
             </div>
 
-            <div className="relative bg-white/5 backdrop-blur-sm border-2 border-[#1E3A8A] p-8 group hover:bg-[#1E3A8A]/20 transition-all">
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#1E3A8A]" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#1E3A8A]" />
+            <div className="relative bg-white/5 backdrop-blur-sm border-2 border-[#4A90A4] p-8 group hover:bg-[#4A90A4]/20 hover:shadow-[0_0_30px_rgba(74,144,164,0.5)] transition-all">
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#4A90A4] group-hover:border-[#6BC1E0]" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#4A90A4] group-hover:border-[#6BC1E0]" />
               
-              <div className="text-5xl font-black text-[#1E3A8A] mb-4">03</div>
+              <div className="text-5xl font-black text-[#4A90A4] group-hover:text-[#6BC1E0] mb-4">03</div>
               <div className="text-5xl mb-4">⚡</div>
               <h3 className="text-2xl font-black text-white mb-3 uppercase">Производим</h3>
               <ul className="space-y-2 text-sm text-gray-300">
@@ -185,11 +185,11 @@ const TasksSection = () => {
               </ul>
             </div>
 
-            <div className="relative bg-white/5 backdrop-blur-sm border-2 border-[#8B7355] p-8 group hover:bg-[#8B7355]/20 transition-all">
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#8B7355]" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#8B7355]" />
+            <div className="relative bg-white/5 backdrop-blur-sm border-2 border-[#D4AF37] p-8 group hover:bg-[#D4AF37]/20 hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all">
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#D4AF37] group-hover:border-[#FFD700]" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#D4AF37] group-hover:border-[#FFD700]" />
               
-              <div className="text-5xl font-black text-[#8B7355] mb-4">04</div>
+              <div className="text-5xl font-black text-[#D4AF37] group-hover:text-[#FFD700] mb-4">04</div>
               <div className="text-5xl mb-4">⚙️</div>
               <h3 className="text-2xl font-black text-white mb-3 uppercase">Обслуживаем</h3>
               <ul className="space-y-2 text-sm text-gray-300">
@@ -212,7 +212,7 @@ const TasksSection = () => {
           <div className="text-center">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-[#8B7355] to-[#A0826D] hover:from-[#6D5940] hover:to-[#8B7355] text-white font-bold text-lg px-12 py-6 uppercase shadow-lg"
+              className="bg-gradient-to-r from-[#D4AF37] via-[#F4D03F] to-[#D4AF37] hover:from-[#F4D03F] hover:via-[#FFD700] hover:to-[#F4D03F] text-[#0D1B2A] font-black text-lg px-12 py-6 uppercase shadow-[0_0_30px_rgba(212,175,55,0.6)] hover:shadow-[0_0_50px_rgba(255,215,0,0.8)] transition-all duration-300 glow-gold"
             >
               Заказать комплексное решение
             </Button>

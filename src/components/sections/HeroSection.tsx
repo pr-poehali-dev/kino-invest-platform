@@ -29,17 +29,19 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10 py-20">
         <div className="max-w-5xl">
           <div className="flex items-center gap-8 mb-8">
-            <img 
-              src="https://cdn.poehali.dev/files/IMG_0686.jpeg" 
-              alt="Пумори" 
-              className="w-24 h-24 md:w-32 md:h-32 object-contain"
-            />
+            <div className="relative shine-effect">
+              <img 
+                src="https://cdn.poehali.dev/files/IMG_0686.jpeg" 
+                alt="Пумори" 
+                className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(192,197,206,0.5)]"
+              />
+            </div>
             <div>
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#8B7355] to-[#A0826D] px-4 py-2 mb-4 font-bold text-sm text-white uppercase tracking-wider">
                 <div className="w-2 h-2 bg-white animate-pulse" />
                 РАБОТАЕМ С 1990 ГОДА
               </div>
-              <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#C0C5CE] via-[#A8B2C0] to-[#8B96A5] leading-tight uppercase tracking-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#E8EAED] via-[#C0C5CE] via-[#8B96A5] to-[#E8EAED] animate-shimmer leading-tight uppercase tracking-tight drop-shadow-[0_0_30px_rgba(192,197,206,0.6)]">
                 ИНЖЕНЕРНЫЙ<br className="md:hidden" /> ЦЕНТР<br />ПУМОРИ
               </h1>
             </div>
@@ -52,10 +54,10 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
-            <Button size="lg" className="bg-gradient-to-r from-[#8B7355] to-[#A0826D] hover:from-[#6D5940] hover:to-[#8B7355] text-white font-bold text-lg px-8 py-6 uppercase shadow-lg">
+            <Button size="lg" className="bg-gradient-to-r from-[#D4AF37] via-[#F4D03F] to-[#D4AF37] hover:from-[#F4D03F] hover:via-[#FFD700] hover:to-[#F4D03F] text-[#0D1B2A] font-black text-lg px-8 py-6 uppercase shadow-[0_0_30px_rgba(212,175,55,0.6)] hover:shadow-[0_0_50px_rgba(255,215,0,0.8)] transition-all duration-300 glow-gold">
               Получить консультацию
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-[#C0C5CE] text-[#C0C5CE] hover:bg-[#C0C5CE] hover:text-[#0D1B2A] font-bold text-lg px-8 py-6 uppercase">
+            <Button size="lg" variant="outline" className="border-2 border-[#C0C5CE] text-[#C0C5CE] hover:bg-gradient-to-r hover:from-[#E8EAED] hover:to-[#C0C5CE] hover:text-[#0D1B2A] hover:border-[#E8EAED] font-bold text-lg px-8 py-6 uppercase shadow-[0_0_20px_rgba(192,197,206,0.3)] hover:shadow-[0_0_40px_rgba(232,234,237,0.6)] transition-all duration-300">
               Наши проекты
             </Button>
           </div>

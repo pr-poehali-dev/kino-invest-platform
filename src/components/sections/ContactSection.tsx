@@ -38,12 +38,12 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           <div className="space-y-6">
-            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#1E3A8A] p-6 relative hover:bg-white/10 transition-all">
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#1E3A8A]" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#1E3A8A]" />
+            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#4A90A4] p-6 relative hover:bg-white/10 hover:shadow-[0_0_30px_rgba(74,144,164,0.4)] transition-all">
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#4A90A4] group-hover:border-[#6BC1E0]" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#4A90A4] group-hover:border-[#6BC1E0]" />
               
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-[#1E3A8A] flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#2C5F75] to-[#4A90A4] flex items-center justify-center">
                   <Icon name="Phone" size={24} />
                 </div>
                 <div>
@@ -56,17 +56,17 @@ const ContactSection = () => {
                 +7 (343) 287-30-58
               </a>
               <div className="text-sm text-gray-400 mb-4">Пн-Пт: 9:00-18:00</div>
-              <Button className="w-full bg-gradient-to-r from-[#8B7355] to-[#A0826D] hover:from-[#6D5940] hover:to-[#8B7355] text-white font-bold uppercase">
+              <Button className="w-full bg-gradient-to-r from-[#D4AF37] via-[#F4D03F] to-[#D4AF37] hover:from-[#F4D03F] hover:via-[#FFD700] hover:to-[#F4D03F] text-[#0D1B2A] font-black uppercase shadow-[0_0_20px_rgba(212,175,55,0.5)] hover:shadow-[0_0_40px_rgba(255,215,0,0.7)] transition-all">
                 Позвонить
               </Button>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#8B7355] p-6 relative hover:bg-white/10 transition-all">
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#8B7355]" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#8B7355]" />
+            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#D4AF37] p-6 relative hover:bg-white/10 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all">
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#D4AF37] group-hover:border-[#FFD700]" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#D4AF37] group-hover:border-[#FFD700]" />
               
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-[#8B7355] flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#B8860B] to-[#D4AF37] flex items-center justify-center">
                   <Icon name="Send" size={24} />
                 </div>
                 <div>
@@ -84,12 +84,12 @@ const ContactSection = () => {
               </Button>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#1E3A8A] p-6 relative hover:bg-white/10 transition-all">
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#1E3A8A]" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#1E3A8A]" />
+            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#4A90A4] p-6 relative hover:bg-white/10 hover:shadow-[0_0_30px_rgba(74,144,164,0.4)] transition-all">
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#4A90A4] group-hover:border-[#6BC1E0]" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#4A90A4] group-hover:border-[#6BC1E0]" />
               
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-[#1E3A8A] flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#2C5F75] to-[#4A90A4] flex items-center justify-center">
                   <Icon name="Mail" size={24} />
                 </div>
                 <div>
@@ -105,8 +105,8 @@ const ContactSection = () => {
           </div>
 
           <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border-2 border-white/20 p-8 relative">
-            <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-[#8B7355]" />
-            <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-[#8B7355]" />
+            <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-[#D4AF37]" />
+            <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-[#D4AF37]" />
             
             <h3 className="text-3xl font-black mb-6 uppercase">Оставьте заявку</h3>
             <form className="space-y-4">
@@ -159,7 +159,7 @@ const ContactSection = () => {
                 </label>
               </div>
               
-              <Button size="lg" className="w-full bg-gradient-to-r from-[#8B7355] to-[#A0826D] hover:from-[#6D5940] hover:to-[#8B7355] text-white font-black text-lg py-6 uppercase shadow-lg">
+              <Button size="lg" className="w-full bg-gradient-to-r from-[#D4AF37] via-[#F4D03F] to-[#D4AF37] hover:from-[#F4D03F] hover:via-[#FFD700] hover:to-[#F4D03F] text-[#0D1B2A] font-black text-lg py-6 uppercase shadow-[0_0_30px_rgba(212,175,55,0.6)] hover:shadow-[0_0_50px_rgba(255,215,0,0.8)] transition-all duration-300 glow-gold">
                 Отправить заявку
               </Button>
               

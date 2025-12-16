@@ -33,7 +33,7 @@ const CasesSection = () => {
                 </div>
               </div>
               <div className="p-6">
-                <div className="inline-block bg-[#1E3A8A]/10 text-[#1E3A8A] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
+                <div className="inline-block bg-[#4A90A4]/10 text-[#4A90A4] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
                   ООО «КРАСМАШ»
                 </div>
                 <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase">Модернизация токарного участка</h3>
@@ -60,8 +60,8 @@ const CasesSection = () => {
               </div>
             </div>
 
-            <div className="bg-white border-l-4 border-[#8B7355] hover:shadow-2xl transition-shadow">
-              <div className="aspect-video bg-gradient-to-br from-[#6D5940] to-[#8B7355] flex items-center justify-center relative overflow-hidden">
+            <div className="bg-white border-l-4 border-[#D4AF37] hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:border-[#FFD700] transition-all">
+              <div className="aspect-video bg-gradient-to-br from-[#B8860B] to-[#D4AF37] flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
                   <Icon name="Factory" size={200} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white" />
                 </div>
@@ -71,7 +71,7 @@ const CasesSection = () => {
                 </div>
               </div>
               <div className="p-6">
-                <div className="inline-block bg-[#8B7355]/10 text-[#8B7355] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
+                <div className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
                   УРАЛВАГОНЗАВОД
                 </div>
                 <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase">Автоматизация фрезерного участка</h3>
@@ -92,7 +92,7 @@ const CasesSection = () => {
                     <span>ROI: 18 месяцев</span>
                   </div>
                 </div>
-                <Button variant="link" className="p-0 text-[#8B7355] font-bold uppercase">
+                <Button variant="link" className="p-0 text-[#D4AF37] hover:text-[#FFD700] font-bold uppercase transition-colors">
                   Читать кейс полностью →
                 </Button>
               </div>
@@ -109,7 +109,7 @@ const CasesSection = () => {
                 </div>
               </div>
               <div className="p-6">
-                <div className="inline-block bg-[#1E3A8A]/10 text-[#1E3A8A] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
+                <div className="inline-block bg-[#4A90A4]/10 text-[#4A90A4] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
                   ВСМПО-AVISMA
                 </div>
                 <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase">Обработка титановых сплавов</h3>
@@ -138,7 +138,7 @@ const CasesSection = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-[#1B263B] to-[#4A90A4] hover:from-[#0D1B2A] hover:to-[#2C5F75] text-white font-bold text-lg px-12 py-6 uppercase shadow-lg">
+            <Button size="lg" className="bg-gradient-to-r from-[#D4AF37] via-[#F4D03F] to-[#D4AF37] hover:from-[#F4D03F] hover:via-[#FFD700] hover:to-[#F4D03F] text-[#0D1B2A] font-black text-lg px-12 py-6 uppercase shadow-[0_0_30px_rgba(212,175,55,0.6)] hover:shadow-[0_0_50px_rgba(255,215,0,0.8)] transition-all duration-300 glow-gold">
               Все проекты и кейсы
             </Button>
           </div>
