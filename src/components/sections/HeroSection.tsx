@@ -54,10 +54,10 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
-            <Button size="lg" className="bg-gradient-to-r from-[#D4AF37] via-[#F4D03F] to-[#D4AF37] hover:from-[#F4D03F] hover:via-[#FFD700] hover:to-[#F4D03F] text-[#0D1B2A] font-black text-lg px-8 py-6 uppercase shadow-[0_0_30px_rgba(212,175,55,0.6)] hover:shadow-[0_0_50px_rgba(255,215,0,0.8)] transition-all duration-300 glow-gold">
+            <Button size="lg" className="bg-gradient-to-r from-[#FF6B00] via-[#FF8C00] to-[#FF6B00] hover:from-[#FF8C00] hover:via-[#FFA500] hover:to-[#FF8C00] text-white font-black text-lg px-8 py-6 uppercase shadow-[0_0_30px_rgba(255,107,0,0.6)] hover:shadow-[0_0_50px_rgba(255,140,0,0.8)] transition-all duration-300">
               Получить консультацию
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-[#C0C5CE] text-[#C0C5CE] hover:bg-gradient-to-r hover:from-[#E8EAED] hover:to-[#C0C5CE] hover:text-[#0D1B2A] hover:border-[#E8EAED] font-bold text-lg px-8 py-6 uppercase shadow-[0_0_20px_rgba(192,197,206,0.3)] hover:shadow-[0_0_40px_rgba(232,234,237,0.6)] transition-all duration-300">
+            <Button size="lg" variant="outline" className="border-2 border-[#FF6B00] text-[#FF6B00] hover:bg-[#FF6B00] hover:text-white hover:border-[#FF8C00] font-bold text-lg px-8 py-6 uppercase shadow-[0_0_20px_rgba(255,107,0,0.3)] hover:shadow-[0_0_40px_rgba(255,140,0,0.6)] transition-all duration-300">
               Наши проекты
             </Button>
           </div>

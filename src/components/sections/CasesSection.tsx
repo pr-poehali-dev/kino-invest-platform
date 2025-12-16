@@ -60,8 +60,8 @@ const CasesSection = () => {
               </div>
             </div>
 
-            <div className="bg-white border-l-4 border-[#D4AF37] hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:border-[#FFD700] transition-all">
-              <div className="aspect-video bg-gradient-to-br from-[#B8860B] to-[#D4AF37] flex items-center justify-center relative overflow-hidden">
+            <div className="bg-white border-l-4 border-[#FF6B00] hover:shadow-[0_0_40px_rgba(255,107,0,0.4)] hover:border-[#FF8C00] transition-all">
+              <div className="aspect-video bg-gradient-to-br from-[#FF6B00] to-[#FF8C00] flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
                   <Icon name="Factory" size={200} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white" />
                 </div>
@@ -71,7 +71,7 @@ const CasesSection = () => {
                 </div>
               </div>
               <div className="p-6">
-                <div className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
+                <div className="inline-block bg-[#FF6B00]/10 text-[#FF6B00] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
                   УРАЛВАГОНЗАВОД
                 </div>
                 <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase">Автоматизация фрезерного участка</h3>
@@ -92,7 +92,7 @@ const CasesSection = () => {
                     <span>ROI: 18 месяцев</span>
                   </div>
                 </div>
-                <Button variant="link" className="p-0 text-[#D4AF37] hover:text-[#FFD700] font-bold uppercase transition-colors">
+                <Button variant="link" className="p-0 text-[#FF6B00] hover:text-[#FF8C00] font-bold uppercase transition-colors">
                   Читать кейс полностью →
                 </Button>
               </div>
@@ -138,7 +138,7 @@ const CasesSection = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-[#D4AF37] via-[#F4D03F] to-[#D4AF37] hover:from-[#F4D03F] hover:via-[#FFD700] hover:to-[#F4D03F] text-[#0D1B2A] font-black text-lg px-12 py-6 uppercase shadow-[0_0_30px_rgba(212,175,55,0.6)] hover:shadow-[0_0_50px_rgba(255,215,0,0.8)] transition-all duration-300 glow-gold">
+            <Button size="lg" className="bg-gradient-to-r from-[#FF6B00] via-[#FF8C00] to-[#FF6B00] hover:from-[#FF8C00] hover:via-[#FFA500] hover:to-[#FF8C00] text-white font-black text-lg px-12 py-6 uppercase shadow-[0_0_30px_rgba(255,107,0,0.6)] hover:shadow-[0_0_50px_rgba(255,140,0,0.8)] transition-all duration-300">
               Все проекты и кейсы
             </Button>
           </div>

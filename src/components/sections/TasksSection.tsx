@@ -185,11 +185,11 @@ const TasksSection = () => {
               </ul>
             </div>
 
-            <div className="relative bg-white/5 backdrop-blur-sm border-2 border-[#D4AF37] p-8 group hover:bg-[#D4AF37]/20 hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all">
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#D4AF37] group-hover:border-[#FFD700]" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#D4AF37] group-hover:border-[#FFD700]" />
+            <div className="relative bg-white/5 backdrop-blur-sm border-2 border-[#FF6B00] p-8 group hover:bg-[#FF6B00]/20 hover:shadow-[0_0_30px_rgba(255,107,0,0.5)] transition-all">
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#FF6B00] group-hover:border-[#FF8C00]" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#FF6B00] group-hover:border-[#FF8C00]" />
               
-              <div className="text-5xl font-black text-[#D4AF37] group-hover:text-[#FFD700] mb-4">04</div>
+              <div className="text-5xl font-black text-[#FF6B00] group-hover:text-[#FF8C00] mb-4">04</div>
               <div className="text-5xl mb-4">⚙️</div>
               <h3 className="text-2xl font-black text-white mb-3 uppercase">Обслуживаем</h3>
               <ul className="space-y-2 text-sm text-gray-300">
@@ -212,7 +212,7 @@ const TasksSection = () => {
           <div className="text-center">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-[#D4AF37] via-[#F4D03F] to-[#D4AF37] hover:from-[#F4D03F] hover:via-[#FFD700] hover:to-[#F4D03F] text-[#0D1B2A] font-black text-lg px-12 py-6 uppercase shadow-[0_0_30px_rgba(212,175,55,0.6)] hover:shadow-[0_0_50px_rgba(255,215,0,0.8)] transition-all duration-300 glow-gold"
+              className="bg-gradient-to-r from-[#FF6B00] via-[#FF8C00] to-[#FF6B00] hover:from-[#FF8C00] hover:via-[#FFA500] hover:to-[#FF8C00] text-white font-black text-lg px-12 py-6 uppercase shadow-[0_0_30px_rgba(255,107,0,0.6)] hover:shadow-[0_0_50px_rgba(255,140,0,0.8)] transition-all duration-300"
             >
               Заказать комплексное решение
             </Button>
