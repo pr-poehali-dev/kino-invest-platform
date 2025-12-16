@@ -6,8 +6,15 @@ import Icon from '@/components/ui/icon';
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary via-primary/90 to-secondary text-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-to-br from-primary via-primary/90 to-secondary text-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.05]">
+        <img 
+          src="https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/631b940d-0890-4ab1-b942-fe9d4decfecd.jpg" 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">ПОЛУЧИТЕ КОНСУЛЬТАЦИЮ ЭКСПЕРТА</h2>
           <p className="text-white/90 text-lg">
