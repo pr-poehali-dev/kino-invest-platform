@@ -56,17 +56,17 @@ const ContactSection = () => {
                 +7 (343) 287-30-58
               </a>
               <div className="text-sm text-gray-400 mb-4">Пн-Пт: 9:00-18:00</div>
-              <Button className="w-full bg-gradient-to-r from-[#FF6B00] via-[#FF8C00] to-[#FF6B00] hover:from-[#FF8C00] hover:via-[#FFA500] hover:to-[#FF8C00] text-white font-black uppercase shadow-[0_0_20px_rgba(255,107,0,0.5)] hover:shadow-[0_0_40px_rgba(255,140,0,0.7)] transition-all">
+              <Button className="w-full bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black uppercase shadow-lg hover:shadow-xl transition-all">
                 Позвонить
               </Button>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#FF6B00] p-6 relative hover:bg-white/10 hover:shadow-[0_0_30px_rgba(255,107,0,0.4)] transition-all">
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#FF6B00] group-hover:border-[#FF8C00]" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#FF6B00] group-hover:border-[#FF8C00]" />
+            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#CD7F32] p-6 relative hover:bg-white/10 hover:shadow-xl transition-all">
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#CD7F32]" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#CD7F32]" />
               
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#FF6B00] to-[#FF8C00] flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#CD7F32] to-[#D4822B] flex items-center justify-center">
                   <Icon name="Send" size={24} />
                 </div>
                 <div>
@@ -105,8 +105,8 @@ const ContactSection = () => {
           </div>
 
           <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border-2 border-white/20 p-8 relative">
-            <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-[#FF6B00]" />
-            <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-[#FF6B00]" />
+            <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-[#CD7F32]" />
+            <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-[#CD7F32]" />
             
             <h3 className="text-3xl font-black mb-6 uppercase">Оставьте заявку</h3>
             <form className="space-y-4">
@@ -159,7 +159,7 @@ const ContactSection = () => {
                 </label>
               </div>
               
-              <Button size="lg" className="w-full bg-gradient-to-r from-[#FF6B00] via-[#FF8C00] to-[#FF6B00] hover:from-[#FF8C00] hover:via-[#FFA500] hover:to-[#FF8C00] text-white font-black text-lg py-6 uppercase shadow-[0_0_30px_rgba(255,107,0,0.6)] hover:shadow-[0_0_50px_rgba(255,140,0,0.8)] transition-all duration-300">
+              <Button size="lg" className="w-full bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg py-6 uppercase shadow-lg hover:shadow-xl transition-all duration-300">
                 Отправить заявку
               </Button>
               

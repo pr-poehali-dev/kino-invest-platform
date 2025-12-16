@@ -6,17 +6,17 @@ const TasksSection = () => {
   return (
     <>
       <section className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#1B263B] via-[#8B7355] to-[#1B263B]" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#1E3A8A] via-[#CD7F32] to-[#1E3A8A]" />
         
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <div className="inline-block text-sm font-bold text-[#8B7355] uppercase tracking-wider mb-4">
+            <div className="inline-block text-sm font-bold text-[#CD7F32] uppercase tracking-wider mb-4">
               ЧЕМ МЫ МОЖЕМ ПОМОЧЬ
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-[#1B263B] mb-4 uppercase">
               ВЫБЕРИТЕ ВАШУ ЗАДАЧУ
             </h2>
-            <div className="w-20 h-1 bg-[#8B7355] mx-auto" />
+            <div className="w-20 h-1 bg-[#CD7F32] mx-auto" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -39,9 +39,9 @@ const TasksSection = () => {
 
             <Link
               to="/tools"
-              className="group relative bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-[#8B7355] p-8 transition-all duration-300 hover:shadow-2xl"
+              className="group relative bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-[#CD7F32] p-8 transition-all duration-300 hover:shadow-2xl"
             >
-              <div className="absolute top-0 left-0 w-1 h-full bg-[#8B7355] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top" />
+              <div className="absolute top-0 left-0 w-1 h-full bg-[#CD7F32] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top" />
               <div className="text-6xl mb-4">🔧</div>
               <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase leading-tight">
                 Оснастить инструментом
@@ -49,7 +49,7 @@ const TasksSection = () => {
               <p className="text-sm text-gray-600 mb-4 leading-relaxed">
                 3000+ позиций, собственное производство режущего инструмента
               </p>
-              <div className="flex items-center text-[#8B7355] font-bold text-sm uppercase">
+              <div className="flex items-center text-[#CD7F32] font-bold text-sm uppercase">
                 Подробнее <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
               </div>
             </Link>
@@ -73,9 +73,9 @@ const TasksSection = () => {
 
             <Link
               to="/production"
-              className="group relative bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-[#8B7355] p-8 transition-all duration-300 hover:shadow-2xl"
+              className="group relative bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-[#CD7F32] p-8 transition-all duration-300 hover:shadow-2xl"
             >
-              <div className="absolute top-0 left-0 w-1 h-full bg-[#8B7355] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top" />
+              <div className="absolute top-0 left-0 w-1 h-full bg-[#CD7F32] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top" />
               <div className="text-6xl mb-4">⚡</div>
               <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase leading-tight">
                 Изготовить детали
@@ -83,7 +83,7 @@ const TasksSection = () => {
               <p className="text-sm text-gray-600 mb-4 leading-relaxed">
                 Механообработка на заказ, формообразующая оснастка
               </p>
-              <div className="flex items-center text-[#8B7355] font-bold text-sm uppercase">
+              <div className="flex items-center text-[#CD7F32] font-bold text-sm uppercase">
                 Подробнее <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
               </div>
             </Link>
@@ -212,7 +212,7 @@ const TasksSection = () => {
           <div className="text-center">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-[#FF6B00] via-[#FF8C00] to-[#FF6B00] hover:from-[#FF8C00] hover:via-[#FFA500] hover:to-[#FF8C00] text-white font-black text-lg px-12 py-6 uppercase shadow-[0_0_30px_rgba(255,107,0,0.6)] hover:shadow-[0_0_50px_rgba(255,140,0,0.8)] transition-all duration-300"
+              className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-12 py-6 uppercase shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Заказать комплексное решение
             </Button>
@@ -225,13 +225,13 @@ const TasksSection = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <div className="inline-block text-sm font-bold text-[#8B7355] uppercase tracking-wider mb-4">
+            <div className="inline-block text-sm font-bold text-[#CD7F32] uppercase tracking-wider mb-4">
               НАШИ ПРЕИМУЩЕСТВА
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-[#1B263B] mb-4 uppercase">
               Почему выбирают Пумори
             </h2>
-            <div className="w-20 h-1 bg-[#8B7355] mx-auto" />
+            <div className="w-20 h-1 bg-[#CD7F32] mx-auto" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">

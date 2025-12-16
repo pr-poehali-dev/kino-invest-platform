@@ -37,7 +37,7 @@ const HeroSection = () => {
               />
             </div>
             <div>
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#8B7355] to-[#A0826D] px-4 py-2 mb-4 font-bold text-sm text-white uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#CD7F32] to-[#D4822B] px-4 py-2 mb-4 font-bold text-sm text-white uppercase tracking-wider">
                 <div className="w-2 h-2 bg-white animate-pulse" />
                 РАБОТАЕМ С 1990 ГОДА
               </div>
@@ -47,17 +47,17 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="w-20 h-1 bg-gradient-to-r from-[#8B7355] to-[#A0826D] mb-6" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#CD7F32] to-[#D4822B] mb-6" />
 
           <p className="text-xl md:text-2xl text-[#A8B2C0] font-medium mb-8 max-w-2xl leading-relaxed">
             Полный цикл решений для промышленных предприятий: от проектирования до круглосуточного сервиса
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
-            <Button size="lg" className="bg-gradient-to-r from-[#FF6B00] via-[#FF8C00] to-[#FF6B00] hover:from-[#FF8C00] hover:via-[#FFA500] hover:to-[#FF8C00] text-white font-black text-lg px-8 py-6 uppercase shadow-[0_0_30px_rgba(255,107,0,0.6)] hover:shadow-[0_0_50px_rgba(255,140,0,0.8)] transition-all duration-300">
+            <Button size="lg" className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-8 py-6 uppercase shadow-lg hover:shadow-xl transition-all duration-300">
               Получить консультацию
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-[#FF6B00] text-[#FF6B00] hover:bg-[#FF6B00] hover:text-white hover:border-[#FF8C00] font-bold text-lg px-8 py-6 uppercase shadow-[0_0_20px_rgba(255,107,0,0.3)] hover:shadow-[0_0_40px_rgba(255,140,0,0.6)] transition-all duration-300">
+            <Button size="lg" variant="outline" className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white hover:border-[#2563EB] font-bold text-lg px-8 py-6 uppercase transition-all duration-300">
               Наши проекты
             </Button>
           </div>
@@ -83,7 +83,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8B7355] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#CD7F32] to-transparent" />
     </section>
   );
 };
