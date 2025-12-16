@@ -7,10 +7,10 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 opacity-20"
         style={{
-          backgroundImage: `url('https://cdn.poehali.dev/files/file_1765917159048.jpeg')`,
-          backgroundSize: 'cover',
+          backgroundImage: `url('https://cdn.poehali.dev/files/IMG_0686.jpeg')`,
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
-          filter: 'brightness(0.3) contrast(1.3)'
+          backgroundRepeat: 'no-repeat'
         }}
       />
       
@@ -28,23 +28,14 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 relative z-10 py-20">
         <div className="max-w-5xl">
-          <div className="flex items-center gap-8 mb-8">
-            <div className="relative shine-effect">
-              <img 
-                src="https://cdn.poehali.dev/files/IMG_0686.jpeg" 
-                alt="Пумори" 
-                className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(192,197,206,0.5)]"
-              />
+          <div className="mb-8">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#CD7F32] to-[#D4822B] px-4 py-2 mb-4 font-bold text-sm text-white uppercase tracking-wider">
+              <div className="w-2 h-2 bg-white animate-pulse" />
+              РАБОТАЕМ С 1990 ГОДА
             </div>
-            <div>
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#CD7F32] to-[#D4822B] px-4 py-2 mb-4 font-bold text-sm text-white uppercase tracking-wider">
-                <div className="w-2 h-2 bg-white animate-pulse" />
-                РАБОТАЕМ С 1990 ГОДА
-              </div>
-              <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#E8EAED] via-[#C0C5CE] via-[#8B96A5] to-[#E8EAED] animate-shimmer leading-tight uppercase tracking-tight drop-shadow-[0_0_30px_rgba(192,197,206,0.6)]">
-                ИНЖЕНЕРНЫЙ<br className="md:hidden" /> ЦЕНТР<br />ПУМОРИ
-              </h1>
-            </div>
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#E8EAED] via-[#C0C5CE] via-[#8B96A5] to-[#E8EAED] animate-shimmer leading-tight uppercase tracking-tight drop-shadow-[0_0_30px_rgba(192,197,206,0.6)]">
+              ИНЖЕНЕРНЫЙ<br className="md:hidden" /> ЦЕНТР<br />ПУМОРИ
+            </h1>
           </div>
 
           <div className="w-20 h-1 bg-gradient-to-r from-[#CD7F32] to-[#D4822B] mb-6" />
