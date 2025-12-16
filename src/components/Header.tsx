@@ -19,13 +19,14 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary flex items-center justify-center" 
-                 style={{ clipPath: 'polygon(50% 0%, 100% 100%, 0% 100%)' }}>
-              <Icon name="Settings" className="text-white" size={20} />
-            </div>
+            <img 
+              src="https://cdn.poehali.dev/files/IMG_0679.jpeg" 
+              alt="Пумори" 
+              className="h-12 w-auto object-contain"
+            />
             <div className="flex flex-col">
-              <span className="text-lg font-bold text-foreground leading-tight">ИНЖЕНЕРНЫЙ ЦЕНТР</span>
-              <span className="text-sm font-semibold text-primary leading-tight">ПУМОРИ</span>
+              <span className="text-sm text-muted-foreground leading-tight">ИНЖЕНЕРНЫЙ ЦЕНТР</span>
+              <span className="text-xl font-bold text-primary leading-tight">ПУМОРИ</span>
             </div>
           </Link>
 

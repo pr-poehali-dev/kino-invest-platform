@@ -102,19 +102,24 @@ const TasksSection = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-gradient-to-br from-[#e8eef5] to-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-r from-[#1a4d7a]/5 via-[#c29555]/5 to-[#1a4d7a]/5" 
+             style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 100%)' }}></div>
+        <div className="absolute bottom-0 right-0 w-full h-32 bg-gradient-to-l from-[#1a4d7a]/5 via-[#c29555]/5 to-[#1a4d7a]/5" 
+             style={{ clipPath: 'polygon(0 50%, 100% 100%, 100% 0, 0 100%)' }}></div>
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">МЫ ЗАКРЫВАЕМ ВЕСЬ ЦИКЛ</h2>
+          <div className="text-center mb-12 relative z-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1a4d7a]">МЫ ЗАКРЫВАЕМ ВЕСЬ ЦИКЛ</h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
               От проектирования до безостановочной работы — комплексное решение всех задач производства
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto relative z-10">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gradient-to-br from-primary to-primary/80 text-white p-8 rounded-2xl hover:scale-105 transition-transform">
-                <div className="text-4xl font-bold mb-2">1</div>
+              <div className="bg-gradient-to-br from-[#2563a8] to-[#1a4d7a] text-white p-8 border-2 border-[#c29555]/30 hover:scale-105 transition-transform relative overflow-hidden"
+                   style={{ clipPath: 'polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)' }}>
+                <div className="text-4xl font-bold mb-2 text-[#c29555]">1</div>
                 <div className="text-5xl mb-4">🏭</div>
                 <h3 className="text-xl font-bold mb-4">ПРОЕКТИРУЕМ</h3>
                 <ul className="space-y-2 text-sm text-white/90">
@@ -125,8 +130,9 @@ const TasksSection = () => {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-secondary to-secondary/80 text-white p-8 rounded-2xl hover:scale-105 transition-transform">
-                <div className="text-4xl font-bold mb-2">2</div>
+              <div className="bg-gradient-to-br from-[#c29555] to-[#a67c52] text-white p-8 border-2 border-[#2563a8]/30 hover:scale-105 transition-transform relative overflow-hidden"
+                   style={{ clipPath: 'polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)' }}>
+                <div className="text-4xl font-bold mb-2 text-[#1a4d7a]">2</div>
                 <div className="text-5xl mb-4">🔧</div>
                 <h3 className="text-xl font-bold mb-4">ОСНАЩАЕМ</h3>
                 <ul className="space-y-2 text-sm text-white/90">
@@ -137,8 +143,9 @@ const TasksSection = () => {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-primary to-primary/80 text-white p-8 rounded-2xl hover:scale-105 transition-transform">
-                <div className="text-4xl font-bold mb-2">3</div>
+              <div className="bg-gradient-to-br from-[#2563a8] to-[#1a4d7a] text-white p-8 border-2 border-[#c29555]/30 hover:scale-105 transition-transform relative overflow-hidden"
+                   style={{ clipPath: 'polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)' }}>
+                <div className="text-4xl font-bold mb-2 text-[#c29555]">3</div>
                 <div className="text-5xl mb-4">🏭</div>
                 <h3 className="text-xl font-bold mb-4">ПРОИЗВОДИМ</h3>
                 <ul className="space-y-2 text-sm text-white/90">
@@ -149,8 +156,9 @@ const TasksSection = () => {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-secondary to-secondary/80 text-white p-8 rounded-2xl hover:scale-105 transition-transform">
-                <div className="text-4xl font-bold mb-2">4</div>
+              <div className="bg-gradient-to-br from-[#c29555] to-[#a67c52] text-white p-8 border-2 border-[#2563a8]/30 hover:scale-105 transition-transform relative overflow-hidden"
+                   style={{ clipPath: 'polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)' }}>
+                <div className="text-4xl font-bold mb-2 text-[#1a4d7a]">4</div>
                 <div className="text-5xl mb-4">⚙️</div>
                 <h3 className="text-xl font-bold mb-4">ОБСЛУЖИВАЕМ</h3>
                 <ul className="space-y-2 text-sm text-white/90">

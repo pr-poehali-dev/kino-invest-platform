@@ -8,13 +8,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-white/10 backdrop-blur-sm flex items-center justify-center" 
-                   style={{ clipPath: 'polygon(50% 0%, 100% 100%, 0% 100%)' }}>
-                <Icon name="Settings" className="text-white" size={20} />
-              </div>
+              <img 
+                src="https://cdn.poehali.dev/files/IMG_0679.jpeg" 
+                alt="Пумори" 
+                className="h-12 w-auto object-contain brightness-0 invert"
+              />
               <div className="flex flex-col">
-                <span className="font-bold text-lg">ИНЖЕНЕРНЫЙ ЦЕНТР</span>
-                <span className="text-sm font-semibold">ПУМОРИ</span>
+                <span className="text-sm text-primary-foreground/70">ИНЖЕНЕРНЫЙ ЦЕНТР</span>
+                <span className="text-lg font-bold">ПУМОРИ</span>
               </div>
             </div>
             <p className="text-sm text-primary-foreground/80 mb-4">
