@@ -75,7 +75,7 @@ const Production = () => {
             <div className="w-20 h-1 bg-[#CD7F32] mx-auto" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {[
               {
                 icon: 'Wrench',
@@ -90,6 +90,13 @@ const Production = () => {
                 color: 'bronze'
               },
               {
+                icon: 'Truck',
+                title: 'Транспортёры стружки',
+                items: ['Конвейеры под заказ', 'Цельносварная конструкция', 'Для всех типов стружки', 'Гарантия 12 месяцев', 'Постгарантийный сервис'],
+                color: 'bronze',
+                badge: '🇷🇺 СВОЁ ПРОИЗВОДСТВО'
+              },
+              {
                 icon: 'Package',
                 title: 'Серийное изготовление',
                 items: ['До 500 деталей', 'Контроль качества', 'Логистика', 'Упаковка', 'Документация'],
@@ -97,6 +104,11 @@ const Production = () => {
               }
             ].map((service, idx) => (
               <div key={idx} className={`bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-${service.color === 'blue' ? '[#3B82F6]' : '[#CD7F32]'} p-8 transition-all hover:shadow-xl group`}>
+                {service.badge && (
+                  <div className="inline-block text-xs font-bold text-white bg-gradient-to-r from-[#CD7F32] to-[#D4822B] px-3 py-1 mb-4 uppercase tracking-wider">
+                    {service.badge}
+                  </div>
+                )}
                 <div className={`w-20 h-20 bg-gradient-to-br ${service.color === 'blue' ? 'from-[#1E3A8A] to-[#3B82F6]' : 'from-[#CD7F32] to-[#D4822B]'} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                   <Icon name={service.icon as any} size={40} className="text-white" />
                 </div>
@@ -136,8 +148,7 @@ const Production = () => {
               { name: 'Mitutoyo CNC', type: 'КИМ', count: '1 шт' },
               { name: 'Studer S33', type: 'Круглошлифовальный', count: '2 шт' },
               { name: 'TOS WD130', type: 'Горизонтально-расточной', count: '1 шт' },
-              { name: 'Makino V55', type: 'Вертикально-фрезерный', count: '3 шт' },
-              { name: 'Стружкоуборщики', type: 'Автоматическая уборка стружки', count: '5 шт' }
+              { name: 'Makino V55', type: 'Вертикально-фрезерный', count: '3 шт' }
             ].map((machine, idx) => (
               <div key={idx} className="bg-white border-2 border-gray-200 hover:border-[#3B82F6] p-6 transition-all hover:shadow-lg group">
                 <div className="flex items-start justify-between mb-3">
