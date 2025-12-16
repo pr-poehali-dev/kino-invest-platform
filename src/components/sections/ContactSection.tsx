@@ -6,113 +6,172 @@ import Icon from '@/components/ui/icon';
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary via-primary/90 to-secondary text-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.05]">
-        <img 
-          src="https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/631b940d-0890-4ab1-b942-fe9d4decfecd.jpg" 
-          alt="" 
-          className="w-full h-full object-cover"
-        />
-      </div>
+    <section className="py-24 bg-gradient-to-br from-[#0A1628] via-[#1E3A8A] to-[#0A1628] text-white relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#1E3A8A] via-[#D97706] to-[#1E3A8A]" />
+      
+      <div 
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: `repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(59, 130, 246, 0.1) 10px,
+            rgba(59, 130, 246, 0.1) 20px
+          )`
+        }}
+      />
+
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">ПОЛУЧИТЕ КОНСУЛЬТАЦИЮ ЭКСПЕРТА</h2>
-          <p className="text-white/90 text-lg">
+        <div className="text-center mb-16">
+          <div className="inline-block text-sm font-bold text-[#FBBF24] uppercase tracking-wider mb-4">
+            СВЯЖИТЕСЬ С НАМИ
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-4 uppercase">
+            Получите консультацию эксперта
+          </h2>
+          <div className="w-20 h-1 bg-[#D97706] mx-auto mb-6" />
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ответим сразу. Подберём решение для вашей задачи за 2 часа.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
-          <div className="lg:col-span-2 space-y-4">
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
-              <Icon name="Phone" size={24} className="mb-3" />
-              <div className="text-sm text-white/70 mb-1">Единый телефон</div>
-              <a href="tel:+73432873058" className="text-xl font-bold hover:text-secondary transition-colors">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="space-y-6">
+            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#1E3A8A] p-6 relative hover:bg-white/10 transition-all">
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#1E3A8A]" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#1E3A8A]" />
+              
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-[#1E3A8A] flex items-center justify-center">
+                  <Icon name="Phone" size={24} />
+                </div>
+                <div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wide">Телефон</div>
+                  <div className="text-sm font-bold">Звоните сейчас</div>
+                </div>
+              </div>
+              
+              <a href="tel:+73432873058" className="text-2xl font-black hover:text-[#FBBF24] transition-colors block mb-2">
                 +7 (343) 287-30-58
               </a>
-              <div className="text-sm text-white/70 mt-2">Пн-Пт: 9:00-18:00</div>
-              <Button className="w-full mt-4 bg-white text-primary hover:bg-white/90">
-                Позвонить сейчас
+              <div className="text-sm text-gray-400 mb-4">Пн-Пт: 9:00-18:00</div>
+              <Button className="w-full bg-[#D97706] hover:bg-[#B45309] text-white font-bold uppercase">
+                Позвонить
               </Button>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
-              <Icon name="Send" size={24} className="mb-3" />
-              <div className="text-sm text-white/70 mb-1">Telegram-бот</div>
-              <div className="text-xl font-bold">@pumori_bot</div>
-              <div className="text-sm text-white/70 mt-2">Ответ за 5 минут</div>
+            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#D97706] p-6 relative hover:bg-white/10 transition-all">
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#D97706]" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#D97706]" />
+              
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-[#D97706] flex items-center justify-center">
+                  <Icon name="Send" size={24} />
+                </div>
+                <div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wide">Telegram</div>
+                  <div className="text-sm font-bold">Ответ за 5 минут</div>
+                </div>
+              </div>
+              
+              <div className="text-xl font-black mb-4">@pumori_bot</div>
               <Button
-                className="w-full mt-4 bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                className="w-full bg-white text-[#0A1628] hover:bg-gray-200 font-bold uppercase"
                 onClick={() => window.open('https://t.me/pumori_bot', '_blank')}
               >
                 Написать в Telegram
               </Button>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
-              <Icon name="Mail" size={24} className="mb-3" />
-              <div className="text-sm text-white/70 mb-1">Email</div>
-              <a href="mailto:info@pumori-engineering.ru" className="text-lg font-bold hover:text-secondary transition-colors break-all">
+            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#1E3A8A] p-6 relative hover:bg-white/10 transition-all">
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#1E3A8A]" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#1E3A8A]" />
+              
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-[#1E3A8A] flex items-center justify-center">
+                  <Icon name="Mail" size={24} />
+                </div>
+                <div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wide">Email</div>
+                  <div className="text-sm font-bold">Ответ в течение дня</div>
+                </div>
+              </div>
+              
+              <a href="mailto:info@pumori-engineering.ru" className="text-lg font-bold hover:text-[#FBBF24] transition-colors break-all">
                 info@pumori-engineering.ru
               </a>
-              <div className="text-sm text-white/70 mt-2">Ответ в течение дня</div>
             </div>
           </div>
 
-          <div className="lg:col-span-3 bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
-            <h3 className="text-2xl font-bold mb-6">Или оставьте заявку</h3>
+          <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border-2 border-white/20 p-8 relative">
+            <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-[#D97706]" />
+            <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-[#D97706]" />
+            
+            <h3 className="text-3xl font-black mb-6 uppercase">Оставьте заявку</h3>
             <form className="space-y-4">
-              <div>
-                <Input
-                  placeholder="Имя *"
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                  required
-                />
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <Input
+                    placeholder="Имя *"
+                    className="bg-white/10 border-white/30 text-white placeholder:text-white/50 h-12 font-medium"
+                    required
+                  />
+                </div>
+                <div>
+                  <Input
+                    type="tel"
+                    placeholder="Телефон *"
+                    className="bg-white/10 border-white/30 text-white placeholder:text-white/50 h-12 font-medium"
+                    required
+                  />
+                </div>
               </div>
-              <div>
-                <Input
-                  type="tel"
-                  placeholder="Телефон *"
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                  required
-                />
+              
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <Input
+                    placeholder="Компания"
+                    className="bg-white/10 border-white/30 text-white placeholder:text-white/50 h-12 font-medium"
+                  />
+                </div>
+                <div>
+                  <Input
+                    type="email"
+                    placeholder="Email"
+                    className="bg-white/10 border-white/30 text-white placeholder:text-white/50 h-12 font-medium"
+                  />
+                </div>
               </div>
-              <div>
-                <Input
-                  placeholder="Компания"
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                />
-              </div>
-              <div>
-                <Input
-                  type="email"
-                  placeholder="Email"
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                />
-              </div>
+              
               <div>
                 <Textarea
                   placeholder="Какую задачу нужно решить?"
-                  rows={4}
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
+                  rows={5}
+                  className="bg-white/10 border-white/30 text-white placeholder:text-white/50 font-medium"
                 />
               </div>
-              <div className="flex items-start gap-2">
-                <Checkbox id="consent" className="mt-1 border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:border-secondary" />
-                <label htmlFor="consent" className="text-sm text-white/70 cursor-pointer">
+              
+              <div className="flex items-start gap-3 py-2">
+                <Checkbox id="consent" className="mt-1 border-white/30 data-[state=checked]:bg-[#D97706] data-[state=checked]:border-[#D97706]" />
+                <label htmlFor="consent" className="text-sm text-white/70 cursor-pointer leading-relaxed">
                   Согласен на обработку персональных данных
                 </label>
               </div>
-              <Button size="lg" className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                ОТПРАВИТЬ ЗАЯВКУ
+              
+              <Button size="lg" className="w-full bg-[#D97706] hover:bg-[#B45309] text-white font-black text-lg py-6 uppercase">
+                Отправить заявку
               </Button>
-              <p className="text-sm text-white/60 text-center">
+              
+              <p className="text-sm text-white/60 text-center leading-relaxed">
                 Мы перезвоним в течение 15 минут в рабочее время
               </p>
             </form>
           </div>
         </div>
       </div>
+
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D97706] to-transparent" />
     </section>
   );
 };

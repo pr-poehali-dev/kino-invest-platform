@@ -3,72 +3,78 @@ import Icon from '@/components/ui/icon';
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-[#1E3A8A] via-[#2563EB] to-[#3B82F6] min-h-[700px] flex items-center overflow-hidden">
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 right-20 w-32 h-32">
-          <Icon name="Settings" size={128} className="animate-spin" style={{ animationDuration: '20s' }} />
-        </div>
-        <div className="absolute bottom-20 left-32 w-24 h-24">
-          <Icon name="Settings" size={96} className="animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
+    <section className="relative bg-[#0A1628] min-h-[90vh] flex items-center overflow-hidden">
+      <div 
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: `url('https://cdn.poehali.dev/files/file_1765917159048.jpeg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'brightness(0.4) contrast(1.2)'
+        }}
+      />
+      
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1E3A8A]/80 via-[#0A1628]/90 to-[#0A1628]/95" />
+      
+      <div className="absolute inset-0" style={{
+        backgroundImage: `repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 2px,
+          rgba(59, 130, 246, 0.03) 2px,
+          rgba(59, 130, 246, 0.03) 4px
+        )`
+      }} />
+
+      <div className="container mx-auto px-4 relative z-10 py-20">
+        <div className="max-w-4xl">
+          <div className="inline-flex items-center gap-2 bg-[#D97706] px-4 py-2 mb-6 font-bold text-sm text-white uppercase tracking-wider">
+            <div className="w-2 h-2 bg-white animate-pulse" />
+            РАБОТАЕМ С 1990 ГОДА
+          </div>
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-6 uppercase tracking-tight">
+            ИНЖЕНЕРНЫЙ<br />
+            ЦЕНТР <span className="text-[#FBBF24]">ПУМОРИ</span>
+          </h1>
+
+          <div className="w-20 h-1 bg-[#D97706] mb-6" />
+
+          <p className="text-xl md:text-2xl text-gray-300 font-medium mb-8 max-w-2xl leading-relaxed">
+            Полный цикл решений для промышленных предприятий: от проектирования до круглосуточного сервиса
+          </p>
+
+          <div className="flex flex-wrap gap-4 mb-12">
+            <Button size="lg" className="bg-[#D97706] hover:bg-[#B45309] text-white font-bold text-lg px-8 py-6 uppercase">
+              Получить консультацию
+            </Button>
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#0A1628] font-bold text-lg px-8 py-6 uppercase">
+              Наши проекты
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-white/20">
+            <div className="space-y-1">
+              <div className="text-4xl font-black text-[#FBBF24]">2000+</div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">Реализованных проектов</div>
+            </div>
+            <div className="space-y-1">
+              <div className="text-4xl font-black text-[#FBBF24]">35+</div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">Лет на рынке</div>
+            </div>
+            <div className="space-y-1">
+              <div className="text-4xl font-black text-[#FBBF24]">3000+</div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">Позиций инструмента</div>
+            </div>
+            <div className="space-y-1">
+              <div className="text-4xl font-black text-[#FBBF24]">24/7</div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">Экстренный сервис</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-white space-y-6">
-            <div className="inline-block bg-gradient-to-r from-[#D97706] to-[#FBBF24] px-6 py-2 text-sm font-bold text-[#1E3A8A]" 
-                 style={{ clipPath: 'polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%)' }}>
-              35 ЛЕТ ЭКСПЕРТИЗЫ
-            </div>
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              ОТ ИДЕИ ПРОИЗВОДСТВА ДО БЕЗОСТАНОВОЧНОЙ РАБОТЫ
-            </h1>
-
-            <p className="text-lg text-white/90 max-w-xl">
-              Единственные в России, кто закрывает все задачи: от чертежа до ремонта через 5 лет
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20">
-                <div className="text-2xl font-bold">2000+</div>
-                <div className="text-sm text-white/90">проектов</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20">
-                <div className="text-lg font-bold">Собственное</div>
-                <div className="text-sm text-white/90">производство</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20">
-                <div className="text-2xl font-bold">24/7</div>
-                <div className="text-sm text-white/90">Сервис</div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-4 pt-4">
-              <div className="flex flex-wrap gap-4 opacity-60">
-                <span className="text-xs font-mono">URALVAGONZAVOD</span>
-                <span className="text-xs font-mono">VSMPO-AVISMA</span>
-                <span className="text-xs font-mono">KAMAZ</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="hidden lg:block relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#D97706]/20 to-transparent" 
-                 style={{ clipPath: 'polygon(5% 0%, 100% 5%, 95% 100%, 0% 95%)' }}></div>
-            <div className="relative aspect-[4/3] bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm border-2 border-[#FBBF24]/30 flex items-center justify-center overflow-hidden"
-                 style={{ clipPath: 'polygon(5% 0%, 100% 5%, 95% 100%, 0% 95%)' }}>
-              <img 
-                src="https://cdn.poehali.dev/files/file_1765917159048.jpeg" 
-                alt="Производство" 
-                className="w-full h-full object-cover"
-                style={{ filter: 'hue-rotate(10deg) brightness(0.9)' }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-[#1E3A8A]/30 to-[#D97706]/20"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D97706] to-transparent" />
     </section>
   );
 };

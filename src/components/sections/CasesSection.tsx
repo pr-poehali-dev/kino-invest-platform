@@ -4,187 +4,201 @@ import Icon from '@/components/ui/icon';
 const CasesSection = () => {
   return (
     <>
-      <section className="py-20 bg-muted/30 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.04]">
-          <img 
-            src="https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/28417a68-47a7-42f9-8456-ff6fa8958102.jpg" 
-            alt="" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">ПРОЕКТЫ ПОЛНОГО ЦИКЛА</h2>
-            <p className="text-muted-foreground text-lg">
-              От проектирования до запуска и обслуживания — реальные результаты наших клиентов
+      <section className="py-24 bg-gray-50 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#1E3A8A] via-[#D97706] to-[#1E3A8A]" />
+        
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="inline-block text-sm font-bold text-[#D97706] uppercase tracking-wider mb-4">
+              НАШИ РЕЗУЛЬТАТЫ
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-[#0A1628] mb-4 uppercase">
+              Проекты полного цикла
+            </h2>
+            <div className="w-20 h-1 bg-[#D97706] mx-auto mb-6" />
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              От проектирования до запуска и обслуживания — реальные результаты крупнейших производств
             </p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <div className="bg-white rounded-2xl overflow-hidden border-l-4 border-primary hover:shadow-xl transition-shadow">
+            <div className="bg-white border-l-4 border-[#1E3A8A] hover:shadow-2xl transition-shadow">
+              <div className="aspect-video bg-gradient-to-br from-[#1E3A8A] to-[#2563EB] flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 opacity-20">
+                  <Icon name="Factory" size={200} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white" />
+                </div>
+                <div className="relative z-10 text-white text-center p-6">
+                  <div className="text-6xl font-black mb-2">01</div>
+                  <div className="text-sm font-bold uppercase tracking-wider">Кейс</div>
+                </div>
+              </div>
               <div className="p-6">
-                <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold mb-4">
-                  ООО «КРАСМАШ», г. Красноярск
+                <div className="inline-block bg-[#1E3A8A]/10 text-[#1E3A8A] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
+                  ООО «КРАСМАШ»
                 </div>
-                <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
-                  <Icon name="Factory" size={64} className="text-muted-foreground" />
-                </div>
-                <h3 className="text-lg font-bold mb-3">ЗАДАЧА</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Модернизация токарного участка. Требовалась точность ±0.005 мм. Брак 15-20%.
+                <h3 className="text-xl font-black text-[#0A1628] mb-3 uppercase">Модернизация токарного участка</h3>
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Требовалась точность ±0.005 мм. Брак составлял 15-20%. Полный цикл: проектирование → поставка станков Okuma → подбор инструмента → пуско-наладка
                 </p>
-                <h3 className="text-lg font-bold mb-3">РЕШЕНИЕ</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Полный цикл: Проектирование → Поставка станков Okuma → Подбор инструмента → Пуско-наладка
-                </p>
-                <div className="bg-secondary/10 p-4 rounded-lg space-y-2">
-                  <div className="flex items-center gap-2 text-sm">
-                    <Icon name="CheckCircle2" size={16} className="text-secondary" />
-                    <span className="font-semibold">Брак: 15% → 0%</span>
+                <div className="bg-[#FBBF24]/10 p-4 space-y-2 mb-4">
+                  <div className="flex items-center gap-2 text-sm font-bold">
+                    <div className="w-2 h-2 bg-[#D97706]" />
+                    <span>Брак: 15% → 0%</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Icon name="CheckCircle2" size={16} className="text-secondary" />
-                    <span className="font-semibold">Производительность: +150%</span>
+                  <div className="flex items-center gap-2 text-sm font-bold">
+                    <div className="w-2 h-2 bg-[#D97706]" />
+                    <span>Производительность: +150%</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Icon name="CheckCircle2" size={16} className="text-secondary" />
-                    <span className="font-semibold">Экономия: 500 000₽/год</span>
+                  <div className="flex items-center gap-2 text-sm font-bold">
+                    <div className="w-2 h-2 bg-[#D97706]" />
+                    <span>Экономия: 500 000₽/год</span>
                   </div>
                 </div>
-                <Button variant="link" className="mt-4 p-0">
-                  Читать кейс →
+                <Button variant="link" className="p-0 text-[#1E3A8A] font-bold uppercase">
+                  Читать кейс полностью →
                 </Button>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl overflow-hidden border-l-4 border-secondary hover:shadow-xl transition-shadow">
+            <div className="bg-white border-l-4 border-[#D97706] hover:shadow-2xl transition-shadow">
+              <div className="aspect-video bg-gradient-to-br from-[#D97706] to-[#FBBF24] flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 opacity-20">
+                  <Icon name="Factory" size={200} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white" />
+                </div>
+                <div className="relative z-10 text-white text-center p-6">
+                  <div className="text-6xl font-black mb-2">02</div>
+                  <div className="text-sm font-bold uppercase tracking-wider">Кейс</div>
+                </div>
+              </div>
               <div className="p-6">
-                <div className="inline-block bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-[#D97706]/10 text-[#D97706] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
                   УРАЛВАГОНЗАВОД
                 </div>
-                <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
-                  <Icon name="Factory" size={64} className="text-muted-foreground" />
-                </div>
-                <h3 className="text-lg font-bold mb-3">ЗАДАЧА</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Автоматизация фрезерного участка для повышения производительности.
+                <h3 className="text-xl font-black text-[#0A1628] mb-3 uppercase">Автоматизация фрезерного участка</h3>
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Задача — повысить производительность. Решение: внедрение обрабатывающих центров + роботизация производственных процессов
                 </p>
-                <h3 className="text-lg font-bold mb-3">РЕШЕНИЕ</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Внедрение обрабатывающих центров + роботизация
-                </p>
-                <div className="bg-secondary/10 p-4 rounded-lg space-y-2">
-                  <div className="flex items-center gap-2 text-sm">
-                    <Icon name="CheckCircle2" size={16} className="text-secondary" />
-                    <span className="font-semibold">Брак: -80%</span>
+                <div className="bg-[#3B82F6]/10 p-4 space-y-2 mb-4">
+                  <div className="flex items-center gap-2 text-sm font-bold">
+                    <div className="w-2 h-2 bg-[#1E3A8A]" />
+                    <span>Брак: -80%</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Icon name="CheckCircle2" size={16} className="text-secondary" />
-                    <span className="font-semibold">Время цикла: -40%</span>
+                  <div className="flex items-center gap-2 text-sm font-bold">
+                    <div className="w-2 h-2 bg-[#1E3A8A]" />
+                    <span>Время цикла: -40%</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Icon name="CheckCircle2" size={16} className="text-secondary" />
-                    <span className="font-semibold">ROI: 18 месяцев</span>
+                  <div className="flex items-center gap-2 text-sm font-bold">
+                    <div className="w-2 h-2 bg-[#1E3A8A]" />
+                    <span>ROI: 18 месяцев</span>
                   </div>
                 </div>
-                <Button variant="link" className="mt-4 p-0">
-                  Читать кейс →
+                <Button variant="link" className="p-0 text-[#D97706] font-bold uppercase">
+                  Читать кейс полностью →
                 </Button>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl overflow-hidden border-l-4 border-primary hover:shadow-xl transition-shadow">
+            <div className="bg-white border-l-4 border-[#1E3A8A] hover:shadow-2xl transition-shadow">
+              <div className="aspect-video bg-gradient-to-br from-[#1E3A8A] to-[#2563EB] flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 opacity-20">
+                  <Icon name="Factory" size={200} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white" />
+                </div>
+                <div className="relative z-10 text-white text-center p-6">
+                  <div className="text-6xl font-black mb-2">03</div>
+                  <div className="text-sm font-bold uppercase tracking-wider">Кейс</div>
+                </div>
+              </div>
               <div className="p-6">
-                <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-[#1E3A8A]/10 text-[#1E3A8A] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
                   ВСМПО-AVISMA
                 </div>
-                <div className="aspect-video bg-muted rounded-lg mb-4 flex items-center justify-center">
-                  <Icon name="Factory" size={64} className="text-muted-foreground" />
-                </div>
-                <h3 className="text-lg font-bold mb-3">ЗАДАЧА</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Поставка инструмента для обработки титановых сплавов.
+                <h3 className="text-xl font-black text-[#0A1628] mb-3 uppercase">Обработка титановых сплавов</h3>
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Поставка специализированного инструмента. Решение: расточные системы Пумори + пластины Iscar для работы с титаном
                 </p>
-                <h3 className="text-lg font-bold mb-3">РЕШЕНИЕ</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Расточные системы Пумори + пластины Iscar
-                </p>
-                <div className="bg-secondary/10 p-4 rounded-lg space-y-2">
-                  <div className="flex items-center gap-2 text-sm">
-                    <Icon name="CheckCircle2" size={16} className="text-secondary" />
-                    <span className="font-semibold">Точность: +50%</span>
+                <div className="bg-[#FBBF24]/10 p-4 space-y-2 mb-4">
+                  <div className="flex items-center gap-2 text-sm font-bold">
+                    <div className="w-2 h-2 bg-[#D97706]" />
+                    <span>Точность: +50%</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Icon name="CheckCircle2" size={16} className="text-secondary" />
-                    <span className="font-semibold">Срок службы: x2.5</span>
+                  <div className="flex items-center gap-2 text-sm font-bold">
+                    <div className="w-2 h-2 bg-[#D97706]" />
+                    <span>Срок службы: x2.5</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Icon name="CheckCircle2" size={16} className="text-secondary" />
-                    <span className="font-semibold">Экономия: 1 200 000₽/год</span>
+                  <div className="flex items-center gap-2 text-sm font-bold">
+                    <div className="w-2 h-2 bg-[#D97706]" />
+                    <span>Экономия: 1 200 000₽/год</span>
                   </div>
                 </div>
-                <Button variant="link" className="mt-4 p-0">
-                  Читать кейс →
+                <Button variant="link" className="p-0 text-[#1E3A8A] font-bold uppercase">
+                  Читать кейс полностью →
                 </Button>
               </div>
             </div>
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline">
-              ВСЕ КЕЙСЫ И ПРОЕКТЫ
+            <Button size="lg" className="bg-[#0A1628] hover:bg-[#1E3A8A] text-white font-bold text-lg px-12 py-6 uppercase">
+              Все проекты и кейсы
             </Button>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.02]">
-          <img 
-            src="https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/55fefcc1-bc12-4c71-ac42-8b14fae2a73e.jpg" 
-            alt="" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">НАМ ДОВЕРЯЮТ ЛИДЕРЫ ПРОМЫШЛЕННОСТИ</h2>
+      <section className="py-24 bg-[#0A1628] text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="inline-block text-sm font-bold text-[#FBBF24] uppercase tracking-wider mb-4">
+              КЛИЕНТЫ
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4 uppercase">
+              Нам доверяют лидеры
+            </h2>
+            <div className="w-20 h-1 bg-[#D97706] mx-auto" />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
             {['URALVAGONZAVOD', 'VSMPO-AVISMA', 'KAMAZ', 'AVTOVAZ', 'PETROZAVODSK MASH', 'KRASMASH', 'NEVSKY ZAVOD', 'RUSTECHNO'].map((client) => (
               <div
                 key={client}
-                className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center grayscale hover:grayscale-0 transition-all hover:scale-105"
+                className="aspect-video bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-white/10 transition-all hover:scale-105"
               >
-                <span className="text-xs font-mono text-muted-foreground">{client}</span>
+                <span className="text-xs font-mono text-white/80 text-center px-4">{client}</span>
               </div>
             ))}
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <div className="text-center p-6 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl">
-              <div className="text-4xl font-bold text-primary mb-2">35+</div>
-              <div className="font-semibold mb-1">ЛЕТ ЭКСПЕРТИЗЫ</div>
-              <div className="text-sm text-muted-foreground">С 1990 года в составе корпорации</div>
+          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center p-8 bg-white/5 backdrop-blur-sm border-2 border-[#1E3A8A] relative">
+              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#1E3A8A]" />
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#1E3A8A]" />
+              <div className="text-6xl font-black text-[#3B82F6] mb-2">35+</div>
+              <div className="font-bold text-white uppercase tracking-wide mb-1">Лет экспертизы</div>
+              <div className="text-sm text-gray-400">С 1990 года</div>
             </div>
 
-            <div className="text-center p-6 bg-gradient-to-br from-secondary/5 to-transparent rounded-2xl">
-              <div className="text-4xl font-bold text-secondary mb-2">12000+</div>
-              <div className="font-semibold mb-1">ПРОЕКТОВ РЕАЛИЗОВАНО</div>
-              <div className="text-sm text-muted-foreground">По всей России и СНГ</div>
+            <div className="text-center p-8 bg-white/5 backdrop-blur-sm border-2 border-[#D97706] relative">
+              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#D97706]" />
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#D97706]" />
+              <div className="text-6xl font-black text-[#FBBF24] mb-2">2000+</div>
+              <div className="font-bold text-white uppercase tracking-wide mb-1">Проектов</div>
+              <div className="text-sm text-gray-400">По всей России</div>
             </div>
 
-            <div className="text-center p-6 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl">
-              <div className="text-4xl font-bold text-primary mb-2">3000+</div>
-              <div className="font-semibold mb-1">ПОЗИЦИЙ ИНСТРУМЕНТА</div>
-              <div className="text-sm text-muted-foreground">На складе в Екатеринбурге</div>
+            <div className="text-center p-8 bg-white/5 backdrop-blur-sm border-2 border-[#1E3A8A] relative">
+              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#1E3A8A]" />
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#1E3A8A]" />
+              <div className="text-6xl font-black text-[#3B82F6] mb-2">3000+</div>
+              <div className="font-bold text-white uppercase tracking-wide mb-1">Инструмента</div>
+              <div className="text-sm text-gray-400">На складе</div>
             </div>
 
-            <div className="text-center p-6 bg-gradient-to-br from-secondary/5 to-transparent rounded-2xl">
-              <div className="text-4xl font-bold text-secondary mb-2">24/7</div>
-              <div className="font-semibold mb-1">СЕРВИС И ПОДДЕРЖКА</div>
-              <div className="text-sm text-muted-foreground">Экстренный выезд за 2-4 часа</div>
+            <div className="text-center p-8 bg-white/5 backdrop-blur-sm border-2 border-[#D97706] relative">
+              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#D97706]" />
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#D97706]" />
+              <div className="text-6xl font-black text-[#FBBF24] mb-2">24/7</div>
+              <div className="font-bold text-white uppercase tracking-wide mb-1">Сервис</div>
+              <div className="text-sm text-gray-400">Круглосуточно</div>
             </div>
           </div>
         </div>
