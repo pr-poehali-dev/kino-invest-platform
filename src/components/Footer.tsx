@@ -126,7 +126,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="https://t.me/pumori_bot" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+                  <a href="https://t.me/pumoriinvestbot" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
                     Telegram-бот
                   </a>
                 </li>
@@ -161,8 +161,8 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2">
                 <Icon name="Send" size={16} className="mt-1 flex-shrink-0" />
-                <a href="https://t.me/pumori_bot" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
-                  @pumori_bot
+                <a href="https://t.me/pumoriinvestbot" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+                  @pumoriinvestbot
                 </a>
               </li>
             </ul>

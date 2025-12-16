@@ -177,11 +177,14 @@ const Header = () => {
             <Button
               size="icon"
               className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
-              onClick={() => window.open('https://t.me/pumori_bot', '_blank')}
+              onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
             >
               <Icon name="Send" size={18} />
             </Button>
-            <Button className="bg-primary hover:bg-primary/90">
+            <Button 
+              className="bg-primary hover:bg-primary/90"
+              onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+            >
               Связаться
             </Button>
           </div>
@@ -225,7 +228,12 @@ const Header = () => {
                 <Icon name="Phone" size={18} />
                 +7 (343) 287-30-58
               </a>
-              <Button className="w-full bg-primary">Связаться</Button>
+              <Button 
+                className="w-full bg-primary"
+                onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+              >
+                Связаться
+              </Button>
             </div>
           </div>
         )}

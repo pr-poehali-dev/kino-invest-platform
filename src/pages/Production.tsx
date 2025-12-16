@@ -341,9 +341,14 @@ const Production = () => {
                 <Icon name="Phone" size={20} className="mr-2" />
                 +7 (343) 287-30-58
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#1E3A8A]">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-white text-white hover:bg-white hover:text-[#1E3A8A]"
+                onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+              >
                 <Icon name="Send" size={20} className="mr-2" />
-                Написать в Telegram
+                @pumoriinvestbot
               </Button>
             </div>
           </div>

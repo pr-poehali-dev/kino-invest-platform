@@ -45,7 +45,11 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
-            <Button size="lg" className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-8 py-6 uppercase shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-8 py-6 uppercase shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+            >
               Получить консультацию
             </Button>
             <Button size="lg" variant="outline" className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white hover:border-[#2563EB] font-bold text-lg px-8 py-6 uppercase transition-all duration-300">

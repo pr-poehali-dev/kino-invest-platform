@@ -91,8 +91,13 @@ const Catalog = () => {
               <div className="mt-6 bg-[#3B82F6]/10 border-2 border-[#3B82F6] p-4">
                 <div className="text-sm font-bold mb-2">💬 НЕ НАШЛИ?</div>
                 <p className="text-xs text-gray-600 mb-3">Напишите в Telegram</p>
-                <Button size="sm" variant="outline" className="w-full border-[#3B82F6] text-[#3B82F6]">
-                  @pumori_bot
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  className="w-full border-[#3B82F6] text-[#3B82F6]"
+                  onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+                >
+                  @pumoriinvestbot
                 </Button>
               </div>
             </div>
