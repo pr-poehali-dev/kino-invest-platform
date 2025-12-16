@@ -1,21 +1,105 @@
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Production = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const categories = [
+    { id: 'all', label: 'Все услуги', icon: 'Grid3x3' },
+    { id: 'turning', label: 'Токарная обработка', icon: 'Circle' },
+    { id: 'milling', label: 'Фрезерование', icon: 'Box' },
+    { id: 'grinding', label: 'Шлифование', icon: 'Sparkles' },
+    { id: 'tooling', label: 'Оснастка', icon: 'Wrench' },
+    { id: 'serial', label: 'Серийное производство', icon: 'Package' },
+  ];
+
   return (
-    <div className="min-h-screen">
-      <div className="bg-gray-50 py-3 border-b">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <Link to="/" className="hover:text-primary">Главная</Link>
-            <Icon name="ChevronRight" size={16} />
-            <span>Решения</span>
-            <Icon name="ChevronRight" size={16} />
-            <span className="text-primary font-medium">Производство и аутсорсинг</span>
+    <div className="min-h-screen flex">
+      {/* Sidebar */}
+      <aside className={`${isSidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 bg-white border-r border-gray-200 overflow-hidden flex-shrink-0`}>
+        <div className="p-6 sticky top-0">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-black text-[#1B263B] uppercase">Категории</h2>
+            <Button 
+              variant="ghost" 
+              size="sm"
+              onClick={() => setIsSidebarOpen(false)}
+              className="lg:hidden"
+            >
+              <Icon name="X" size={20} />
+            </Button>
+          </div>
+
+          <nav className="space-y-2">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-all ${
+                  selectedCategory === category.id
+                    ? 'bg-gradient-to-r from-[#3B82F6] to-[#1E3A8A] text-white shadow-lg'
+                    : 'hover:bg-gray-100 text-gray-700'
+                }`}
+              >
+                <Icon name={category.icon as any} size={20} />
+                <span className="font-semibold text-sm">{category.label}</span>
+              </button>
+            ))}
+          </nav>
+
+          <div className="mt-8 p-4 bg-gradient-to-br from-[#CD7F32]/10 to-[#D4822B]/10 rounded-lg border border-[#CD7F32]/20">
+            <Icon name="Phone" size={24} className="text-[#CD7F32] mb-2" />
+            <h3 className="font-black text-[#1B263B] mb-1">Нужна консультация?</h3>
+            <p className="text-xs text-gray-600 mb-3">Наши специалисты помогут с выбором</p>
+            <Button size="sm" className="w-full bg-[#CD7F32] hover:bg-[#D4822B]">
+              Связаться
+            </Button>
+          </div>
+
+          <div className="mt-6 space-y-3">
+            <div className="flex items-center gap-2 text-xs text-gray-600">
+              <Icon name="Clock" size={16} className="text-[#3B82F6]" />
+              <span>Работаем 24/7</span>
+            </div>
+            <div className="flex items-center gap-2 text-xs text-gray-600">
+              <Icon name="CheckCircle" size={16} className="text-[#3B82F6]" />
+              <span>Точность ±0.005 мм</span>
+            </div>
+            <div className="flex items-center gap-2 text-xs text-gray-600">
+              <Icon name="TrendingUp" size={16} className="text-[#3B82F6]" />
+              <span>От 1 до 500 деталей</span>
+            </div>
           </div>
         </div>
-      </div>
+      </aside>
+
+      {/* Main content */}
+      <div className="flex-1 min-w-0">
+        <div className="bg-gray-50 py-3 border-b">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <Link to="/" className="hover:text-primary">Главная</Link>
+                <Icon name="ChevronRight" size={16} />
+                <span>Решения</span>
+                <Icon name="ChevronRight" size={16} />
+                <span className="text-primary font-medium">Производство и аутсорсинг</span>
+              </div>
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                className="gap-2"
+              >
+                <Icon name={isSidebarOpen ? 'PanelLeftClose' : 'PanelLeftOpen'} size={16} />
+                {isSidebarOpen ? 'Скрыть меню' : 'Показать меню'}
+              </Button>
+            </div>
+          </div>
+        </div>
 
       <section className="py-20 bg-gradient-to-br from-[#0D1B2A] via-[#1B263B] to-[#0D1B2A] text-white relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
@@ -211,6 +295,7 @@ const Production = () => {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 };
