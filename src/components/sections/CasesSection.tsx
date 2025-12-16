@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import { Link } from 'react-router-dom';
 
 const CasesSection = () => {
   return (
@@ -118,19 +119,27 @@ const CasesSection = () => {
                 <div className="p-6">
                   <p className="text-sm font-bold text-[#1B263B] mb-3">{project.description}</p>
                   <p className="text-xs text-gray-600 mb-4 leading-relaxed">{project.scope}</p>
-                  <div className={`inline-flex items-center gap-2 px-3 py-2 ${project.color === 'blue' ? 'bg-[#1E3A8A]/10 text-[#1E3A8A]' : 'bg-[#CD7F32]/10 text-[#CD7F32]'} text-xs font-bold uppercase`}>
-                    <Icon name="TrendingUp" size={14} />
-                    {project.result}
+                  <div className="flex items-center justify-between gap-4 mb-4">
+                    <div className={`inline-flex items-center gap-2 px-3 py-2 ${project.color === 'blue' ? 'bg-[#1E3A8A]/10 text-[#1E3A8A]' : 'bg-[#CD7F32]/10 text-[#CD7F32]'} text-xs font-bold uppercase`}>
+                      <Icon name="TrendingUp" size={14} />
+                      {project.result}
+                    </div>
                   </div>
+                  <Link to="/cases" className={`inline-flex items-center gap-2 text-xs font-bold uppercase ${project.color === 'blue' ? 'text-[#1E3A8A] hover:text-[#3B82F6]' : 'text-[#CD7F32] hover:text-[#D4822B]'} transition-colors group`}>
+                    Подробнее
+                    <Icon name="ArrowRight" size={14} className="group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-12 py-6 uppercase shadow-lg hover:shadow-xl transition-all duration-300">
-              Все проекты и кейсы
-            </Button>
+            <Link to="/cases">
+              <Button size="lg" className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-12 py-6 uppercase shadow-lg hover:shadow-xl transition-all duration-300">
+                Все проекты и кейсы
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
