@@ -21,120 +21,99 @@ const CasesSection = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <div className="bg-white border-l-4 border-[#1E3A8A] hover:shadow-2xl transition-shadow">
-              <div className="aspect-video bg-gradient-to-br from-[#1E3A8A] to-[#2563EB] flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 opacity-20">
-                  <Icon name="Factory" size={200} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {[
+              {
+                industry: 'АВИАСТРОЕНИЕ',
+                title: 'ОДК-УМПО',
+                description: 'Техперевооружение токарного участка лопаток',
+                scope: 'Поставка 5-осевых центров OKUMA, разработка техпроцессов, обучение персонала',
+                result: 'Производительность +180%',
+                color: 'blue',
+                icon: 'Plane'
+              },
+              {
+                industry: 'АВТОМОБИЛЕСТРОЕНИЕ',
+                title: 'Уралвагонзавод',
+                description: 'Роботизированный комплекс обработки корпусов',
+                scope: 'Проектирование, поставка 12 станков Mazak, внедрение робототехники',
+                result: 'Брак -85%, ROI 14 мес',
+                color: 'bronze',
+                icon: 'Truck'
+              },
+              {
+                industry: 'ЭНЕРГЕТИКА',
+                title: 'Турбомоторный завод',
+                description: 'Участок обработки турбинных дисков Ø до 2500 мм',
+                scope: 'Токарно-фрезерные центры с ЧПУ, технологический аудит',
+                result: 'Точность ±0.003 мм',
+                color: 'blue',
+                icon: 'Zap'
+              },
+              {
+                industry: 'НЕФТЕГАЗ',
+                title: 'Арматурный завод',
+                description: 'Производство запорной арматуры DN до 600',
+                scope: 'Модернизация 8 станков, оснастка, режущий инструмент',
+                result: 'Цикл -35%, экономия 2М₽/год',
+                color: 'bronze',
+                icon: 'PipeDrop'
+              },
+              {
+                industry: 'ТРАНСПОРТ',
+                title: 'РЖД, ТЧЭ-5',
+                description: 'Ремонтный участок колесных пар локомотивов',
+                scope: 'Токарные с ЧПУ, круглошлифовальные, КИМ',
+                result: 'Производительность x2.2',
+                color: 'blue',
+                icon: 'Train'
+              },
+              {
+                industry: 'МЕТАЛЛУРГИЯ',
+                title: 'ЧТПЗ',
+                description: 'Инструментальный цех трубного завода',
+                scope: 'Фрезерные центры, формообразующая оснастка',
+                result: 'Импортозамещение 100%',
+                color: 'bronze',
+                icon: 'Factory'
+              },
+              {
+                industry: 'МЕДТЕХНИКА',
+                title: 'Эндопротезирование',
+                description: 'Производство имплантатов Ti-6Al-4V',
+                scope: '5-осевые центры, биосовместимая обработка, контроль',
+                result: 'Шероховатость Ra 0.2',
+                color: 'blue',
+                icon: 'Heart'
+              },
+              {
+                industry: 'ОБОРОНПРОМ',
+                title: 'Машиностроительный завод',
+                description: 'Техперевооружение механического участка',
+                scope: 'Комплексный проект под ключ: от аудита до пуска',
+                result: 'Мощность +250%',
+                color: 'bronze',
+                icon: 'Shield'
+              }
+            ].map((project, idx) => (
+              <div key={idx} className={`bg-white border-l-4 ${project.color === 'blue' ? 'border-[#1E3A8A]' : 'border-[#CD7F32]'} hover:shadow-xl transition-all group`}>
+                <div className={`p-6 bg-gradient-to-br ${project.color === 'blue' ? 'from-[#1E3A8A] to-[#3B82F6]' : 'from-[#CD7F32] to-[#D4822B]'} text-white`}>
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="text-xs font-bold uppercase tracking-wider opacity-80">{project.industry}</div>
+                    <Icon name={project.icon as any} size={24} className="opacity-50" />
+                  </div>
+                  <h3 className="text-xl font-black uppercase">{project.title}</h3>
                 </div>
-                <div className="relative z-10 text-white text-center p-6">
-                  <div className="text-6xl font-black mb-2">01</div>
-                  <div className="text-sm font-bold uppercase tracking-wider">Кейс</div>
+                <div className="p-6">
+                  <p className="text-sm font-bold text-[#1B263B] mb-3">{project.description}</p>
+                  <p className="text-xs text-gray-600 mb-4 leading-relaxed">{project.scope}</p>
+                  <div className={`inline-flex items-center gap-2 px-3 py-2 ${project.color === 'blue' ? 'bg-[#1E3A8A]/10 text-[#1E3A8A]' : 'bg-[#CD7F32]/10 text-[#CD7F32]'} text-xs font-bold uppercase`}>
+                    <Icon name="TrendingUp" size={14} />
+                    {project.result}
+                  </div>
                 </div>
               </div>
-              <div className="p-6">
-                <div className="inline-block bg-[#4A90A4]/10 text-[#4A90A4] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
-                  ООО «КРАСМАШ»
-                </div>
-                <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase">Модернизация токарного участка</h3>
-                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                  Требовалась точность ±0.005 мм. Брак составлял 15-20%. Полный цикл: проектирование → поставка станков Okuma → подбор инструмента → пуско-наладка
-                </p>
-                <div className="bg-[#A8B2C0]/10 p-4 space-y-2 mb-4">
-                  <div className="flex items-center gap-2 text-sm font-bold">
-                    <div className="w-2 h-2 bg-[#4A90A4]" />
-                    <span>Брак: 15% → 0%</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm font-bold">
-                    <div className="w-2 h-2 bg-[#D97706]" />
-                    <span>Производительность: +150%</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm font-bold">
-                    <div className="w-2 h-2 bg-[#D97706]" />
-                    <span>Экономия: 500 000₽/год</span>
-                  </div>
-                </div>
-                <Button variant="link" className="p-0 text-[#1E3A8A] font-bold uppercase">
-                  Читать кейс полностью →
-                </Button>
-              </div>
-            </div>
-
-            <div className="bg-white border-l-4 border-[#CD7F32] hover:shadow-xl hover:border-[#D4822B] transition-all">
-              <div className="aspect-video bg-gradient-to-br from-[#CD7F32] to-[#D4822B] flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 opacity-20">
-                  <Icon name="Factory" size={200} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white" />
-                </div>
-                <div className="relative z-10 text-white text-center p-6">
-                  <div className="text-6xl font-black mb-2">02</div>
-                  <div className="text-sm font-bold uppercase tracking-wider">Кейс</div>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="inline-block bg-[#CD7F32]/10 text-[#CD7F32] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
-                  УРАЛВАГОНЗАВОД
-                </div>
-                <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase">Автоматизация фрезерного участка</h3>
-                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                  Задача — повысить производительность. Решение: внедрение обрабатывающих центров + роботизация производственных процессов
-                </p>
-                <div className="bg-[#A8B2C0]/10 p-4 space-y-2 mb-4">
-                  <div className="flex items-center gap-2 text-sm font-bold">
-                    <div className="w-2 h-2 bg-[#4A90A4]" />
-                    <span>Брак: -80%</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm font-bold">
-                    <div className="w-2 h-2 bg-[#1E3A8A]" />
-                    <span>Время цикла: -40%</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm font-bold">
-                    <div className="w-2 h-2 bg-[#1E3A8A]" />
-                    <span>ROI: 18 месяцев</span>
-                  </div>
-                </div>
-                <Button variant="link" className="p-0 text-[#CD7F32] hover:text-[#D4822B] font-bold uppercase transition-colors">
-                  Читать кейс полностью →
-                </Button>
-              </div>
-            </div>
-
-            <div className="bg-white border-l-4 border-[#1E3A8A] hover:shadow-2xl transition-shadow">
-              <div className="aspect-video bg-gradient-to-br from-[#1E3A8A] to-[#2563EB] flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 opacity-20">
-                  <Icon name="Factory" size={200} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white" />
-                </div>
-                <div className="relative z-10 text-white text-center p-6">
-                  <div className="text-6xl font-black mb-2">03</div>
-                  <div className="text-sm font-bold uppercase tracking-wider">Кейс</div>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="inline-block bg-[#4A90A4]/10 text-[#4A90A4] px-3 py-1 text-xs font-bold uppercase tracking-wide mb-4">
-                  ВСМПО-AVISMA
-                </div>
-                <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase">Обработка титановых сплавов</h3>
-                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                  Поставка специализированного инструмента. Решение: расточные системы Пумори + пластины Iscar для работы с титаном
-                </p>
-                <div className="bg-[#A8B2C0]/10 p-4 space-y-2 mb-4">
-                  <div className="flex items-center gap-2 text-sm font-bold">
-                    <div className="w-2 h-2 bg-[#4A90A4]" />
-                    <span>Точность: +50%</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm font-bold">
-                    <div className="w-2 h-2 bg-[#D97706]" />
-                    <span>Срок службы: x2.5</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm font-bold">
-                    <div className="w-2 h-2 bg-[#D97706]" />
-                    <span>Экономия: 1 200 000₽/год</span>
-                  </div>
-                </div>
-                <Button variant="link" className="p-0 text-[#1E3A8A] font-bold uppercase">
-                  Читать кейс полностью →
-                </Button>
-              </div>
-            </div>
+            ))}
           </div>
 
           <div className="text-center mt-12">
