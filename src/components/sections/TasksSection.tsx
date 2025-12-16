@@ -110,7 +110,7 @@ const TasksSection = () => {
       </section>
 
       <section className="py-20 bg-[#F9FAFB] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0 opacity-[0.06]">
           <img 
             src="https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/631b940d-0890-4ab1-b942-fe9d4decfecd.jpg" 
             alt="" 
