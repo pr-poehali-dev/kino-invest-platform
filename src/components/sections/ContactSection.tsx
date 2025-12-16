@@ -6,8 +6,8 @@ import Icon from '@/components/ui/icon';
 
 const ContactSection = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-[#0A1628] via-[#1E3A8A] to-[#0A1628] text-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#1E3A8A] via-[#D97706] to-[#1E3A8A]" />
+    <section className="py-24 bg-gradient-to-br from-[#0D1B2A] via-[#1B263B] to-[#0D1B2A] text-white relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#4A90A4] via-[#8B7355] to-[#4A90A4]" />
       
       <div 
         className="absolute inset-0 opacity-5"
@@ -16,22 +16,22 @@ const ContactSection = () => {
             45deg,
             transparent,
             transparent 10px,
-            rgba(59, 130, 246, 0.1) 10px,
-            rgba(59, 130, 246, 0.1) 20px
+            rgba(74, 144, 164, 0.1) 10px,
+            rgba(74, 144, 164, 0.1) 20px
           )`
         }}
       />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-block text-sm font-bold text-[#FBBF24] uppercase tracking-wider mb-4">
+          <div className="inline-block text-sm font-bold text-[#A8B2C0] uppercase tracking-wider mb-4">
             СВЯЖИТЕСЬ С НАМИ
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-4 uppercase">
+          <h2 className="text-4xl md:text-5xl font-black text-[#C0C5CE] mb-4 uppercase">
             Получите консультацию эксперта
           </h2>
-          <div className="w-20 h-1 bg-[#D97706] mx-auto mb-6" />
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <div className="w-20 h-1 bg-[#8B7355] mx-auto mb-6" />
+          <p className="text-xl text-[#8B96A5] max-w-3xl mx-auto">
             Ответим сразу. Подберём решение для вашей задачи за 2 часа.
           </p>
         </div>
@@ -52,21 +52,21 @@ const ContactSection = () => {
                 </div>
               </div>
               
-              <a href="tel:+73432873058" className="text-2xl font-black hover:text-[#FBBF24] transition-colors block mb-2">
+              <a href="tel:+73432873058" className="text-2xl font-black hover:text-[#A8B2C0] transition-colors block mb-2">
                 +7 (343) 287-30-58
               </a>
               <div className="text-sm text-gray-400 mb-4">Пн-Пт: 9:00-18:00</div>
-              <Button className="w-full bg-[#D97706] hover:bg-[#B45309] text-white font-bold uppercase">
+              <Button className="w-full bg-gradient-to-r from-[#8B7355] to-[#A0826D] hover:from-[#6D5940] hover:to-[#8B7355] text-white font-bold uppercase">
                 Позвонить
               </Button>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#D97706] p-6 relative hover:bg-white/10 transition-all">
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#D97706]" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#D97706]" />
+            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#8B7355] p-6 relative hover:bg-white/10 transition-all">
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#8B7355]" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#8B7355]" />
               
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-[#D97706] flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#8B7355] flex items-center justify-center">
                   <Icon name="Send" size={24} />
                 </div>
                 <div>
@@ -77,7 +77,7 @@ const ContactSection = () => {
               
               <div className="text-xl font-black mb-4">@pumori_bot</div>
               <Button
-                className="w-full bg-white text-[#0A1628] hover:bg-gray-200 font-bold uppercase"
+                className="w-full bg-white text-[#1B263B] hover:bg-gray-200 font-bold uppercase"
                 onClick={() => window.open('https://t.me/pumori_bot', '_blank')}
               >
                 Написать в Telegram
@@ -98,15 +98,15 @@ const ContactSection = () => {
                 </div>
               </div>
               
-              <a href="mailto:info@pumori-engineering.ru" className="text-lg font-bold hover:text-[#FBBF24] transition-colors break-all">
+              <a href="mailto:info@pumori-engineering.ru" className="text-lg font-bold hover:text-[#A8B2C0] transition-colors break-all">
                 info@pumori-engineering.ru
               </a>
             </div>
           </div>
 
           <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border-2 border-white/20 p-8 relative">
-            <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-[#D97706]" />
-            <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-[#D97706]" />
+            <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-[#8B7355]" />
+            <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-[#8B7355]" />
             
             <h3 className="text-3xl font-black mb-6 uppercase">Оставьте заявку</h3>
             <form className="space-y-4">
@@ -153,13 +153,13 @@ const ContactSection = () => {
               </div>
               
               <div className="flex items-start gap-3 py-2">
-                <Checkbox id="consent" className="mt-1 border-white/30 data-[state=checked]:bg-[#D97706] data-[state=checked]:border-[#D97706]" />
+                <Checkbox id="consent" className="mt-1 border-white/30 data-[state=checked]:bg-[#8B7355] data-[state=checked]:border-[#8B7355]" />
                 <label htmlFor="consent" className="text-sm text-white/70 cursor-pointer leading-relaxed">
                   Согласен на обработку персональных данных
                 </label>
               </div>
               
-              <Button size="lg" className="w-full bg-[#D97706] hover:bg-[#B45309] text-white font-black text-lg py-6 uppercase">
+              <Button size="lg" className="w-full bg-gradient-to-r from-[#8B7355] to-[#A0826D] hover:from-[#6D5940] hover:to-[#8B7355] text-white font-black text-lg py-6 uppercase shadow-lg">
                 Отправить заявку
               </Button>
               
@@ -171,7 +171,7 @@ const ContactSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D97706] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8B7355] to-transparent" />
     </section>
   );
 };

@@ -20,13 +20,13 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-3">
             <img 
-              src="https://cdn.poehali.dev/files/IMG_0679.jpeg" 
+              src="https://cdn.poehali.dev/files/IMG_0686.jpeg" 
               alt="Пумори" 
               className="h-12 w-auto object-contain"
             />
             <div className="flex flex-col">
-              <span className="text-sm text-muted-foreground leading-tight">ИНЖЕНЕРНЫЙ ЦЕНТР</span>
-              <span className="text-xl font-bold text-primary leading-tight">ПУМОРИ</span>
+              <span className="text-xs md:text-sm text-muted-foreground leading-tight">ИНЖЕНЕРНЫЙ ЦЕНТР</span>
+              <span className="text-lg md:text-xl font-bold text-primary leading-tight">ПУМОРИ</span>
             </div>
           </Link>
 

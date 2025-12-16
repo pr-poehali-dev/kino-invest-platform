@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="https://cdn.poehali.dev/files/IMG_0679.jpeg" 
+                src="https://cdn.poehali.dev/files/IMG_0686.jpeg" 
                 alt="Пумори" 
                 className="h-12 w-auto object-contain brightness-0 invert"
               />

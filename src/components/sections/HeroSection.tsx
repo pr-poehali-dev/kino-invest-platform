@@ -30,17 +30,17 @@ const HeroSection = () => {
         <div className="max-w-5xl">
           <div className="flex items-center gap-8 mb-8">
             <img 
-              src="https://cdn.poehali.dev/files/IMG_0679.jpeg" 
+              src="https://cdn.poehali.dev/files/IMG_0686.jpeg" 
               alt="Пумори" 
-              className="w-32 h-32 object-contain"
+              className="w-24 h-24 md:w-32 md:h-32 object-contain"
             />
             <div>
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#8B7355] to-[#A0826D] px-4 py-2 mb-4 font-bold text-sm text-white uppercase tracking-wider">
                 <div className="w-2 h-2 bg-white animate-pulse" />
                 РАБОТАЕМ С 1990 ГОДА
               </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#C0C5CE] via-[#A8B2C0] to-[#8B96A5] leading-[1.1] uppercase tracking-tight">
-                ИНЖЕНЕРНЫЙ ЦЕНТР<br />ПУМОРИ
+              <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#C0C5CE] via-[#A8B2C0] to-[#8B96A5] leading-tight uppercase tracking-tight">
+                ИНЖЕНЕРНЫЙ<br className="md:hidden" /> ЦЕНТР<br />ПУМОРИ
               </h1>
             </div>
           </div>
@@ -62,7 +62,7 @@ const HeroSection = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-[#C0C5CE]/20">
             <div className="space-y-1">
-              <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#C0C5CE] to-[#8B96A5]">2000+</div>
+              <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#C0C5CE] to-[#8B96A5]">12000+</div>
               <div className="text-sm text-[#8B96A5] uppercase tracking-wide">Реализованных проектов</div>
             </div>
             <div className="space-y-1">
