@@ -205,6 +205,9 @@ const Header = () => {
             <Link to="/service" className="block px-4 py-2 hover:bg-muted rounded-md">
               Сервис
             </Link>
+            <Link to="/production" className="block px-4 py-2 hover:bg-muted rounded-md">
+              Производство
+            </Link>
             <Link to="/catalog" className="block px-4 py-2 hover:bg-muted rounded-md">
               Каталог
             </Link>
