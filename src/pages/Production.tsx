@@ -136,7 +136,8 @@ const Production = () => {
               { name: 'Mitutoyo CNC', type: 'КИМ', count: '1 шт' },
               { name: 'Studer S33', type: 'Круглошлифовальный', count: '2 шт' },
               { name: 'TOS WD130', type: 'Горизонтально-расточной', count: '1 шт' },
-              { name: 'Makino V55', type: 'Вертикально-фрезерный', count: '3 шт' }
+              { name: 'Makino V55', type: 'Вертикально-фрезерный', count: '3 шт' },
+              { name: 'Стружкоуборщики', type: 'Автоматическая уборка стружки', count: '5 шт' }
             ].map((machine, idx) => (
               <div key={idx} className="bg-white border-2 border-gray-200 hover:border-[#3B82F6] p-6 transition-all hover:shadow-lg group">
                 <div className="flex items-start justify-between mb-3">
