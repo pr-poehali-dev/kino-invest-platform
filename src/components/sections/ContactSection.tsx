@@ -10,17 +10,14 @@ const ContactSection = () => {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#4A90A4] via-[#8B7355] to-[#4A90A4]" />
       
       <div 
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-10"
         style={{
-          backgroundImage: `repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 10px,
-            rgba(74, 144, 164, 0.1) 10px,
-            rgba(74, 144, 164, 0.1) 20px
-          )`
+          backgroundImage: `url('https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/6b202b67-bb5a-4ba0-b9ae-c92dd2119482.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
         }}
       />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0D1B2A]/90 via-[#1B263B]/95 to-[#0D1B2A]" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">

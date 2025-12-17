@@ -22,7 +22,7 @@ const CasesSection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {[
               {
                 industry: 'ЭНЕРГЕТИКА',
@@ -32,7 +32,8 @@ const CasesSection = () => {
                 result: 'Точность ±0.05 мм, Ra 1.6',
                 color: 'blue',
                 icon: 'Zap',
-                date: 'Дек 2025'
+                date: 'Дек 2025',
+                image: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/95ad6aba-d684-44bd-a0f5-cbcc8d4ec110.jpg'
               },
               {
                 industry: 'АВИАСТРОЕНИЕ',
@@ -42,7 +43,8 @@ const CasesSection = () => {
                 result: 'Стабильность ±0.005 мм',
                 color: 'bronze',
                 icon: 'Plane',
-                date: 'Дек 2025'
+                date: 'Дек 2025',
+                image: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/0aa55e77-b8f2-40dc-b75a-1081a398a032.jpg'
               },
               {
                 industry: 'МАШИНОСТРОЕНИЕ (ГОЗ)',
@@ -52,7 +54,8 @@ const CasesSection = () => {
                 result: 'Импортозамещение 100%',
                 color: 'blue',
                 icon: 'Shield',
-                date: 'Ноя 2025'
+                date: 'Ноя 2025',
+                image: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/f2cc32f5-e230-46b9-a69b-93a500963de1.jpg'
               },
               {
                 industry: 'ИННОВАЦИИ',
@@ -62,7 +65,8 @@ const CasesSection = () => {
                 result: 'Точность 1 мкм на Ø',
                 color: 'bronze',
                 icon: 'Cpu',
-                date: 'ИННОПРОМ 2024'
+                date: 'ИННОПРОМ 2024',
+                image: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/92c21235-149b-4b25-a677-fb4d7e7d9137.jpg'
               },
               {
                 industry: 'ЭНЕРГЕТИКА',
@@ -72,7 +76,8 @@ const CasesSection = () => {
                 result: 'Точность ±0.003 мм',
                 color: 'blue',
                 icon: 'Zap',
-                date: '2024'
+                date: '2024',
+                image: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/95ad6aba-d684-44bd-a0f5-cbcc8d4ec110.jpg'
               },
               {
                 industry: 'АВТОМОБИЛЕСТРОЕНИЕ',
@@ -82,7 +87,8 @@ const CasesSection = () => {
                 result: 'Брак -85%, ROI 14 мес',
                 color: 'bronze',
                 icon: 'Truck',
-                date: '2024'
+                date: '2024',
+                image: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/27702f11-390a-4c2b-b0b9-4c9f040c972a.jpg'
               },
               {
                 industry: 'МЕТАЛЛУРГИЯ',
@@ -92,7 +98,8 @@ const CasesSection = () => {
                 result: 'Импортозамещение 100%',
                 color: 'blue',
                 icon: 'Factory',
-                date: '2024'
+                date: '2024',
+                image: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/f2cc32f5-e230-46b9-a69b-93a500963de1.jpg'
               },
               {
                 industry: 'МЕТРОЛОГИЯ',
@@ -102,19 +109,30 @@ const CasesSection = () => {
                 result: 'Аналогов в мире нет',
                 color: 'bronze',
                 icon: 'Ruler',
-                date: 'ИННОПРОМ 2024'
+                date: 'ИННОПРОМ 2024',
+                image: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/92c21235-149b-4b25-a677-fb4d7e7d9137.jpg'
               }
             ].map((project, idx) => (
-              <div key={idx} className={`bg-white border-l-4 ${project.color === 'blue' ? 'border-[#1E3A8A]' : 'border-[#CD7F32]'} hover:shadow-xl transition-all group`}>
-                <div className={`p-6 bg-gradient-to-br ${project.color === 'blue' ? 'from-[#1E3A8A] to-[#3B82F6]' : 'from-[#CD7F32] to-[#D4822B]'} text-white`}>
-                  <div className="flex items-start justify-between mb-3">
-                    <div className="text-xs font-bold uppercase tracking-wider opacity-80">{project.industry}</div>
-                    <Icon name={project.icon as any} size={24} className="opacity-50" />
+              <div key={idx} className={`bg-white border-l-4 ${project.color === 'blue' ? 'border-[#1E3A8A]' : 'border-[#CD7F32]'} hover:shadow-xl transition-all group overflow-hidden`}>
+                <div className="relative h-40 overflow-hidden">
+                  <img 
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${project.color === 'blue' ? 'from-[#1E3A8A]' : 'from-[#CD7F32]'} to-transparent opacity-80`} />
+                  <div className="absolute top-4 left-4 right-4">
+                    <div className="flex items-start justify-between mb-2">
+                      <div className="text-xs font-bold text-white uppercase tracking-wider bg-black/30 px-2 py-1">{project.industry}</div>
+                      <Icon name={project.icon as any} size={24} className="text-white opacity-70" />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-black uppercase">{project.title}</h3>
-                  {project.date && (
-                    <div className="text-xs opacity-70 mt-2">📅 {project.date}</div>
-                  )}
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-lg font-black text-white uppercase leading-tight">{project.title}</h3>
+                    {project.date && (
+                      <div className="text-xs text-white/80 mt-1">📅 {project.date}</div>
+                    )}
+                  </div>
                 </div>
                 <div className="p-6">
                   <p className="text-sm font-bold text-[#1B263B] mb-3">{project.description}</p>
