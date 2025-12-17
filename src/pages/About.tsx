@@ -23,7 +23,7 @@ const About = () => {
             </h1>
             <div className="w-20 h-1 bg-gradient-to-r from-[#CD7F32] to-[#D4822B] mb-6" />
             <p className="text-xl text-[#A8B2C0] leading-relaxed">
-              Более 30 лет опыта в области технологий металлообработки. Лидер российского рынка инженерных решений для промышленности.
+              Российский производитель и эксперт в области инжиниринга для металлообработки. Партнёр ведущих мировых производителей оборудования и инструмента. Предприятия и представительства корпорации успешно функционируют во всех основных индустриальных регионах Российской Федерации.
             </p>
           </div>
         </div>
@@ -60,8 +60,11 @@ const About = () => {
 
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-black mb-8 uppercase text-[#1B263B]">
-              Направления деятельности
+              Комплексные решения полного цикла
             </h2>
+            <p className="text-lg text-[#4A5568] mb-8">
+              Корпорация «Пумори» предлагает полный комплекс инженерных услуг для металлообрабатывающих производств — от проектирования и поставки оборудования до технологического сопровождения и обучения персонала.
+            </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-16">
               <div className="border-l-4 border-[#CD7F32] pl-6 py-4 bg-[#0D1B2A]/5">
@@ -74,19 +77,19 @@ const About = () => {
                 <ul className="space-y-2 text-[#4A5568]">
                   <li className="flex items-start gap-2">
                     <span className="text-[#CD7F32] mt-1">▸</span>
-                    Проектный инжиниринг
+                    Проектирование производств под ключ
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#CD7F32] mt-1">▸</span>
-                    Технологические решения
+                    Передовые технологии металлообработки
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#CD7F32] mt-1">▸</span>
-                    Цифровизация производства
+                    Промышленная автоматизация
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#CD7F32] mt-1">▸</span>
-                    Автоматизация и роботизация
+                    Учебные и демонстрационные центры
                   </li>
                 </ul>
               </div>
@@ -101,19 +104,19 @@ const About = () => {
                 <ul className="space-y-2 text-[#4A5568]">
                   <li className="flex items-start gap-2">
                     <span className="text-[#4A90A4] mt-1">▸</span>
-                    Оборудование для металлообработки
+                    Металлорежущие станки
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#4A90A4] mt-1">▸</span>
-                    Заготовительное производство
+                    Собственные лопатки для турбин
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#4A90A4] mt-1">▸</span>
-                    Сервисное обслуживание
+                    Лизинговое финансирование
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#4A90A4] mt-1">▸</span>
-                    Ремонт станков
+                    Сервис и модернизация
                   </li>
                 </ul>
               </div>
@@ -128,15 +131,15 @@ const About = () => {
                 <ul className="space-y-2 text-[#4A5568]">
                   <li className="flex items-start gap-2">
                     <span className="text-[#8B7355] mt-1">▸</span>
-                    Металлорежущий инструмент
+                    Режущий инструмент от мировых брендов
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#8B7355] mt-1">▸</span>
-                    Вспомогательный инструмент
+                    Вспомогательная оснастка собственного производства
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#8B7355] mt-1">▸</span>
-                    Системы инструментообеспечения
+                    Системы управления инструментом
                   </li>
                 </ul>
               </div>
@@ -151,18 +154,31 @@ const About = () => {
                 <ul className="space-y-2 text-[#4A5568]">
                   <li className="flex items-start gap-2">
                     <span className="text-[#FF6B00] mt-1">▸</span>
-                    Аутсорсинг металлообработки
+                    Аутсорсинг металлообработки любой сложности
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#FF6B00] mt-1">▸</span>
-                    Изготовление сложных деталей
+                    Собственные производственные мощности
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#FF6B00] mt-1">▸</span>
-                    Кооперация с производителями
+                    Работа с крупными, средними и малыми предприятиями
                   </li>
                 </ul>
               </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#0D1B2A] to-[#1B263B] p-8 md:p-12 text-white mb-16 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#CD7F32] opacity-10 rounded-full -mr-16 -mt-16" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#4A90A4] opacity-10 rounded-full -ml-24 -mb-24" />
+              
+              <h2 className="text-3xl font-black mb-6 uppercase">Принцип работы: «Обещал — Сделал»</h2>
+              <p className="text-lg text-[#A8B2C0] leading-relaxed mb-6">
+                Основа нашей философии — это доверие, уважение и выполнение обещаний. Мы развиваем персонал, ставим клиента на первое место и внедряем инновации как принцип работы.
+              </p>
+              <p className="text-lg text-[#A8B2C0] leading-relaxed">
+                Наш успех — это успех наших клиентов. Мы не просто поставляем оборудование, мы создаём долгосрочные партнёрские отношения с машиностроительными предприятиями России, стран СНГ (Белоруссии, Казахстана) и международных рынков.
+              </p>
             </div>
 
             <div className="bg-gradient-to-br from-[#0D1B2A] to-[#1B263B] p-8 md:p-12 text-white mb-16 relative overflow-hidden">
@@ -188,6 +204,55 @@ const About = () => {
                   <h3 className="font-bold mb-2 uppercase text-sm">Турбинные лопатки</h3>
                   <p className="text-sm text-[#A8B2C0]">Лопатки паровых и газовых турбин</p>
                 </div>
+              </div>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-black mb-8 uppercase text-[#1B263B] text-center">
+              Корпоративные Ценности
+            </h2>
+            <p className="text-center text-[#4A5568] mb-12 max-w-3xl mx-auto">
+              Более 30 лет опыта генерального директора Александра Ивановича Баландина в машиностроении легли в основу культуры компании.
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              <div className="bg-white border border-[#E2E8F0] p-6 hover:border-[#CD7F32] transition-colors">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#CD7F32] to-[#D4822B] flex items-center justify-center mb-4">
+                  <Icon name="Target" size={24} className="text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Клиент на первом месте</h3>
+                <p className="text-[#4A5568]">
+                  Полный цикл инжиниринговых услуг и техническое сопровождение на всех этапах
+                </p>
+              </div>
+
+              <div className="bg-white border border-[#E2E8F0] p-6 hover:border-[#4A90A4] transition-colors">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#4A90A4] to-[#6BC1E0] flex items-center justify-center mb-4">
+                  <Icon name="Heart" size={24} className="text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Уважение и доверие</h3>
+                <p className="text-[#4A5568]">
+                  Долгосрочные партнёрские отношения как основа коммуникации с клиентами
+                </p>
+              </div>
+
+              <div className="bg-white border border-[#E2E8F0] p-6 hover:border-[#8B7355] transition-colors">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#8B7355] to-[#A89080] flex items-center justify-center mb-4">
+                  <Icon name="Users" size={24} className="text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Развитие персонала</h3>
+                <p className="text-[#4A5568]">
+                  Инвестиции в обучение и развитие команды профессионалов с экспертизой в металлообработке
+                </p>
+              </div>
+
+              <div className="bg-white border border-[#E2E8F0] p-6 hover:border-[#FF6B00] transition-colors">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#FF6B00] to-[#FF8534] flex items-center justify-center mb-4">
+                  <Icon name="Lightbulb" size={24} className="text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Инновации как принцип</h3>
+                <p className="text-[#4A5568]">
+                  Внедрение передовых технологий металлообработки и развитие собственных производственных решений
+                </p>
               </div>
             </div>
 
