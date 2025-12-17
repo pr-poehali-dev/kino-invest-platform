@@ -116,7 +116,7 @@ const TasksSection = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
-            <div className="relative bg-white/5 backdrop-blur-sm border-2 border-[#4A90A4] p-8 group hover:bg-[#4A90A4]/20 hover:shadow-[0_0_30px_rgba(74,144,164,0.5)] transition-all">
+            <Link to="/engineering" className="relative bg-white/5 backdrop-blur-sm border-2 border-[#4A90A4] p-8 group hover:bg-[#4A90A4]/20 hover:shadow-[0_0_30px_rgba(74,144,164,0.5)] transition-all cursor-pointer">
               <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#4A90A4] group-hover:border-[#6BC1E0]" />
               <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#4A90A4] group-hover:border-[#6BC1E0]" />
               
@@ -137,9 +137,9 @@ const TasksSection = () => {
                   <span>Техдокументация</span>
                 </li>
               </ul>
-            </div>
+            </Link>
 
-            <div className="relative bg-white/5 backdrop-blur-sm border-2 border-[#8B7355] p-8 group hover:bg-[#8B7355]/20 transition-all">
+            <Link to="/tools" className="relative bg-white/5 backdrop-blur-sm border-2 border-[#8B7355] p-8 group hover:bg-[#8B7355]/20 transition-all cursor-pointer">
               <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#8B7355]" />
               <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#8B7355]" />
               
@@ -160,9 +160,9 @@ const TasksSection = () => {
                   <span>Оснастка</span>
                 </li>
               </ul>
-            </div>
+            </Link>
 
-            <div className="relative bg-white/5 backdrop-blur-sm border-2 border-[#4A90A4] p-8 group hover:bg-[#4A90A4]/20 hover:shadow-[0_0_30px_rgba(74,144,164,0.5)] transition-all">
+            <Link to="/production" className="relative bg-white/5 backdrop-blur-sm border-2 border-[#4A90A4] p-8 group hover:bg-[#4A90A4]/20 hover:shadow-[0_0_30px_rgba(74,144,164,0.5)] transition-all cursor-pointer">
               <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#4A90A4] group-hover:border-[#6BC1E0]" />
               <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#4A90A4] group-hover:border-[#6BC1E0]" />
               
@@ -183,9 +183,9 @@ const TasksSection = () => {
                   <span>Аутсорсинг</span>
                 </li>
               </ul>
-            </div>
+            </Link>
 
-            <div className="relative bg-white/5 backdrop-blur-sm border-2 border-[#FF6B00] p-8 group hover:bg-[#FF6B00]/20 hover:shadow-[0_0_30px_rgba(255,107,0,0.5)] transition-all">
+            <Link to="/service" className="relative bg-white/5 backdrop-blur-sm border-2 border-[#FF6B00] p-8 group hover:bg-[#FF6B00]/20 hover:shadow-[0_0_30px_rgba(255,107,0,0.5)] transition-all cursor-pointer">
               <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#FF6B00] group-hover:border-[#FF8C00]" />
               <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#FF6B00] group-hover:border-[#FF8C00]" />
               
@@ -206,7 +206,7 @@ const TasksSection = () => {
                   <span>Поставка запчастей</span>
                 </li>
               </ul>
-            </div>
+            </Link>
           </div>
 
           <div className="text-center">
