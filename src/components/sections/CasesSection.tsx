@@ -174,12 +174,16 @@ const CasesSection = () => {
             <div className="w-20 h-1 bg-[#8B7355] mx-auto" />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
             {[
               { name: 'URALVAGONZAVOD', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/118dbac3-f09e-4f7c-8db9-690c1f97e3e8.jpg' },
               { name: 'VSMPO-AVISMA', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/66a50c57-1bc4-429a-8fbf-ac58ae487fdf.jpg' },
               { name: 'KAMAZ', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/5bf1a787-4343-4488-80fa-9fdf0855be6e.jpg' },
               { name: 'AVTOVAZ', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/33693780-787e-41c5-b304-c9cb97212d47.jpg' },
+              { name: 'ЧТПЗ', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/68bbd5dc-4559-4cc5-b954-11faeba7c23a.jpg' },
+              { name: 'УРАЛЬСКИЙ ТУРБИННЫЙ ЗАВОД', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/34b8af74-1026-4356-a51c-bce0a3485d8f.jpg' },
+              { name: 'УЗГА', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/37b2ef34-cf50-484e-bab2-bc94ee301c27.jpg' },
+              { name: 'ЛИПЕЦКИЙ МЕХАНИЧЕСКИЙ ЗАВОД', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/ed40f3d8-279d-410e-a086-35033cbe0d28.jpg' },
               { name: 'PETROZAVODSK MASH', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/6d89a43a-fe99-497f-a84a-361b281af63f.jpg' },
               { name: 'KRASMASH', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/18ae446b-331f-446e-a7c0-7b42ef7aa3b4.jpg' },
               { name: 'NEVSKY ZAVOD', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/38664c40-0409-414c-aad0-95e6493ed57f.jpg' },
