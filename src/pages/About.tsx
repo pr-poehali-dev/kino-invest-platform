@@ -256,6 +256,99 @@ const About = () => {
               </div>
             </div>
 
+            <div className="bg-gradient-to-br from-[#0D1B2A] to-[#1B263B] p-8 md:p-12 text-white mb-16 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#CD7F32] opacity-5 rounded-full -mr-32 -mt-32" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#4A90A4] opacity-5 rounded-full -ml-24 -mb-24" />
+              
+              <h2 className="text-3xl md:text-4xl font-black mb-12 uppercase text-center relative z-10">
+                История Корпорации
+              </h2>
+              
+              <div className="relative z-10 max-w-4xl mx-auto">
+                <div className="space-y-8">
+                  <div className="flex gap-6 items-start">
+                    <div className="flex-shrink-0">
+                      <div className="w-24 h-24 bg-gradient-to-br from-[#CD7F32] to-[#D4822B] flex items-center justify-center font-black text-2xl">
+                        1990
+                      </div>
+                    </div>
+                    <div className="flex-1 pt-2">
+                      <h3 className="text-xl font-black mb-2 text-[#CD7F32]">ОСНОВАНИЕ КОМПАНИИ</h3>
+                      <p className="text-[#A8B2C0] leading-relaxed">
+                        Создание Корпорации «Пумори» под руководством Александра Ивановича Баландина. Начало деятельности в области поставки металлорежущего инструмента для машиностроительных предприятий Урала.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-6 items-start">
+                    <div className="flex-shrink-0">
+                      <div className="w-24 h-24 bg-gradient-to-br from-[#4A90A4] to-[#6BC1E0] flex items-center justify-center font-black text-xl text-center leading-tight">
+                        1995-<br/>2000
+                      </div>
+                    </div>
+                    <div className="flex-1 pt-2">
+                      <h3 className="text-xl font-black mb-2 text-[#6BC1E0]">РАСШИРЕНИЕ ПОРТФОЛИО</h3>
+                      <p className="text-[#A8B2C0] leading-relaxed">
+                        Развитие направления по поставке металлообрабатывающего оборудования. Установление партнёрских отношений с ведущими мировыми производителями станков с ЧПУ и режущего инструмента.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-6 items-start">
+                    <div className="flex-shrink-0">
+                      <div className="w-24 h-24 bg-gradient-to-br from-[#8B7355] to-[#A89080] flex items-center justify-center font-black text-xl text-center leading-tight">
+                        2000-<br/>2010
+                      </div>
+                    </div>
+                    <div className="flex-1 pt-2">
+                      <h3 className="text-xl font-black mb-2 text-[#A89080]">РАЗВИТИЕ СЕРВИСА И ИНЖИНИРИНГА</h3>
+                      <p className="text-[#A8B2C0] leading-relaxed">
+                        Запуск собственных сервисных центров. Создание инженерного подразделения для проектирования производств под ключ. Открытие представительств в крупнейших промышленных регионах России.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-6 items-start">
+                    <div className="flex-shrink-0">
+                      <div className="w-24 h-24 bg-gradient-to-br from-[#FF6B00] to-[#FF8534] flex items-center justify-center font-black text-xl text-center leading-tight">
+                        2010-<br/>2020
+                      </div>
+                    </div>
+                    <div className="flex-1 pt-2">
+                      <h3 className="text-xl font-black mb-2 text-[#FF8534]">СОБСТВЕННОЕ ПРОИЗВОДСТВО</h3>
+                      <p className="text-[#A8B2C0] leading-relaxed">
+                        Открытие собственных производственных мощностей: выпуск вспомогательного инструмента PUMORI, токарных центров с ЧПУ и турбинных лопаток. Создание лизинговой компании для финансирования поставок.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-6 items-start">
+                    <div className="flex-shrink-0">
+                      <div className="w-24 h-24 bg-gradient-to-br from-[#CD7F32] to-[#D4822B] flex items-center justify-center font-black text-xl relative">
+                        <div className="absolute inset-0 border-4 border-white/20 animate-pulse" />
+                        2020+
+                      </div>
+                    </div>
+                    <div className="flex-1 pt-2">
+                      <h3 className="text-xl font-black mb-2 text-[#CD7F32]">ЦИФРОВИЗАЦИЯ И ИННОВАЦИИ</h3>
+                      <p className="text-[#A8B2C0] leading-relaxed">
+                        Внедрение цифровых технологий управления производством. Развитие направления промышленной автоматизации и роботизации. Создание учебных и демонстрационных центров для обучения персонала клиентов. Выход на международные рынки.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-12 pt-8 border-t border-white/20 text-center">
+                  <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3">
+                    <Icon name="TrendingUp" size={24} className="text-[#CD7F32]" />
+                    <span className="text-lg font-bold">
+                      30+ лет непрерывного развития и лидерства в металлообработке
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="bg-[#F7FAFC] p-8 md:p-12 border-l-4 border-[#CD7F32]">
               <h2 className="text-3xl font-black mb-6 uppercase text-[#1B263B]">
                 География присутствия
