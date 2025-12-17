@@ -445,21 +445,35 @@ const About = () => {
 
       <section className="py-16 bg-gradient-to-br from-[#0D1B2A] via-[#1B263B] to-[#0D1B2A] text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-black mb-6 uppercase">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-black mb-12 uppercase text-center">
               Руководство
             </h2>
             <div className="bg-white/5 backdrop-blur-sm border-2 border-white/20 p-8 md:p-12">
-              <div className="w-24 h-24 bg-gradient-to-br from-[#CD7F32] to-[#D4822B] rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Icon name="User" size={48} className="text-white" />
+              <div className="grid md:grid-cols-[300px,1fr] gap-8 items-center">
+                <div className="relative">
+                  <div className="relative overflow-hidden rounded-lg shadow-2xl">
+                    <img 
+                      src="https://cdn.poehali.dev/files/IMG_0687.jpeg"
+                      alt="Баландин Александр Иванович"
+                      className="w-full h-auto object-cover"
+                    />
+                    <div className="absolute inset-0 ring-4 ring-[#CD7F32]/30 ring-inset" />
+                  </div>
+                </div>
+                <div className="text-center md:text-left">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2">Баландин Александр Иванович</h3>
+                  <div className="text-[#CD7F32] font-semibold mb-6 uppercase text-sm tracking-wider">
+                    Генеральный директор
+                  </div>
+                  <p className="text-[#C0C5CE] leading-relaxed text-lg mb-4">
+                    Более 30 лет опыта работы в машиностроении. Под его руководством корпорация «Пумори» стала одним из ведущих поставщиков технологических решений для металлообработки в России.
+                  </p>
+                  <p className="text-[#A8B2C0] leading-relaxed">
+                    Основатель компании, который превратил небольшую торговую организацию в крупную корпорацию полного цикла с собственными производственными мощностями и представительствами во всех индустриальных регионах РФ.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-2">Баландин Александр Иванович</h3>
-              <div className="text-[#CD7F32] font-semibold mb-4 uppercase text-sm tracking-wider">
-                Генеральный директор
-              </div>
-              <p className="text-[#A8B2C0] leading-relaxed">
-                Более 30 лет опыта работы в машиностроении. Под его руководством корпорация «Пумори» стала одним из ведущих поставщиков технологических решений для металлообработки в России.
-              </p>
             </div>
           </div>
         </div>
