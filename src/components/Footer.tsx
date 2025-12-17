@@ -11,7 +11,7 @@ const Footer = () => {
               <img 
                 src="https://cdn.poehali.dev/files/IMG_0686.jpeg" 
                 alt="Пумори" 
-                className="h-12 w-auto object-contain brightness-0 invert"
+                className="h-12 w-auto object-contain"
               />
               <div className="flex flex-col">
                 <span className="text-sm text-primary-foreground/70">ИНЖЕНЕРНЫЙ ЦЕНТР</span>
