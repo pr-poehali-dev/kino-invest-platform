@@ -175,12 +175,25 @@ const CasesSection = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
-            {['URALVAGONZAVOD', 'VSMPO-AVISMA', 'KAMAZ', 'AVTOVAZ', 'PETROZAVODSK MASH', 'KRASMASH', 'NEVSKY ZAVOD', 'RUSTECHNO'].map((client) => (
+            {[
+              { name: 'URALVAGONZAVOD', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/118dbac3-f09e-4f7c-8db9-690c1f97e3e8.jpg' },
+              { name: 'VSMPO-AVISMA', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/66a50c57-1bc4-429a-8fbf-ac58ae487fdf.jpg' },
+              { name: 'KAMAZ', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/5bf1a787-4343-4488-80fa-9fdf0855be6e.jpg' },
+              { name: 'AVTOVAZ', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/33693780-787e-41c5-b304-c9cb97212d47.jpg' },
+              { name: 'PETROZAVODSK MASH', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/6d89a43a-fe99-497f-a84a-361b281af63f.jpg' },
+              { name: 'KRASMASH', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/18ae446b-331f-446e-a7c0-7b42ef7aa3b4.jpg' },
+              { name: 'NEVSKY ZAVOD', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/38664c40-0409-414c-aad0-95e6493ed57f.jpg' },
+              { name: 'RUSTECHNO', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/b3e46a98-68fc-4a32-aec3-423848ef4375.jpg' }
+            ].map((client) => (
               <div
-                key={client}
-                className="aspect-video bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-white/10 transition-all hover:scale-105"
+                key={client.name}
+                className="aspect-video bg-white/95 backdrop-blur-sm border border-white/20 flex items-center justify-center p-4 hover:bg-white transition-all hover:scale-105 hover:shadow-xl group"
               >
-                <span className="text-xs font-mono text-white/80 text-center px-4">{client}</span>
+                <img 
+                  src={client.logo} 
+                  alt={client.name}
+                  className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
               </div>
             ))}
           </div>
