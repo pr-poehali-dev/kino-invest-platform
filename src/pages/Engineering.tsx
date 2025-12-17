@@ -68,13 +68,13 @@ const Engineering = () => {
             </div>
 
             <div className="relative">
-              <div className="relative shine-effect">
-                <div className="aspect-video bg-gradient-to-br from-[#1E3A8A] to-[#3B82F6] rounded-lg flex items-center justify-center">
-                  <Icon name="Factory" size={200} className="text-white/20" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Icon name="HardHat" size={100} className="text-white/80" />
-                  </div>
-                </div>
+              <div className="relative shine-effect overflow-hidden rounded-lg">
+                <img 
+                  src="https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/252f6d8c-44a7-4d8c-abf6-06882b0f28bd.jpg"
+                  alt="Инжиниринг и проектирование"
+                  className="w-full h-full object-cover aspect-video"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1E3A8A]/60 to-transparent" />
               </div>
             </div>
           </div>

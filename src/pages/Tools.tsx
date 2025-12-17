@@ -54,10 +54,13 @@ const Tools = () => {
                 </Button>
               </div>
             </div>
-            <div className="relative shine-effect">
-              <div className="aspect-video bg-gradient-to-br from-[#CD7F32] to-[#D4822B] rounded-lg flex items-center justify-center">
-                <Icon name="Wrench" size={150} className="text-white/80" />
-              </div>
+            <div className="relative shine-effect overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/2ce27730-7026-4f8c-9f3f-8829cc4f41db.jpg"
+                alt="Инструмент и оснастка"
+                className="w-full h-full object-cover aspect-video"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#CD7F32]/60 to-transparent" />
             </div>
           </div>
         </div>

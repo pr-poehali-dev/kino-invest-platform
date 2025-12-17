@@ -61,10 +61,13 @@ const Service = () => {
                 </Button>
               </div>
             </div>
-            <div className="relative shine-effect">
-              <div className="aspect-video bg-gradient-to-br from-[#1E3A8A] to-[#3B82F6] rounded-lg flex items-center justify-center">
-                <Icon name="Settings" size={150} className="text-white/80" />
-              </div>
+            <div className="relative shine-effect overflow-hidden rounded-lg">
+              <img 
+                src="https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/d7440e05-db88-4d6c-b060-45a572306403.jpg"
+                alt="Сервис и обслуживание"
+                className="w-full h-full object-cover aspect-video"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1E3A8A]/60 to-transparent" />
             </div>
           </div>
         </div>
