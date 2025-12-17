@@ -19,72 +19,112 @@ const TasksSection = () => {
             <div className="w-20 h-1 bg-[#CD7F32] mx-auto" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             <Link
               to="/engineering"
-              className="group relative bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-[#1B263B] p-8 transition-all duration-300 hover:shadow-2xl"
+              className="group relative overflow-hidden bg-white border-2 border-gray-200 hover:border-[#1B263B] transition-all duration-300 hover:shadow-2xl"
             >
-              <div className="absolute top-0 left-0 w-1 h-full bg-[#1B263B] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top" />
-              <div className="text-6xl mb-4">🏭</div>
-              <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase leading-tight">
-                Построить производство
-              </h3>
-              <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                Инжиниринг, проектирование, техническое перевооружение
-              </p>
-              <div className="flex items-center text-[#1B263B] font-bold text-sm uppercase">
-                Подробнее <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
+              <div className="absolute top-0 left-0 w-1 h-full bg-[#1B263B] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top z-10" />
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/f2cc32f5-e230-46b9-a69b-93a500963de1.jpg"
+                  alt="Построить производство"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1B263B]/80 to-transparent" />
+                <div className="absolute bottom-4 left-4 text-5xl">🏭</div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase leading-tight">
+                  Построить производство
+                </h3>
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Инжиниринг, проектирование, техническое перевооружение
+                </p>
+                <div className="flex items-center text-[#1B263B] font-bold text-sm uppercase">
+                  Подробнее <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
+                </div>
               </div>
             </Link>
 
             <Link
               to="/tools"
-              className="group relative bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-[#CD7F32] p-8 transition-all duration-300 hover:shadow-2xl"
+              className="group relative overflow-hidden bg-white border-2 border-gray-200 hover:border-[#CD7F32] transition-all duration-300 hover:shadow-2xl"
             >
-              <div className="absolute top-0 left-0 w-1 h-full bg-[#CD7F32] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top" />
-              <div className="text-6xl mb-4">🔧</div>
-              <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase leading-tight">
-                Оснастить инструментом
-              </h3>
-              <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                3000+ позиций, собственное производство режущего инструмента
-              </p>
-              <div className="flex items-center text-[#CD7F32] font-bold text-sm uppercase">
-                Подробнее <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
+              <div className="absolute top-0 left-0 w-1 h-full bg-[#CD7F32] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top z-10" />
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/92c21235-149b-4b25-a677-fb4d7e7d9137.jpg"
+                  alt="Оснастить инструментом"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#CD7F32]/80 to-transparent" />
+                <div className="absolute bottom-4 left-4 text-5xl">🔧</div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase leading-tight">
+                  Оснастить инструментом
+                </h3>
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                  3000+ позиций, собственное производство режущего инструмента
+                </p>
+                <div className="flex items-center text-[#CD7F32] font-bold text-sm uppercase">
+                  Подробнее <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
+                </div>
               </div>
             </Link>
 
             <Link
               to="/service"
-              className="group relative bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-[#1B263B] p-8 transition-all duration-300 hover:shadow-2xl"
+              className="group relative overflow-hidden bg-white border-2 border-gray-200 hover:border-[#1B263B] transition-all duration-300 hover:shadow-2xl"
             >
-              <div className="absolute top-0 left-0 w-1 h-full bg-[#1B263B] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top" />
-              <div className="text-6xl mb-4">⚙️</div>
-              <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase leading-tight">
-                Ремонт и обслуживание
-              </h3>
-              <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                Экстренный ремонт 24/7, пуско-наладка, техническое обслуживание
-              </p>
-              <div className="flex items-center text-[#1B263B] font-bold text-sm uppercase">
-                Подробнее <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
+              <div className="absolute top-0 left-0 w-1 h-full bg-[#1B263B] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top z-10" />
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/0e21128b-89c6-464a-a137-79021c0523e5.jpg"
+                  alt="Ремонт и обслуживание"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1B263B]/80 to-transparent" />
+                <div className="absolute bottom-4 left-4 text-5xl">⚙️</div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase leading-tight">
+                  Ремонт и обслуживание
+                </h3>
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Экстренный ремонт 24/7, пуско-наладка, техническое обслуживание
+                </p>
+                <div className="flex items-center text-[#1B263B] font-bold text-sm uppercase">
+                  Подробнее <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
+                </div>
               </div>
             </Link>
 
             <Link
               to="/production"
-              className="group relative bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-[#CD7F32] p-8 transition-all duration-300 hover:shadow-2xl"
+              className="group relative overflow-hidden bg-white border-2 border-gray-200 hover:border-[#CD7F32] transition-all duration-300 hover:shadow-2xl"
             >
-              <div className="absolute top-0 left-0 w-1 h-full bg-[#CD7F32] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top" />
-              <div className="text-6xl mb-4">⚡</div>
-              <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase leading-tight">
-                Изготовить детали
-              </h3>
-              <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                Механообработка на заказ, формообразующая оснастка
-              </p>
-              <div className="flex items-center text-[#CD7F32] font-bold text-sm uppercase">
-                Подробнее <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
+              <div className="absolute top-0 left-0 w-1 h-full bg-[#CD7F32] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top z-10" />
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/27702f11-390a-4c2b-b0b9-4c9f040c972a.jpg"
+                  alt="Изготовить детали"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#CD7F32]/80 to-transparent" />
+                <div className="absolute bottom-4 left-4 text-5xl">⚡</div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-black text-[#1B263B] mb-3 uppercase leading-tight">
+                  Изготовить детали
+                </h3>
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Механообработка на заказ, формообразующая оснастка
+                </p>
+                <div className="flex items-center text-[#CD7F32] font-bold text-sm uppercase">
+                  Подробнее <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
+                </div>
               </div>
             </Link>
           </div>
