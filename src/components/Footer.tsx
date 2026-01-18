@@ -30,13 +30,18 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <button className="w-8 h-8 rounded-full border border-primary-foreground/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+              <button 
+                className="w-8 h-8 rounded-full border border-primary-foreground/30 flex items-center justify-center hover:bg-white/10 transition-colors"
+                onClick={() => window.open('https://rutube.ru/channel/38218998/', '_blank')}
+                aria-label="RuTube"
+              >
                 <Icon name="Youtube" size={16} />
               </button>
-              <button className="w-8 h-8 rounded-full border border-primary-foreground/30 flex items-center justify-center hover:bg-white/10 transition-colors">
-                <Icon name="MessageCircle" size={16} />
-              </button>
-              <button className="w-8 h-8 rounded-full border border-primary-foreground/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+              <button 
+                className="w-8 h-8 rounded-full border border-primary-foreground/30 flex items-center justify-center hover:bg-white/10 transition-colors"
+                onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+                aria-label="Telegram"
+              >
                 <Icon name="Send" size={16} />
               </button>
             </div>

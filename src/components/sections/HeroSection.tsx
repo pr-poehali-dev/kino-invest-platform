@@ -52,7 +52,12 @@ const HeroSection = () => {
             >
               Получить консультацию
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white hover:border-[#2563EB] font-bold text-lg px-8 py-6 uppercase transition-all duration-300">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white hover:border-[#2563EB] font-bold text-lg px-8 py-6 uppercase transition-all duration-300"
+              onClick={() => window.location.href = '/cases'}
+            >
               Наши проекты
             </Button>
           </div>

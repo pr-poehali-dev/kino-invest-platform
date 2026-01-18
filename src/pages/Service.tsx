@@ -54,10 +54,24 @@ const Service = () => {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white font-black text-lg uppercase shadow-lg">
+                <Button 
+                  size="lg" 
+                  className="bg-red-600 hover:bg-red-700 text-white font-black text-lg uppercase shadow-lg"
+                  onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+                >
                   ВЫЗВАТЬ ИНЖЕНЕРА
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white"
+                  onClick={() => {
+                    const calculator = document.getElementById('calculator');
+                    if (calculator) {
+                      calculator.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                >
                   Рассчитать стоимость
                 </Button>
               </div>
@@ -74,7 +88,7 @@ const Service = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section id="calculator" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block text-sm font-bold text-[#CD7F32] uppercase tracking-wider mb-4">
@@ -173,7 +187,11 @@ const Service = () => {
                 <div>• Инженеры: {engineers}</div>
                 {urgent && <div>• Срочность: +50%</div>}
               </div>
-              <Button size="lg" className="bg-white text-[#1E3A8A] hover:bg-gray-100 font-black uppercase w-full">
+              <Button 
+                size="lg" 
+                className="bg-white text-[#1E3A8A] hover:bg-gray-100 font-black uppercase w-full"
+                onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+              >
                 ЗАКАЗАТЬ ВЫЕЗД
               </Button>
             </div>

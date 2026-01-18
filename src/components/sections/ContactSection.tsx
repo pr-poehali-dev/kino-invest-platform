@@ -53,7 +53,10 @@ const ContactSection = () => {
                 +7 (343) 287-30-58
               </a>
               <div className="text-sm text-gray-400 mb-4">Пн-Пт: 9:00-18:00</div>
-              <Button className="w-full bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black uppercase shadow-lg hover:shadow-xl transition-all">
+              <Button 
+                className="w-full bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black uppercase shadow-lg hover:shadow-xl transition-all"
+                onClick={() => window.location.href = 'tel:+73432873058'}
+              >
                 Позвонить
               </Button>
             </div>

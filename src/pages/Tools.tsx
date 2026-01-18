@@ -46,10 +46,19 @@ const Tools = () => {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black uppercase">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black uppercase"
+                  onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+                >
                   Подобрать инструмент
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white"
+                  onClick={() => window.open('https://uzis.su/www/files/katalog-pumori-2024.pdf', '_blank')}
+                >
                   <Icon name="Download" size={20} className="mr-2" />
                   Скачать каталог
                 </Button>
@@ -118,7 +127,11 @@ const Tools = () => {
             <p className="text-xl text-gray-400 mb-8">
               Наш AI-бот в Telegram подберёт оптимальное решение за 5 минут
             </p>
-            <Button size="lg" className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-12 py-6 uppercase">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-12 py-6 uppercase"
+              onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+            >
               <Icon name="Send" size={24} className="mr-3" />
               ПОДОБРАТЬ ИНСТРУМЕНТ С AI
             </Button>

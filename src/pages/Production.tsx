@@ -46,10 +46,19 @@ const Production = () => {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black uppercase">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black uppercase"
+                  onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+                >
                   Заказать расчёт
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white"
+                  onClick={() => window.location.href = 'mailto:osn@pumori.ru?subject=Отправка чертежа'}
+                >
                   <Icon name="FileText" size={20} className="mr-2" />
                   Отправить чертёж
                 </Button>
