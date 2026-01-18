@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import Footer from '@/components/Footer';
 
 const Service = () => {
   const [hours, setHours] = useState(24);
@@ -179,6 +180,7 @@ const Service = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

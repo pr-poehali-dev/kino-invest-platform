@@ -94,31 +94,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3 className="font-bold mb-4">КАТАЛОГ</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link to="/catalog?category=equipment" className="hover:text-secondary transition-colors">
-                    Оборудование
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/catalog?category=tools" className="hover:text-secondary transition-colors">
-                    Режущий инструмент
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/catalog?category=pumori" className="hover:text-secondary transition-colors">
-                    Инструмент Пумори
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/catalog?category=parts" className="hover:text-secondary transition-colors">
-                    Запчасти
-                  </Link>
-                </li>
-              </ul>
-
-              <h3 className="font-bold mt-6 mb-4">ПОДДЕРЖКА</h3>
+              <h3 className="font-bold mb-4">ПОДДЕРЖКА</h3>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link to="/contacts" className="hover:text-secondary transition-colors">
@@ -135,10 +111,24 @@ const Footer = () => {
                     Отправить заявку
                   </Link>
                 </li>
+              </ul>
+
+              <h3 className="font-bold mt-6 mb-4">СВЯЗЬ</h3>
+              <ul className="space-y-2 text-sm">
                 <li>
-                  <Link to="/faq" className="hover:text-secondary transition-colors">
-                    FAQ
-                  </Link>
+                  <a href="tel:+73432873058" className="hover:text-secondary transition-colors">
+                    Позвонить
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:info@pumori-engineering.ru" className="hover:text-secondary transition-colors">
+                    Написать email
+                  </a>
+                </li>
+                <li>
+                  <a href="https://t.me/pumoriinvestbot" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+                    Telegram
+                  </a>
                 </li>
               </ul>
             </div>

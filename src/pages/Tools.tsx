@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
+import Footer from '@/components/Footer';
 
 const Tools = () => {
   return (
@@ -89,17 +90,17 @@ const Tools = () => {
               { icon: 'Box', title: 'Вспомогательный', count: '1100+' },
               { icon: 'Star', title: 'Нестандартный под заказ', count: 'КБ' }
             ].map((cat, idx) => (
-              <Link
+              <div
                 key={idx}
-                to="/catalog"
-                className="group bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-[#3B82F6] p-6 transition-all hover:shadow-xl"
+                className="group bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-[#3B82F6] p-6 transition-all hover:shadow-xl cursor-pointer"
+                onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-[#1E3A8A] to-[#3B82F6] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Icon name={cat.icon as any} size={32} className="text-white" />
                 </div>
                 <h3 className="text-lg font-black text-[#1B263B] mb-2 uppercase">{cat.title}</h3>
                 <div className="text-2xl font-black text-[#CD7F32]">{cat.count}</div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -124,6 +125,7 @@ const Tools = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

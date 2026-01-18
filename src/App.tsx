@@ -9,7 +9,6 @@ import Engineering from "./pages/Engineering";
 import Tools from "./pages/Tools";
 import Service from "./pages/Service";
 import Production from "./pages/Production";
-import Catalog from "./pages/Catalog";
 import Cases from "./pages/Cases";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
@@ -28,7 +27,6 @@ const App = () => (
           <Route path="/tools" element={<Tools />} />
           <Route path="/service" element={<Service />} />
           <Route path="/production" element={<Production />} />
-          <Route path="/catalog" element={<Catalog />} />
           <Route path="/cases" element={<Cases />} />
           <Route path="/about" element={<About />} />
           <Route path="/contacts" element={<Home />} />

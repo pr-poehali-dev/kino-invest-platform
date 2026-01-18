@@ -104,50 +104,7 @@ const Header = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Каталог</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[300px] gap-2 p-4">
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link to="/catalog?category=equipment" className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
-                          <div className="text-sm font-medium">Оборудование</div>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link to="/catalog?category=tools" className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
-                          <div className="text-sm font-medium">Режущий инструмент</div>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link to="/catalog?category=pumori" className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
-                          <div className="text-sm font-medium flex items-center gap-2">
-                            Инструмент Пумори <span className="text-xs">🇷🇺</span>
-                          </div>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link to="/catalog?category=boring" className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
-                          <div className="text-sm font-medium">Расточные системы</div>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link to="/catalog?category=parts" className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
-                          <div className="text-sm font-medium">Запчасти</div>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+
 
               <NavigationMenuItem>
                 <Link to="/cases" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
@@ -210,9 +167,6 @@ const Header = () => {
             </Link>
             <Link to="/production" className="block px-4 py-2 hover:bg-muted rounded-md">
               Производство
-            </Link>
-            <Link to="/catalog" className="block px-4 py-2 hover:bg-muted rounded-md">
-              Каталог
             </Link>
             <Link to="/cases" className="block px-4 py-2 hover:bg-muted rounded-md">
               Кейсы

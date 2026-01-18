@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
+import Footer from '@/components/Footer';
 
 const Engineering = () => {
   return (
@@ -169,6 +170,7 @@ const Engineering = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
