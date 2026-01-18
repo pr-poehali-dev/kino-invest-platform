@@ -97,13 +97,7 @@ const Partners = () => {
     { name: 'RUSTECHNO', logo: 'https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/b3e46a98-68fc-4a32-aec3-423848ef4375.jpg' }
   ];
 
-  const branches = [
-    { city: 'Екатеринбург', address: 'ул. Монтёрская, 3Д', phone: '+7 (343) 287-30-58' },
-    { city: 'Москва', address: 'Варшавское шоссе, 125', phone: '+7 (495) 215-50-12' },
-    { city: 'Челябинск', address: 'ул. Героев Танкограда, 51', phone: '+7 (351) 777-03-33' },
-    { city: 'Пермь', address: 'ул. Героев Хасана, 105', phone: '+7 (342) 241-01-91' },
-    { city: 'Нижний Тагил', address: 'ул. Красноармейская, 135', phone: '+7 (3435) 25-46-00' }
-  ];
+
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -141,9 +135,6 @@ const Partners = () => {
             </a>
             <a href="#clients" className="text-lg font-bold text-[#3B82F6] hover:text-[#1E3A8A] transition-colors uppercase">
               Клиенты
-            </a>
-            <a href="#branches" className="text-lg font-bold text-[#3B82F6] hover:text-[#1E3A8A] transition-colors uppercase">
-              Филиалы
             </a>
           </div>
         </div>
@@ -208,46 +199,6 @@ const Partners = () => {
                     alt={client.name}
                     className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                   />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="branches" className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-black text-[#1B263B] mb-6 uppercase text-center">
-              Филиалы
-            </h2>
-            <div className="w-20 h-1 bg-[#CD7F32] mx-auto mb-8" />
-            <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">
-              Представительства корпорации в основных индустриальных регионах России
-            </p>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {branches.map((branch, idx) => (
-                <div 
-                  key={idx} 
-                  className="bg-white border-l-4 border-[#3B82F6] p-6 hover:shadow-xl transition-all"
-                >
-                  <div className="flex items-start gap-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-[#1E3A8A] to-[#3B82F6] rounded flex items-center justify-center flex-shrink-0">
-                      <Icon name="MapPin" size={20} className="text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-black text-[#1B263B] mb-2">
-                        {branch.city}
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-3">
-                        {branch.address}
-                      </p>
-                      <a href={`tel:${branch.phone.replace(/\s/g, '')}`} className="text-lg font-bold text-[#3B82F6] hover:text-[#1E3A8A] transition-colors">
-                        {branch.phone}
-                      </a>
-                    </div>
-                  </div>
                 </div>
               ))}
             </div>
