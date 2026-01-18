@@ -85,11 +85,6 @@ const Footer = () => {
                     Партнёры
                   </Link>
                 </li>
-                <li>
-                  <Link to="/careers" className="hover:text-secondary transition-colors">
-                    Вакансии
-                  </Link>
-                </li>
               </ul>
             </div>
 
@@ -107,7 +102,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <Link to="/contacts#form" className="hover:text-secondary transition-colors">
+                  <Link to="/contacts" className="hover:text-secondary transition-colors">
                     Отправить заявку
                   </Link>
                 </li>
