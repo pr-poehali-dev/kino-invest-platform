@@ -295,7 +295,7 @@ const Cases = () => {
 
       <section className="py-24 bg-[#0D1B2A] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-black mb-6 uppercase">Станьте частью наших кейсов</h2>
+          <h2 className="text-3xl md:text-4xl font-black mb-6 uppercase">Готовы повторить такой успех у себя?</h2>
           <p className="text-xl text-[#A8B2C0] mb-8 max-w-2xl mx-auto">
             Решим вашу производственную задачу под ключ с гарантией результата
           </p>
