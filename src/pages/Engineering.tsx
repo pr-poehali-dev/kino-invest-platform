@@ -61,7 +61,12 @@ const Engineering = () => {
                 >
                   Заказать консультацию
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white"
+                  onClick={() => window.open('https://disk.yandex.ru/i/v1bo8dkoM4wZwQ', '_blank')}
+                >
                   <Icon name="Download" size={20} className="mr-2" />
                   Скачать презентацию
                 </Button>
@@ -163,9 +168,22 @@ const Engineering = () => {
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-12 py-6 uppercase">
+          <div className="text-center mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-12 py-6 uppercase"
+              onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+            >
               Начать проект
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white font-black text-lg px-12 py-6 uppercase"
+              onClick={() => window.open('https://disk.yandex.ru/i/8Kn2CZqfKwEgiA', '_blank')}
+            >
+              <Icon name="Download" size={20} className="mr-2" />
+              Скачать кейс PDF
             </Button>
           </div>
         </div>
