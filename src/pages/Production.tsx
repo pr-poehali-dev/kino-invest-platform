@@ -333,7 +333,11 @@ const Production = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-12 py-6 uppercase">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-12 py-6 uppercase"
+              onClick={() => window.location.href = 'mailto:osn@pumori.ru?subject=Отправка чертежа на расчёт'}
+            >
               Отправить чертёж на расчёт
             </Button>
           </div>
@@ -350,9 +354,13 @@ const Production = () => {
               Не уверены в технологии? Свяжитесь с нашим технологом — он поможет выбрать оптимальное решение.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-white text-[#1E3A8A] hover:bg-gray-100 font-black uppercase">
+              <Button 
+                size="lg" 
+                className="bg-white text-[#1E3A8A] hover:bg-gray-100 font-black uppercase"
+                onClick={() => window.location.href = 'tel:+73432873058'}
+              >
                 <Icon name="Phone" size={20} className="mr-2" />
-                +7 (343) 287-30-58
+                Позвонить
               </Button>
               <Button 
                 size="lg" 
@@ -361,7 +369,7 @@ const Production = () => {
                 onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
               >
                 <Icon name="Send" size={20} className="mr-2" />
-                @pumoriinvestbot
+                Написать в Telegram
               </Button>
             </div>
           </div>
