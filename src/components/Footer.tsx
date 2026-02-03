@@ -97,6 +97,11 @@ const Footer = () => {
               <h3 className="font-bold mb-4">ПОДДЕРЖКА</h3>
               <ul className="space-y-2 text-sm">
                 <li>
+                  <Link to="/faq" className="hover:text-secondary transition-colors">
+                    FAQ
+                  </Link>
+                </li>
+                <li>
                   <Link to="/contacts" className="hover:text-secondary transition-colors">
                     Контакты
                   </Link>
