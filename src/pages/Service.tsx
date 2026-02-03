@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 const Service = () => {
   const [hours, setHours] = useState(24);
@@ -16,11 +17,16 @@ const Service = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Сервис и ремонт станков 24/7 | Экстренная помощь за 4 часа"
-        description="Ремонт и обслуживание станков с ЧПУ, модернизация оборудования, запчасти в наличии. Экстренный выезд 24/7, ремонт на месте за 4 часа. Бригады инженеров по РФ. ☎ +7 (343) 287-30-58"
-        keywords="ремонт станков чпу, обслуживание станков, модернизация станков, запчасти для станков, экстренный ремонт станков, ремонт оборудования 24/7, сервис промышленного оборудования, техническое обслуживание станков, ремонт металлообрабатывающего оборудования"
+        title="Ремонт станков ЧПУ 24/7 | Выезд за 4 часа, запчасти в наличии"
+        description="⚡ Станок встал? → Инженеры выезжают за 4 часа круглосуточно. ✅ Ремонт на месте ✅ Запчасти в наличии ✅ Гарантия на работы ✅ Бригады по всей РФ ✅ Модернизация старых станков. Простой дорого обходится → Звоните сейчас: +7 (343) 287-30-58"
+        keywords="ремонт станков чпу круглосуточно, аварийный ремонт станков, запчасти для станков в наличии, выездной ремонт оборудования, обслуживание станков с чпу, модернизация токарных станков, восстановление точности станка, профилактика станков"
         canonical="https://pumori360.online/service"
       />
+      <BreadcrumbSchema items={[
+        { name: 'Главная', url: 'https://pumori360.online/' },
+        { name: 'Решения', url: 'https://pumori360.online/' },
+        { name: 'Сервис и обслуживание', url: 'https://pumori360.online/service' }
+      ]} />
       <div className="bg-gray-50 py-3 border-b">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">
