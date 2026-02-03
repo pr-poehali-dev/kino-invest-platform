@@ -1,0 +1,19 @@
+{
+  "name": "Инженерный центр Пумори",
+  "short_name": "Пумори",
+  "description": "35 лет опыта в металлообработке: инжиниринг, инструмент, производство, сервис 24/7",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1B263B",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "ru"
+}

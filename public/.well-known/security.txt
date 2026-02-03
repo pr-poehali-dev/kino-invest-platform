@@ -1,0 +1,7 @@
+Contact: mailto:security@pumori.ru
+Contact: tel:+7-343-287-30-58
+Expires: 2027-02-03T12:00:00.000Z
+Preferred-Languages: ru, en
+Canonical: https://pumori360.online/.well-known/security.txt
+Policy: https://pumori360.online/privacy
+Acknowledgments: https://pumori360.online/about

@@ -1,0 +1,18 @@
+/* TEAM */
+Компания: Инженерный центр Пумори
+Сайт: https://pumori360.online
+Телефон: +7 (343) 287-30-58
+Email: info@pumori.ru
+Расположение: Екатеринбург, Россия
+
+/* THANKS */
+Технологии: React, TypeScript, Vite, Tailwind CSS
+Разработано: poehali.dev
+Год: 2026
+
+/* SITE */
+Стандарты: HTML5, CSS3, Schema.org
+Компоненты: shadcn/ui, Lucide Icons
+Язык: Русский
+Doctype: HTML5
+IDE: Visual Studio Code

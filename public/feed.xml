@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Инженерный центр Пумори - Новости и кейсы</title>
+    <link>https://pumori360.online</link>
+    <description>Новости металлообработки, проекты, технологии и решения от Пумори</description>
+    <language>ru</language>
+    <lastBuildDate>Mon, 03 Feb 2026 12:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pumori360.online/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://pumori360.online/logo.svg</url>
+      <title>Инженерный центр Пумори</title>
+      <link>https://pumori360.online</link>
+    </image>
+    
+    <item>
+      <title>Роботизация производства Уралвагонзавод: снижение брака на 85%</title>
+      <link>https://pumori360.online/cases</link>
+      <description>Проект роботизированного комплекса обработки корпусных деталей на УВЗ. Результат: брак снижен с 15% до 2%, производительность выросла в 2.5 раза, ROI проекта составил 14 месяцев.</description>
+      <pubDate>Mon, 03 Feb 2026 10:00:00 +0000</pubDate>
+      <guid>https://pumori360.online/cases#uvz</guid>
+    </item>
+    
+    <item>
+      <title>Запуск производства маслоохладителей для Уральского турбинного завода</title>
+      <link>https://pumori360.online/cases</link>
+      <description>Организация серийного производства маслоохладителей из нержавеющей стали для газотурбинных установок. Точность геометрии ±0.05 мм, шероховатость Ra 1.6 мкм.</description>
+      <pubDate>Sun, 02 Feb 2026 10:00:00 +0000</pubDate>
+      <guid>https://pumori360.online/cases#utz</guid>
+    </item>
+    
+    <item>
+      <title>35 лет опыта в металлообработке</title>
+      <link>https://pumori360.online/about</link>
+      <description>С 1990 года Корпорация Пумори помогает предприятиям России создавать и развивать производства. Собственный завод УЗИС, КБ из 40 инженеров, представительства во всех промышленных регионах.</description>
+      <pubDate>Sat, 01 Feb 2026 10:00:00 +0000</pubDate>
+      <guid>https://pumori360.online/about</guid>
+    </item>
+  </channel>
+</rss>
