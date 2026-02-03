@@ -147,19 +147,17 @@ const Engineering = () => {
                 { num: '05', title: 'МОНТАЖ И НАЛАДКА', desc: 'Установка, подключение, тестирование', duration: '1-2 месяца' },
                 { num: '06', title: 'ПОДДЕРЖКА', desc: 'Обучение персонала, гарантия, сервис 24/7', duration: 'Постоянно' }
               ].map((step, idx) => (
-                <div key={idx} className={`relative mb-12 lg:mb-16 ${idx % 2 === 0 ? 'lg:pr-1/2' : 'lg:pl-1/2 lg:text-right'}`}>
-                  <div className={`lg:absolute lg:top-0 ${idx % 2 === 0 ? 'lg:right-12' : 'lg:left-12'} lg:w-1/2`}>
-                    <div className="bg-white border-2 border-[#3B82F6] p-6 relative hover:shadow-xl transition-shadow">
-                      <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-[#1E3A8A] to-[#3B82F6] flex items-center justify-center">
-                        <span className="text-2xl font-black text-white">{step.num}</span>
-                      </div>
-                      <div className="ml-20">
-                        <h3 className="text-2xl font-black text-[#1B263B] mb-2 uppercase">{step.title}</h3>
-                        <p className="text-sm text-gray-600 mb-3">{step.desc}</p>
-                        <div className="inline-flex items-center gap-2 text-xs font-bold text-[#CD7F32]">
-                          <Icon name="Clock" size={14} />
-                          {step.duration}
-                        </div>
+                <div key={idx} className="relative mb-12 lg:mb-16">
+                  <div className={`bg-white border-2 border-[#3B82F6] p-6 relative hover:shadow-xl transition-shadow ${idx % 2 === 0 ? 'lg:mr-auto lg:ml-0' : 'lg:ml-auto lg:mr-0'} lg:w-[calc(50%-2rem)]`}>
+                    <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-[#1E3A8A] to-[#3B82F6] flex items-center justify-center">
+                      <span className="text-2xl font-black text-white">{step.num}</span>
+                    </div>
+                    <div className="ml-20">
+                      <h3 className="text-2xl font-black text-[#1B263B] mb-2 uppercase">{step.title}</h3>
+                      <p className="text-sm text-gray-600 mb-3">{step.desc}</p>
+                      <div className="inline-flex items-center gap-2 text-xs font-bold text-[#CD7F32]">
+                        <Icon name="Clock" size={14} />
+                        {step.duration}
                       </div>
                     </div>
                   </div>
