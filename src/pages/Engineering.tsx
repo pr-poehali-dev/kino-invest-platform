@@ -2,10 +2,17 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 
 const Engineering = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Инжиниринг и проектирование производств под ключ | Пумори"
+        description="Проектирование промышленных производств, технологический аудит, 3D-моделирование цехов. Запуск производства металлообработки под ключ. Собственное КБ, 35 лет опыта, 1200+ проектов. ☎ +7 (343) 287-30-58"
+        keywords="инжиниринг производства, проектирование цеха, технологический аудит, производство под ключ, проектирование металлообработки, инженерные решения, модернизация производства, планировка цеха, технический проект, оборудование для цеха"
+        canonical="https://pumori360.online/engineering"
+      />
       {/* Breadcrumbs */}
       <div className="bg-gray-50 py-3 border-b">
         <div className="container mx-auto px-4">

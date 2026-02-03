@@ -1,10 +1,17 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Icon from '@/components/ui/icon';
+import SEO from '@/components/SEO';
 
 const About = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEO 
+        title="О компании Пумори | 35 лет в металлообработке с 1990 года"
+        description="Корпорация Пумори - российский лидер инжиниринга металлообработки с 1990 года. Собственное производство УЗИС, Техтрейд, Пумори Инжиниринг. Представительства в РФ. ☎ +7 (343) 287-30-58"
+        keywords="корпорация пумори, о компании пумори, история пумори, узис завод, техтрейд екатеринбург, производитель инструмента россия, российское оборудование металлообработка"
+        canonical="https://pumori360.online/about"
+      />
       <Header />
       
       <section className="relative bg-gradient-to-br from-[#0D1B2A] via-[#1B263B] to-[#0D1B2A] py-20 overflow-hidden">

@@ -6,10 +6,17 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
+import SEO from '@/components/SEO';
 
 const Contacts = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="Контакты Пумори Екатеринбург | Телефон, адрес, реквизиты"
+        description="Инженерный центр Пумори в Екатеринбурге: адрес офиса, телефоны, email, режим работы. Консультация по металлообработке. ☎ +7 (343) 287-30-58, +7 (343) 287-01-10"
+        keywords="пумори контакты, пумори екатеринбург адрес, пумори телефон, как связаться пумори, офис пумори, консультация металлообработка"
+        canonical="https://pumori360.online/contacts"
+      />
       <Header />
 
       <div className="bg-gray-50 py-3 border-b">

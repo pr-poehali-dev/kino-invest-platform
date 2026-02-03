@@ -3,6 +3,7 @@ import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 
 const Service = () => {
   const [hours, setHours] = useState(24);
@@ -14,6 +15,12 @@ const Service = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Сервис и ремонт станков 24/7 | Экстренная помощь за 4 часа"
+        description="Ремонт и обслуживание станков с ЧПУ, модернизация оборудования, запчасти в наличии. Экстренный выезд 24/7, ремонт на месте за 4 часа. Бригады инженеров по РФ. ☎ +7 (343) 287-30-58"
+        keywords="ремонт станков чпу, обслуживание станков, модернизация станков, запчасти для станков, экстренный ремонт станков, ремонт оборудования 24/7, сервис промышленного оборудования, техническое обслуживание станков, ремонт металлообрабатывающего оборудования"
+        canonical="https://pumori360.online/service"
+      />
       <div className="bg-gray-50 py-3 border-b">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">

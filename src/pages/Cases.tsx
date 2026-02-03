@@ -3,6 +3,7 @@ import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 
 const Cases = () => {
   const cases = [
@@ -202,6 +203,12 @@ const Cases = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="Реализованные проекты и кейсы | УВЗ, УТЗ, Турбомоторный завод"
+        description="Примеры реализованных проектов металлообработки: роботизация Уралвагонзавод, производство для УТЗ, импортозамещение. 1200+ успешных проектов за 35 лет. ☎ +7 (343) 287-30-58"
+        keywords="проекты металлообработки, кейсы производства, роботизация производства, автоматизация цеха, примеры проектов инжиниринг, успешные проекты металлообработка, уралвагонзавод проект, турбомоторный завод"
+        canonical="https://pumori360.online/cases"
+      />
       <Header />
 
       <div className="bg-gray-50 py-3 border-b">

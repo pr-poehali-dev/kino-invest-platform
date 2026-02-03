@@ -2,10 +2,17 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 
 const Production = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Механообработка на заказ | Производство деталей и аутсорсинг"
+        description="Токарная и фрезерная обработка металла на ЧПУ, изготовление деталей по чертежам. Единичное и серийное производство. Точность до 0.005 мм, сроки от 3 дней. ☎ +7 (343) 287-30-58"
+        keywords="механообработка на заказ, токарные работы, фрезерные работы чпу, изготовление деталей по чертежам, серийное производство деталей, металлообработка заказ, производство металлоконструкций, обработка металла чпу, производственный аутсорсинг"
+        canonical="https://pumori360.online/production"
+      />
       <div className="bg-gray-50 py-3 border-b">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">

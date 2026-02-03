@@ -2,10 +2,17 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 
 const Tools = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Инструмент и оснастка для станков с ЧПУ | 3000+ позиций на складе"
+        description="Режущий инструмент, оснастка для металлообработки, быстросменная оснастка. Склад 3000+ позиций. Собственное производство УЗИС. Доставка по РФ. ☎ +7 (343) 287-30-58"
+        keywords="инструмент для станков чпу, режущий инструмент, оснастка металлообработка, быстросменная оснастка, инструментальная оснастка, фрезы для чпу, сверла для металла, резцы токарные, державки для инструмента, узис инструмент"
+        canonical="https://pumori360.online/tools"
+      />
       <div className="bg-gray-50 py-3 border-b">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">
