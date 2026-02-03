@@ -33,72 +33,64 @@ const Header = () => {
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Решения</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="cursor-pointer">Решения</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4">
                     <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/engineering"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="flex items-center gap-2 text-sm font-medium leading-none">
-                            <Icon name="Factory" size={16} />
-                            Инжиниринг и проектирование
-                          </div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                            От чертежа до запуска производства
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
+                      <Link
+                        to="/engineering"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="flex items-center gap-2 text-sm font-medium leading-none">
+                          <Icon name="Factory" size={16} />
+                          Инжиниринг и проектирование
+                        </div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          От чертежа до запуска производства
+                        </p>
+                      </Link>
                     </li>
                     <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/tools"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="flex items-center gap-2 text-sm font-medium leading-none">
-                            <Icon name="Wrench" size={16} />
-                            Инструмент и оснастка
-                          </div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                            3000+ позиций на складе
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
+                      <Link
+                        to="/tools"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="flex items-center gap-2 text-sm font-medium leading-none">
+                          <Icon name="Wrench" size={16} />
+                          Инструмент и оснастка
+                        </div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          3000+ позиций на складе
+                        </p>
+                      </Link>
                     </li>
                     <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/service"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="flex items-center gap-2 text-sm font-medium leading-none">
-                            <Icon name="Settings" size={16} />
-                            Сервис и обслуживание
-                          </div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                            Экстренный ремонт 24/7
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
+                      <Link
+                        to="/service"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="flex items-center gap-2 text-sm font-medium leading-none">
+                          <Icon name="Settings" size={16} />
+                          Сервис и обслуживание
+                        </div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Экстренный ремонт 24/7
+                        </p>
+                      </Link>
                     </li>
                     <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/production"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="flex items-center gap-2 text-sm font-medium leading-none">
-                            <Icon name="Factory" size={16} />
-                            Производство и аутсорсинг
-                          </div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                            Механообработка на заказ
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
+                      <Link
+                        to="/production"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="flex items-center gap-2 text-sm font-medium leading-none">
+                          <Icon name="Factory" size={16} />
+                          Производство и аутсорсинг
+                        </div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Механообработка на заказ
+                        </p>
+                      </Link>
                     </li>
                   </ul>
                 </NavigationMenuContent>
