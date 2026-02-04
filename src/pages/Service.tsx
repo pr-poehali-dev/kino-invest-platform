@@ -70,7 +70,7 @@ const Service = () => {
                 <Button 
                   size="lg" 
                   className="bg-red-600 hover:bg-red-700 text-white font-black text-lg uppercase shadow-lg"
-                  onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+                  onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
                 >
                   ВЫЗВАТЬ ИНЖЕНЕРА
                 </Button>

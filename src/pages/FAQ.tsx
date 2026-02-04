@@ -215,7 +215,7 @@ const FAQ = () => {
                 Позвонить: +7 (343) 287-30-58
               </a>
               <button
-                onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+                onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
                 className="inline-flex items-center justify-center gap-2 bg-[#3B82F6] hover:bg-[#2563EB] px-8 py-4 font-bold text-white uppercase transition-all hover:scale-105"
               >
                 <Icon name="Send" size={20} />

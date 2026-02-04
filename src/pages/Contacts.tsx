@@ -109,10 +109,10 @@ const Contacts = () => {
                       </div>
                       <div>
                         <h3 className="text-lg font-black text-[#1B263B] mb-2 uppercase">Telegram</h3>
-                        <p className="text-lg font-bold text-gray-700 mb-2">@pumoriinvestbot</p>
+                        <p className="text-lg font-bold text-gray-700 mb-2">@pumori360_bot</p>
                         <Button
                           className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-bold"
-                          onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+                          onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
                         >
                           Написать в Telegram
                         </Button>

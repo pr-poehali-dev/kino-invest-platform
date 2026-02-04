@@ -75,10 +75,10 @@ const ContactSection = () => {
                 </div>
               </div>
               
-              <div className="text-xl font-black mb-4">@pumoriinvestbot</div>
+              <div className="text-xl font-black mb-4">@pumori360_bot</div>
               <Button
                 className="w-full bg-white text-[#1B263B] hover:bg-gray-200 font-bold uppercase"
-                onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+                onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
               >
                 Написать в Telegram
               </Button>

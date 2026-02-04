@@ -126,13 +126,13 @@ const Header = () => {
             <Button
               size="icon"
               className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
-              onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+              onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
             >
               <Icon name="Send" size={18} />
             </Button>
             <Button 
               className="bg-primary hover:bg-primary/90"
-              onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+              onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
             >
               Связаться
             </Button>
@@ -176,7 +176,7 @@ const Header = () => {
               </a>
               <Button 
                 className="w-full bg-primary"
-                onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+                onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
               >
                 Связаться
               </Button>

@@ -48,7 +48,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-8 py-6 uppercase shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+              onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
             >
               Получить консультацию
             </Button>

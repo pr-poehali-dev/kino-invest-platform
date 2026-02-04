@@ -39,7 +39,7 @@ const Footer = () => {
               </button>
               <button 
                 className="w-8 h-8 rounded-full border border-primary-foreground/30 flex items-center justify-center hover:bg-white/10 transition-colors"
-                onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+                onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
                 aria-label="Telegram"
               >
                 <Icon name="Send" size={16} />
@@ -107,7 +107,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="https://t.me/pumoriinvestbot" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+                  <a href="https://t.me/pumori360_bot" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
                     Telegram-бот
                   </a>
                 </li>
@@ -156,8 +156,8 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2">
                 <Icon name="Send" size={16} className="mt-1 flex-shrink-0" />
-                <a href="https://t.me/pumoriinvestbot" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
-                  @pumoriinvestbot
+                <a href="https://t.me/pumori360_bot" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+                  @pumori360_bot
                 </a>
               </li>
             </ul>

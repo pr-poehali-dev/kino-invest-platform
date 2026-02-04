@@ -62,7 +62,7 @@ const Production = () => {
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black uppercase"
-                  onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+                  onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
                 >
                   Заказать расчёт
                 </Button>
