@@ -12,8 +12,8 @@ const Contacts = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Контакты Пумори | Звоните: +7 (343) 287-30-58 круглосуточно"
-        description="📞 Нужна консультация? Звоните прямо сейчас: +7 (343) 287-30-58 (продажи) или +7 (343) 287-01-10 (сервис 24/7). Офис в Екатеринбурге. Telegram-бот для быстрой связи. ✅ Ответим за 5 минут ✅ Бесплатный расчёт проекта"
+        title="Контакты Пумори | Звоните: +7 (343) 287-08-08 круглосуточно"
+        description="📞 Нужна консультация? Звоните прямо сейчас: +7 (343) 287-08-08. Офис в Екатеринбурге. Telegram-бот для быстрой связи. ✅ Ответим за 5 минут ✅ Бесплатный расчёт проекта"
         keywords="пумори телефон екатеринбург, пумори контакты круглосуточно, связаться с пумори, офис пумори адрес, консультация инженер металлообработка, экстренная связь ремонт станков"
         canonical="https://pumori360.online/contacts"
       />
@@ -79,8 +79,8 @@ const Contacts = () => {
                       </div>
                       <div>
                         <h3 className="text-lg font-black text-[#1B263B] mb-2 uppercase">Телефон</h3>
-                        <a href="tel:+73432873058" className="text-xl font-bold text-[#3B82F6] hover:text-[#1E3A8A] transition-colors block mb-2">
-                          +7 (343) 287-30-58
+                        <a href="tel:+73432870808" className="text-xl font-bold text-[#3B82F6] hover:text-[#1E3A8A] transition-colors block mb-2">
+                          +7 (343) 287-08-08
                         </a>
                         <p className="text-sm text-gray-500">Пн-Пт: 9:00-18:00</p>
                       </div>

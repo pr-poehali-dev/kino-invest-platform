@@ -121,7 +121,7 @@ const Footer = () => {
               <h3 className="font-bold mt-6 mb-4">СВЯЗЬ</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="tel:+73432873058" className="hover:text-secondary transition-colors">
+                  <a href="tel:+73432870808" className="hover:text-secondary transition-colors">
                     Позвонить
                   </a>
                 </li>
@@ -144,8 +144,8 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Icon name="Phone" size={16} className="mt-1 flex-shrink-0" />
-                <a href="tel:+73432873058" className="hover:text-secondary transition-colors">
-                  +7 (343) 287-30-58
+                <a href="tel:+73432870808" className="hover:text-secondary transition-colors">
+                  +7 (343) 287-08-08
                 </a>
               </li>
               <li className="flex items-start gap-2">

@@ -119,9 +119,9 @@ const Header = () => {
           </NavigationMenu>
 
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+73432873058" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors">
+            <a href="tel:+73432870808" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors">
               <Icon name="Phone" size={18} />
-              <span className="text-lg font-semibold">+7 (343) 287-30-58</span>
+              <span className="text-lg font-semibold">+7 (343) 287-08-08</span>
             </a>
             <Button
               size="icon"
@@ -170,9 +170,9 @@ const Header = () => {
               Контакты
             </Link>
             <div className="px-4 pt-4 space-y-2">
-              <a href="tel:+73432873058" className="flex items-center gap-2 font-semibold">
+              <a href="tel:+73432870808" className="flex items-center gap-2 font-semibold">
                 <Icon name="Phone" size={18} />
-                +7 (343) 287-30-58
+                +7 (343) 287-08-08
               </a>
               <Button 
                 className="w-full bg-primary"
