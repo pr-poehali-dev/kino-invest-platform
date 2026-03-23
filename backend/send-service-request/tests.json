@@ -1,0 +1,25 @@
+{
+  "tests": [
+    {
+      "name": "Test OPTIONS CORS",
+      "method": "OPTIONS",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Test service request submission",
+      "method": "POST",
+      "body": {
+        "name": "Иван Петров",
+        "phone": "+7 (343) 111-22-33",
+        "company": "ОАО Завод",
+        "machine": "Токарный станок DMG MORI",
+        "problem": "Не включается шпиндель",
+        "request_type": "Вызов инженера",
+        "urgent": true
+      },
+      "expectedStatus": 200,
+      "expectedBody": {"success": true},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
