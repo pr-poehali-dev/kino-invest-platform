@@ -201,7 +201,7 @@ const ServiceSubscription = ({
                 <p className="text-gray-400 text-sm">Пн-Пт: 9:00–18:00</p>
 
                 <h4 className="font-bold text-[#1B263B] pt-2">Напишите в Telegram:</h4>
-                <a href="https://t.me/pumori_service" target="_blank" rel="noopener noreferrer">
+                <a href="https://t.me/pumori360_bot" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg" className="w-full border-[#1B263B] text-[#1B263B] hover:bg-[#1B263B] hover:text-white">
                     <Icon name="Send" size={18} className="mr-2" />
                     Telegram
