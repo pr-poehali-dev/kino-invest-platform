@@ -131,7 +131,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://t.me/pumoriinvestbot" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+                  <a href="https://t.me/PUMORI360_bot" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
                     Telegram
                   </a>
                 </li>
