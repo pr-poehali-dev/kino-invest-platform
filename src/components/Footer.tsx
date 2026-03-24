@@ -126,7 +126,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@pumori-engineering.ru" className="hover:text-secondary transition-colors">
+                  <a href="mailto:pii@pumori.ru" className="hover:text-secondary transition-colors">
                     Написать email
                   </a>
                 </li>
