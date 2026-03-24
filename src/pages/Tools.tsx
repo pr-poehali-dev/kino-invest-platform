@@ -62,7 +62,7 @@ const Tools = () => {
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black uppercase"
-                  onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
+                  onClick={() => window.location.href = 'mailto:tools@pumori.ru?subject=%D0%9F%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82'}
                 >
                   Подобрать инструмент
                 </Button>
@@ -118,7 +118,7 @@ const Tools = () => {
                 onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-[#1E3A8A] to-[#3B82F6] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Icon name={cat.icon as any} size={32} className="text-white" />
+                  <Icon name={cat.icon as string} size={32} className="text-white" />
                 </div>
                 <h3 className="text-lg font-black text-[#1B263B] mb-2 uppercase">{cat.title}</h3>
                 <div className="text-2xl font-black text-[#CD7F32]">{cat.count}</div>
