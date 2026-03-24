@@ -62,7 +62,7 @@ const Production = () => {
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black uppercase"
-                  onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
+                  onClick={() => window.location.href = 'mailto:osn@pumori.ru?subject=%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%80%D0%B0%D1%81%D1%87%D1%91%D1%82'}
                 >
                   Заказать расчёт
                 </Button>
@@ -136,7 +136,7 @@ const Production = () => {
                   </div>
                 )}
                 <div className={`w-20 h-20 bg-gradient-to-br ${service.color === 'blue' ? 'from-[#1E3A8A] to-[#3B82F6]' : 'from-[#CD7F32] to-[#D4822B]'} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <Icon name={service.icon as any} size={40} className="text-white" />
+                  <Icon name={service.icon as string} size={40} className="text-white" />
                 </div>
                 <h3 className="text-2xl font-black text-[#1B263B] mb-4 uppercase">{service.title}</h3>
                 <ul className="space-y-2">
@@ -337,7 +337,7 @@ const Production = () => {
             ].map((step, idx) => (
               <div key={idx} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-[#1E3A8A] to-[#3B82F6] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name={step.icon as any} size={32} className="text-white" />
+                  <Icon name={step.icon as string} size={32} className="text-white" />
                 </div>
                 <div className="text-4xl font-black text-[#CD7F32] mb-2">{step.num}</div>
                 <div className="text-sm font-bold uppercase">{step.title}</div>
