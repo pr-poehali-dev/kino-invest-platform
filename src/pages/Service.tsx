@@ -446,6 +446,87 @@ const Service = () => {
         </div>
       </section>
 
+      <section className="py-24 bg-gradient-to-br from-[#0D1B2A] via-[#1B263B] to-[#0D1B2A] text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 uppercase">Новое направление для наших клиентов</h2>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
+              После успешного ремонта и ввода в эксплуатацию мы готовы предложить вам долгосрочное партнёрство
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
+            {[
+              { num: '1', icon: 'Clipboard', title: 'Аудит бесплатно', sub: 'Диагностика 47 точек' },
+              { num: '2', icon: 'Wrench', title: 'Ремонт под ключ', sub: 'Устранение неисправностей' },
+              { num: '3', icon: 'CheckCircle', title: 'Подписка на сервис', sub: 'Регулярное обслуживание' },
+            ].map((step, i) => (
+              <div key={i} className="text-center relative">
+                {i > 0 && <div className="hidden md:block absolute top-8 -left-8 w-16 h-0.5 bg-white/20" />}
+                <div className="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3">
+                  {step.num}
+                </div>
+                <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name={step.icon} size={24} />
+                </div>
+                <h3 className="text-lg font-semibold mb-1">{step.title}</h3>
+                <p className="text-sm text-white/70">{step.sub}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mb-16">
+            <h3 className="text-2xl font-semibold mb-8 text-center uppercase">Что даёт подписка</h3>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {[
+                {
+                  icon: 'Shield',
+                  title: 'Проактивное обслуживание',
+                  description: 'Регулярное ТО по графику предотвращает 80% аварийных поломок. Станок всегда в рабочем состоянии.',
+                },
+                {
+                  icon: 'Calculator',
+                  title: 'Предсказуемые расходы',
+                  description: 'Фиксированная сумма каждый месяц. Никаких неожиданных счетов за экстренный ремонт.',
+                },
+                {
+                  icon: 'Zap',
+                  title: 'Приоритетная поддержка',
+                  description: 'Выезд инженера за 1-2 часа даже в выходные. Запчасти на складе — доставка за 4 часа.',
+                },
+                {
+                  icon: 'Smartphone',
+                  title: 'Личный кабинет и приложение',
+                  description: 'Онлайн мониторинг состояния станков, история обслуживания, заявки в 1 клик, push-уведомления о плановом ТО.',
+                },
+              ].map((benefit) => (
+                <div key={benefit.title} className="bg-white/10 backdrop-blur-sm rounded border border-white/20 p-6">
+                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-4">
+                    <Icon name={benefit.icon} size={24} />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-2">{benefit.title}</h4>
+                  <div className="h-0.5 bg-white/20 w-12 mb-3" />
+                  <p className="text-sm text-white/80">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="max-w-2xl mx-auto text-center bg-white/10 backdrop-blur-sm rounded border border-white/20 p-8">
+            <p className="text-white/90 mb-6">
+              Подписка на сервис — это новое направление, которое мы запускаем для постоянных клиентов.
+              Чтобы узнать подробности и условия, начните с бесплатного аудита вашего оборудования.
+            </p>
+            <Button
+              className="bg-[#CD7F32] hover:bg-[#D4822B] text-white font-semibold"
+              onClick={() => openModal('order')}
+            >
+              Узнать больше о подписке
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <Footer />
 
       {modalOpen && (
@@ -475,7 +556,7 @@ const Service = () => {
                   <p className="text-sm text-gray-500 mb-4">
                     {modalType === 'engineer'
                       ? 'Заявка придёт нашим специалистам, выедем за 2-4 часа'
-                      : `Сумма по расчёту: ${total.toLocaleString('ru-RU')} ₽`}
+                      : `Сумма по расчёту: ${formatPrice(totalCost)}`}
                   </p>
                 </div>
 
