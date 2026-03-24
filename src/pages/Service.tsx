@@ -1,5 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Checkbox } from '@/components/ui/checkbox';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -523,6 +527,104 @@ const Service = () => {
             >
               Узнать больше о подписке
             </Button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-form" className="py-20 bg-gradient-to-br from-white to-orange-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black text-[#1B263B] mb-4 uppercase">
+              Получите бесплатный аудит вашего оборудования
+            </h2>
+            <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+              Наш инженер приедет, проведёт 47-точечную проверку и подготовит отчёт с рекомендациями за 24 часа
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            <form
+              onSubmit={handleSubmit}
+              className="bg-white rounded-2xl p-8 shadow-xl space-y-5"
+            >
+              <Input placeholder="Ваше имя *" value={form.name} onChange={(e) => setForm(f => ({ ...f, name: e.target.value }))} required className="h-12" />
+              <Input type="tel" placeholder="Телефон * +7 (___) ___-__-__" value={form.phone} onChange={(e) => setForm(f => ({ ...f, phone: e.target.value }))} required className="h-12" />
+              <Input placeholder="Компания" value={form.company} onChange={(e) => setForm(f => ({ ...f, company: e.target.value }))} className="h-12" />
+              <Input placeholder="Станок / оборудование" value={form.machine} onChange={(e) => setForm(f => ({ ...f, machine: e.target.value }))} className="h-12" />
+
+              <Select onValueChange={(v) => setForm(f => ({ ...f, problem: v }))}>
+                <SelectTrigger className="h-12">
+                  <SelectValue placeholder="Количество станков *" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="1-3">1-3 станка</SelectItem>
+                  <SelectItem value="3-5">3-5 станков</SelectItem>
+                  <SelectItem value="5-10">5-10 станков</SelectItem>
+                  <SelectItem value="10+">Более 10 станков</SelectItem>
+                </SelectContent>
+              </Select>
+
+              <Textarea placeholder="Опишите проблему (если есть)" rows={4} />
+
+              <div className="flex items-start gap-3">
+                <Checkbox id="agree-form" />
+                <label htmlFor="agree-form" className="text-sm text-gray-500 cursor-pointer">
+                  Согласен с политикой обработки персональных данных
+                </label>
+              </div>
+
+              {error && <p className="text-red-500 text-sm">{error}</p>}
+              {sent && <p className="text-green-600 text-sm font-medium">Заявка отправлена! Мы свяжемся с вами в ближайшее время.</p>}
+
+              <Button
+                type="submit"
+                size="lg"
+                disabled={sending}
+                className="w-full bg-[#CD7F32] hover:bg-[#D4822B] text-white text-lg font-bold"
+              >
+                <Icon name="Wrench" size={20} className="mr-2" />
+                {sending ? 'Отправляем...' : 'Заказать бесплатный аудит'}
+              </Button>
+            </form>
+
+            <div className="space-y-8">
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  'Выезд в течение 24-48 часов',
+                  'Отчёт с фото и рекомендациями',
+                  'Никаких скрытых платежей',
+                  'Работаем по всей России',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-green-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg space-y-4">
+                <h3 className="text-2xl font-bold text-[#1B263B]">Или позвоните нам:</h3>
+                <a href="tel:+73432875737" className="text-3xl font-bold text-[#CD7F32] hover:text-[#D4822B] block">
+                  +7 (343) 287-57-37
+                </a>
+                <p className="text-gray-400 text-sm">Пн-Пт: 9:00–18:00</p>
+
+                <h4 className="font-bold text-[#1B263B] pt-2">Напишите в Telegram:</h4>
+                <a href="https://t.me/pumori_service" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="lg" className="w-full border-[#1B263B] text-[#1B263B] hover:bg-[#1B263B] hover:text-white">
+                    <Icon name="Send" size={18} className="mr-2" />
+                    Telegram
+                  </Button>
+                </a>
+
+                <div className="pt-4 border-t">
+                  <p className="text-gray-400 text-sm mb-1">Email:</p>
+                  <a href="mailto:pii@pumori.ru" className="text-lg font-semibold text-[#CD7F32] hover:underline">
+                    pii@pumori.ru
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
