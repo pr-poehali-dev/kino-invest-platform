@@ -75,7 +75,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     if urgent:
         extra_rows += '<div class="field"><div class="label">🚨 Срочность:</div><div class="value">Срочный выезд (+50%)</div></div>'
     if total:
-        extra_rows += f'<div class="field"><div class="label">💰 Ориентировочная стоимость:</div><div class="value">{total} ₽</div></div>'
+        extra_rows += f'<div class="field"><div class="label">💰 Ориентировочная стоимость:</div><div class="value">{total}</div></div>'
 
     html_body = f'''
     <html>
