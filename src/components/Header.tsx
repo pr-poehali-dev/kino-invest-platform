@@ -132,7 +132,7 @@ const Header = () => {
             </Button>
             <Button 
               className="bg-primary hover:bg-primary/90"
-              onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
+              onClick={() => window.location.href = 'mailto:pii@pumori.ru?subject=Оставить заявку'}
             >
               Связаться
             </Button>
@@ -176,7 +176,7 @@ const Header = () => {
               </a>
               <Button 
                 className="w-full bg-primary"
-                onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
+                onClick={() => window.location.href = 'mailto:pii@pumori.ru?subject=Оставить заявку'}
               >
                 Связаться
               </Button>
