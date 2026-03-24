@@ -195,8 +195,8 @@ const ServiceSubscription = ({
 
               <div className="bg-white rounded-2xl p-8 shadow-lg space-y-4">
                 <h3 className="text-2xl font-bold text-[#1B263B]">Или позвоните нам:</h3>
-                <a href="tel:+73432875737" className="text-3xl font-bold text-[#CD7F32] hover:text-[#D4822B] block">
-                  +7 (343) 287-57-37
+                <a href="tel:+73432870808" className="text-3xl font-bold text-[#CD7F32] hover:text-[#D4822B] block">
+                  +7 (343) 287-08-08
                 </a>
                 <p className="text-gray-400 text-sm">Пн-Пт: 9:00–18:00</p>
 
