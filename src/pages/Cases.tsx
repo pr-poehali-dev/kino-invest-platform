@@ -311,7 +311,7 @@ const Cases = () => {
           <p className="text-xl text-[#A8B2C0] mb-8 max-w-2xl mx-auto">
             Решим вашу производственную задачу под ключ с гарантией результата
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-12 py-6 uppercase">
+          <Button size="lg" className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-12 py-6 uppercase" onClick={() => window.location.href = 'mailto:info@pumori-invest.ru?subject=Обсудить проект'}>
             Обсудить проект
           </Button>
         </div>
