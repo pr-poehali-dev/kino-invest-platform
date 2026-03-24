@@ -145,7 +145,7 @@ const Privacy = () => {
                   <p><strong>Юридический адрес:</strong> 620017, Свердловская область, г. Екатеринбург, ул. Монтёрская, стр. 3, офис 201</p>
                   <p><strong>Генеральный директор:</strong> Ревзин Владимир Борисович</p>
                   <p><strong>Телефон:</strong> +7 (343) 287-08-08</p>
-                  <p><strong>Email:</strong> info@pumori-engineering.ru</p>
+                  <p><strong>Email:</strong> pii@pumori.ru</p>
                 </div>
               </section>
             </div>
