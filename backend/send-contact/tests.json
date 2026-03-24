@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "POST contact form",
+      "method": "POST",
+      "path": "/",
+      "body": {"name": "Тест Тестов", "phone": "+79000000000", "company": "ООО Тест", "email": "test@test.ru", "message": "Тестовое сообщение"},
+      "expectedStatus": 200,
+      "expectedBody": {"success": true},
+      "bodyMatcher": "partial"
+    }
+  ]
+}

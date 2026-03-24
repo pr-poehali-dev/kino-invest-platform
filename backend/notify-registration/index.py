@@ -52,9 +52,9 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     smtp_port = int(os.environ.get('SMTP_PORT', '587'))
     smtp_user = os.environ.get('SMTP_USER', '')
     smtp_password = os.environ.get('SMTP_PASSWORD', '')
-    recipient_email = os.environ.get('RECIPIENT_EMAIL', '')
+    recipient_email = 'pii@pumori.ru'
     
-    if not smtp_user or not smtp_password or not recipient_email:
+    if not smtp_user or not smtp_password:
         return {
             'statusCode': 500,
             'headers': {

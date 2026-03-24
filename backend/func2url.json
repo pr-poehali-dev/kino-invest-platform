@@ -1,3 +1,5 @@
 {
-  "send-service-request": "https://functions.poehali.dev/665592c9-5ce8-4dc9-813b-296a3866cb7f"
+  "send-contact": "https://functions.poehali.dev/2f79de75-180a-47a0-9030-04a1278ac281",
+  "send-service-request": "https://functions.poehali.dev/665592c9-5ce8-4dc9-813b-296a3866cb7f",
+  "notify-registration": "https://functions.poehali.dev/6d9e2e70-45dd-4bac-af65-f1d069ab9210"
 }

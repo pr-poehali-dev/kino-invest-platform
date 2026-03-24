@@ -1,10 +1,50 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import Icon from '@/components/ui/icon';
 
+const SEND_CONTACT_URL = 'https://functions.poehali.dev/2f79de75-180a-47a0-9030-04a1278ac281';
+
 const ContactSection = () => {
+  const [form, setForm] = useState({ name: '', phone: '', company: '', email: '', message: '' });
+  const [consent, setConsent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name.trim() || !form.phone.trim()) {
+      setError('Пожалуйста, заполните имя и телефон');
+      return;
+    }
+    setSending(true);
+    setError('');
+    try {
+      const res = await fetch(SEND_CONTACT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSent(true);
+      } else {
+        setError('Ошибка отправки. Позвоните: +7 (343) 287-08-08');
+      }
+    } catch {
+      setError('Ошибка сети. Позвоните: +7 (343) 287-08-08');
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <section className="py-24 bg-gradient-to-br from-[#0D1B2A] via-[#1B263B] to-[#0D1B2A] text-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#4A90A4] via-[#8B7355] to-[#4A90A4]" />
@@ -109,69 +149,95 @@ const ContactSection = () => {
             <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-[#CD7F32]" />
             
             <h3 className="text-3xl font-black mb-6 uppercase">Оставьте заявку</h3>
-            <form className="space-y-4">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
+
+            {sent ? (
+              <div className="flex flex-col items-center justify-center py-16 text-center gap-4">
+                <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center">
+                  <Icon name="CheckCircle" size={40} className="text-green-400" />
+                </div>
+                <p className="text-2xl font-black text-white">Заявка отправлена!</p>
+                <p className="text-white/70">Мы перезвоним вам в течение 15 минут в рабочее время</p>
+              </div>
+            ) : (
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                <div className="grid md:grid-cols-2 gap-4">
                   <Input
+                    name="name"
                     placeholder="Имя *"
+                    value={form.name}
+                    onChange={handleChange}
                     className="bg-white/10 border-white/30 text-white placeholder:text-white/50 h-12 font-medium"
                     required
                   />
-                </div>
-                <div>
                   <Input
+                    name="phone"
                     type="tel"
                     placeholder="Телефон *"
+                    value={form.phone}
+                    onChange={handleChange}
                     className="bg-white/10 border-white/30 text-white placeholder:text-white/50 h-12 font-medium"
                     required
                   />
                 </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
+                
+                <div className="grid md:grid-cols-2 gap-4">
                   <Input
+                    name="company"
                     placeholder="Компания"
+                    value={form.company}
+                    onChange={handleChange}
                     className="bg-white/10 border-white/30 text-white placeholder:text-white/50 h-12 font-medium"
                   />
-                </div>
-                <div>
                   <Input
+                    name="email"
                     type="email"
                     placeholder="Email"
+                    value={form.email}
+                    onChange={handleChange}
                     className="bg-white/10 border-white/30 text-white placeholder:text-white/50 h-12 font-medium"
                   />
                 </div>
-              </div>
-              
-              <div>
+                
                 <Textarea
+                  name="message"
                   placeholder="Какую задачу нужно решить?"
                   rows={5}
+                  value={form.message}
+                  onChange={handleChange}
                   className="bg-white/10 border-white/30 text-white placeholder:text-white/50 font-medium"
                 />
-              </div>
-              
-              <div className="flex items-start gap-3 py-2">
-                <Checkbox id="consent" className="mt-1 border-white/30 data-[state=checked]:bg-[#8B7355] data-[state=checked]:border-[#8B7355]" />
-                <label htmlFor="consent" className="text-sm text-white/70 cursor-pointer leading-relaxed">
-                  Согласен на обработку персональных данных
-                </label>
-              </div>
-              
-              <Button size="lg" className="w-full bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg py-6 uppercase shadow-lg hover:shadow-xl transition-all duration-300">
-                Отправить заявку
-              </Button>
-              
-              <p className="text-sm text-white/60 text-center leading-relaxed">
-                Мы перезвоним в течение 15 минут в рабочее время
-              </p>
-            </form>
+                
+                <div className="flex items-start gap-3 py-2">
+                  <Checkbox
+                    id="consent-main"
+                    checked={consent}
+                    onCheckedChange={(v) => setConsent(!!v)}
+                    className="mt-1 border-white/30 data-[state=checked]:bg-[#8B7355] data-[state=checked]:border-[#8B7355]"
+                  />
+                  <label htmlFor="consent-main" className="text-sm text-white/70 cursor-pointer leading-relaxed">
+                    Согласен на обработку персональных данных
+                  </label>
+                </div>
+
+                {error && <p className="text-red-400 text-sm">{error}</p>}
+                
+                <Button
+                  type="submit"
+                  size="lg"
+                  disabled={sending || !consent}
+                  className="w-full bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg py-6 uppercase shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50"
+                >
+                  {sending ? 'Отправляем...' : 'Отправить заявку'}
+                </Button>
+                
+                <p className="text-sm text-white/60 text-center leading-relaxed">
+                  Мы перезвоним в течение 15 минут в рабочее время
+                </p>
+              </form>
+            )}
           </div>
         </div>
       </div>
-
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8B7355] to-transparent" />
     </section>
   );
 };

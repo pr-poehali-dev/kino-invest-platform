@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 import Header from '@/components/Header';
@@ -8,7 +9,45 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import SEO from '@/components/SEO';
 
+const SEND_CONTACT_URL = 'https://functions.poehali.dev/2f79de75-180a-47a0-9030-04a1278ac281';
+
 const Contacts = () => {
+  const [form, setForm] = useState({ name: '', phone: '', company: '', email: '', message: '' });
+  const [consent, setConsent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name.trim() || !form.phone.trim()) {
+      setError('Пожалуйста, заполните имя и телефон');
+      return;
+    }
+    setSending(true);
+    setError('');
+    try {
+      const res = await fetch(SEND_CONTACT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSent(true);
+      } else {
+        setError('Ошибка отправки. Позвоните: +7 (343) 287-08-08');
+      }
+    } catch {
+      setError('Ошибка сети. Позвоните: +7 (343) 287-08-08');
+    } finally {
+      setSending(false);
+    }
+  };
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
@@ -151,67 +190,89 @@ const Contacts = () => {
               <p className="text-gray-600 mb-6">
                 Заполните форму, и мы свяжемся с вами в течение 15 минут в рабочее время
               </p>
-              
-              <form className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
+
+              {sent ? (
+                <div className="flex flex-col items-center justify-center py-16 text-center gap-4">
+                  <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
+                    <Icon name="CheckCircle" size={40} className="text-green-500" />
+                  </div>
+                  <p className="text-2xl font-black text-[#1B263B]">Заявка отправлена!</p>
+                  <p className="text-gray-500">Мы перезвоним вам в течение 15 минут в рабочее время</p>
+                </div>
+              ) : (
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                  <div className="grid md:grid-cols-2 gap-4">
                     <Input
+                      name="name"
                       placeholder="Имя *"
+                      value={form.name}
+                      onChange={handleChange}
                       className="h-12"
                       required
                     />
-                  </div>
-                  <div>
                     <Input
+                      name="phone"
                       type="tel"
                       placeholder="Телефон *"
+                      value={form.phone}
+                      onChange={handleChange}
                       className="h-12"
                       required
                     />
                   </div>
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
+                  
+                  <div className="grid md:grid-cols-2 gap-4">
                     <Input
+                      name="company"
                       placeholder="Компания"
+                      value={form.company}
+                      onChange={handleChange}
                       className="h-12"
                     />
-                  </div>
-                  <div>
                     <Input
+                      name="email"
                       type="email"
                       placeholder="Email"
+                      value={form.email}
+                      onChange={handleChange}
                       className="h-12"
                     />
                   </div>
-                </div>
-                
-                <div>
+                  
                   <Textarea
+                    name="message"
                     placeholder="Какую задачу нужно решить?"
                     rows={5}
+                    value={form.message}
+                    onChange={handleChange}
                   />
-                </div>
-                
-                <div className="flex items-start gap-3 py-2">
-                  <Checkbox id="consent" />
-                  <label htmlFor="consent" className="text-sm text-gray-600 cursor-pointer leading-relaxed">
-                    Согласен на обработку персональных данных в соответствии с{' '}
-                    <Link to="/privacy" className="text-[#3B82F6] hover:underline">
-                      политикой конфиденциальности
-                    </Link>
-                  </label>
-                </div>
-                
-                <Button 
-                  size="lg" 
-                  className="w-full bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg py-6 uppercase"
-                  onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
-                >
-                  Отправить заявку
-                </Button>
-              </form>
+                  
+                  <div className="flex items-start gap-3 py-2">
+                    <Checkbox
+                      id="consent-contacts"
+                      checked={consent}
+                      onCheckedChange={(v) => setConsent(!!v)}
+                    />
+                    <label htmlFor="consent-contacts" className="text-sm text-gray-600 cursor-pointer leading-relaxed">
+                      Согласен на обработку персональных данных в соответствии с{' '}
+                      <Link to="/privacy" className="text-[#3B82F6] hover:underline">
+                        политикой конфиденциальности
+                      </Link>
+                    </label>
+                  </div>
+
+                  {error && <p className="text-red-500 text-sm">{error}</p>}
+                  
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={sending || !consent}
+                    className="w-full bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg py-6 uppercase disabled:opacity-50"
+                  >
+                    {sending ? 'Отправляем...' : 'Отправить заявку'}
+                  </Button>
+                </form>
+              )}
             </div>
           </div>
         </div>
