@@ -70,7 +70,7 @@ const Engineering = () => {
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black uppercase"
-                  onClick={() => window.open('https://t.me/pumori360_bot', '_blank')}
+                  onClick={() => window.location.href = 'mailto:pii@pumori.ru?subject=%D0%98%D0%BD%D0%B6%D0%B8%D0%BD%D0%B8%D1%80%D0%B8%D0%BD%D0%B3'}
                 >
                   Заказать консультацию
                 </Button>
@@ -124,7 +124,7 @@ const Engineering = () => {
             ].map((service, idx) => (
               <div key={idx} className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-[#3B82F6] p-6 transition-all hover:shadow-xl group">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#1E3A8A] to-[#3B82F6] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Icon name={service.icon as any} size={32} className="text-white" />
+                  <Icon name={service.icon as string} size={32} className="text-white" />
                 </div>
                 <h3 className="text-xl font-black text-[#1B263B] mb-2 uppercase">{service.title}</h3>
                 <p className="text-sm text-gray-600">{service.desc}</p>
@@ -183,7 +183,7 @@ const Engineering = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-[#CD7F32] to-[#D4822B] hover:from-[#D4822B] hover:to-[#CD7F32] text-white font-black text-lg px-12 py-6 uppercase"
-              onClick={() => window.open('https://t.me/pumoriinvestbot', '_blank')}
+              onClick={() => window.location.href = 'mailto:pii@pumori.ru?subject=%D0%98%D0%BD%D0%B6%D0%B8%D0%BD%D0%B8%D1%80%D0%B8%D0%BD%D0%B3'}
             >
               Начать проект
             </Button>
