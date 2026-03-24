@@ -93,63 +93,85 @@ const Service = () => {
         </div>
       </div>
 
-      <section className="py-20 bg-gradient-to-br from-[#0D1B2A] via-[#1B263B] to-[#0D1B2A] text-white relative overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative min-h-[90vh] bg-gradient-to-br from-[#0D1B2A] via-[#1B263B] to-[#0D1B2A] text-white flex items-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1565008576549-57569a49371d?q=80&w=2000')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0D1B2A]/60 to-[#0D1B2A]/90" />
+
+        <div className="container mx-auto px-4 relative z-10 py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-red-600 px-4 py-2 mb-4 font-bold text-sm uppercase animate-pulse">
-                🚨 ЭКСТРЕННЫЙ РЕМОНТ 24/7
-              </div>
-              <h1 className="text-4xl md:text-6xl font-black mb-6 uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#E8EAED] via-[#C0C5CE] to-[#8B96A5] animate-shimmer">
-                Сервис и обслуживание станков с ЧПУ
+              <p className="text-xs uppercase tracking-wider text-white/70 mb-4">
+                ЭКСПЕРТНЫЙ СЕРВИС ЧПУ-ОБОРУДОВАНИЯ С 2000 ГОДА
+              </p>
+              <h1 className="text-4xl md:text-5xl lg:text-[52px] font-bold leading-tight mb-6">
+                Профессиональный ремонт и обслуживание станков с ЧПУ
               </h1>
               <div className="w-20 h-1 bg-gradient-to-r from-[#CD7F32] to-[#D4822B] mb-6" />
+              <p className="text-lg text-white/90 mb-8 leading-relaxed">
+                Экстренный ремонт, пуско-наладка, гарантийное обслуживание. Поставка оригинальных запчастей, в том числе под санкциями.
+              </p>
 
-              <div className="grid grid-cols-3 gap-4 mb-8">
-                <div className="bg-white/5 backdrop-blur-sm border border-red-500/50 p-4">
-                  <div className="text-3xl font-black text-red-500 mb-1">2-4ч</div>
-                  <div className="text-xs text-gray-400 uppercase">Выезд</div>
-                </div>
-                <div className="bg-white/5 backdrop-blur-sm border border-[#3B82F6]/30 p-4">
-                  <div className="text-3xl font-black text-[#3B82F6] mb-1">24/7</div>
-                  <div className="text-xs text-gray-400 uppercase">Всегда</div>
-                </div>
-                <div className="bg-white/5 backdrop-blur-sm border border-[#CD7F32]/30 p-4">
-                  <div className="text-3xl font-black text-[#CD7F32] mb-1">6 мес</div>
-                  <div className="text-xs text-gray-400 uppercase">Гарантия</div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <Button
                   size="lg"
-                  className="bg-red-600 hover:bg-red-700 text-white font-black text-lg uppercase shadow-lg"
-                  onClick={() => openModal('engineer')}
+                  className="bg-[#CD7F32] hover:bg-[#D4822B] text-white font-semibold"
+                  onClick={() => openModal('order')}
                 >
-                  ВЫЗВАТЬ ИНЖЕНЕРА
+                  Заказать бесплатный аудит
+                  <Icon name="ArrowRight" size={20} className="ml-2" />
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white"
-                  onClick={() => {
-                    const calculator = document.getElementById('calculator');
-                    if (calculator) {
-                      calculator.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                  }}
+                  className="bg-transparent border-2 border-red-500 text-red-400 hover:bg-red-600 hover:text-white hover:border-red-600"
+                  onClick={() => openModal('engineer')}
                 >
-                  Рассчитать стоимость
+                  Экстренный ремонт 24/7
                 </Button>
               </div>
+
+              <div className="space-y-3">
+                {[
+                  'Выезд инженера за 2-4 часа',
+                  'Оригинальные запчасти',
+                  'Гарантия на работы 6 месяцев',
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <Icon name="Check" size={20} className="text-green-400 flex-shrink-0" />
+                    <span className="text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="relative shine-effect overflow-hidden rounded-lg">
-              <img
-                src="https://cdn.poehali.dev/projects/d9de8b0c-3e86-444c-bcc7-a44c2047fb60/files/d7440e05-db88-4d6c-b060-45a572306403.jpg"
-                alt="Сервис и обслуживание"
-                className="w-full h-full object-cover aspect-video"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1E3A8A]/60 to-transparent" />
+
+            <div className="bg-white/10 backdrop-blur-md rounded border border-white/20 p-8">
+              <h3 className="text-xl font-semibold text-white mb-4">ПУМОРИ В ЦИФРАХ</h3>
+              <div className="border-t border-white/20 mb-6" />
+
+              <div className="grid grid-cols-3 gap-6 mb-8">
+                {[
+                  { value: '30+', label: 'лет опыта' },
+                  { value: '200+', label: 'проектов в год' },
+                  { value: '98%', label: 'клиентов остаются' },
+                ].map((stat) => (
+                  <div key={stat.label}>
+                    <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                    <div className="text-xs text-white/70">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-xs text-white/70 mb-3 uppercase tracking-wider">Работаем с брендами</p>
+              <div className="flex flex-wrap gap-3 text-sm font-semibold text-white">
+                {['OKUMA', 'DMG MORI', 'FANUC', 'HEADMAN', 'MAZAK', 'HAAS'].map((brand, i, arr) => (
+                  <span key={brand} className="flex items-center gap-3">
+                    {brand}{i < arr.length - 1 && <span className="text-white/40">|</span>}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
