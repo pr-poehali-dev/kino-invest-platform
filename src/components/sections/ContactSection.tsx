@@ -98,8 +98,8 @@ const ContactSection = () => {
                 </div>
               </div>
               
-              <a href="mailto:info@pumori-engineering.ru" className="text-lg font-bold hover:text-[#A8B2C0] transition-colors break-all">
-                info@pumori-engineering.ru
+              <a href="mailto:pii@pumori.ru" className="text-lg font-bold hover:text-[#A8B2C0] transition-colors break-all">
+                pii@pumori.ru
               </a>
             </div>
           </div>

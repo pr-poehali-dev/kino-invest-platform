@@ -150,8 +150,8 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2">
                 <Icon name="Mail" size={16} className="mt-1 flex-shrink-0" />
-                <a href="mailto:info@pumori-engineering.ru" className="hover:text-secondary transition-colors">
-                  info@pumori-engineering.ru
+                <a href="mailto:pii@pumori.ru" className="hover:text-secondary transition-colors">
+                  pii@pumori.ru
                 </a>
               </li>
               <li className="flex items-start gap-2">
