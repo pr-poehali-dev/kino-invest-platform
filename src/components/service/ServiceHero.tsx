@@ -49,7 +49,7 @@ const ServiceHero = ({ openModal }: ServiceHeroProps) => {
 
             <div className="space-y-3">
               {[
-                'Выезд инженера за 2-4 часа',
+                'Выезд инженера от 2 часов*',
                 'Оригинальные запчасти',
                 'Гарантия на работы 6 месяцев',
               ].map((item) => (
