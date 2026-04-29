@@ -8,6 +8,8 @@ import ServiceHero from '@/components/service/ServiceHero';
 import ServicesList from '@/components/service/ServicesList';
 import ServiceCalculator from '@/components/service/ServiceCalculator';
 import ServiceSubscription from '@/components/service/ServiceSubscription';
+import ServiceCases from '@/components/service/ServiceCases';
+import ServiceReviews from '@/components/service/ServiceReviews';
 
 const API_URL = 'https://functions.poehali.dev/665592c9-5ce8-4dc9-813b-296a3866cb7f';
 const baseRate = 6000;
@@ -94,6 +96,8 @@ const Service = () => {
 
       <ServiceHero openModal={openModal} />
       <ServicesList openModal={openModal} />
+      <ServiceCases openModal={openModal} />
+      <ServiceReviews />
       <ServiceCalculator openModal={openModal} />
       <ServiceSubscription
         openModal={openModal}
