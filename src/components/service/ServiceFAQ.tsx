@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Icon from '@/components/ui/icon';
 
 const faqs = [
@@ -80,6 +80,30 @@ const ServiceFAQ = () => {
   const [openItem, setOpenItem] = useState<string | null>(null);
 
   const toggle = (key: string) => setOpenItem(openItem === key ? null : key);
+
+  useEffect(() => {
+    const allItems = faqs.flatMap(g => g.items);
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: allItems.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.a,
+        },
+      })),
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'faq-schema';
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => {
+      document.getElementById('faq-schema')?.remove();
+    };
+  }, []);
 
   return (
     <section className="py-16 bg-white border-t border-gray-100">
