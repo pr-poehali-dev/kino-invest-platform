@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Icon from '@/components/ui/icon';
 import SEO from '@/components/SEO';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 
 const About = () => {
   return (
@@ -12,6 +13,7 @@ const About = () => {
         keywords="корпорация пумори екатеринбург, узис уральский завод инструментальных систем, техтрейд компания, российский производитель инструмента, представительства пумори регионы, история компании пумори 1990"
         canonical="https://pumori360.online/about"
       />
+      <LocalBusinessSchema />
       <Header />
       
       <section className="relative bg-gradient-to-br from-[#0D1B2A] via-[#1B263B] to-[#0D1B2A] py-20 overflow-hidden">

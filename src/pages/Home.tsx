@@ -6,6 +6,7 @@ import CasesSection from '@/components/sections/CasesSection';
 import ContactSection from '@/components/sections/ContactSection';
 import SEO from '@/components/SEO';
 import ServiceSchema from '@/components/ServiceSchema';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 
 const Home = () => {
   return (
@@ -52,6 +53,7 @@ const Home = () => {
       ]} />
       <Header />
       <HeroSection />
+      <LocalBusinessSchema />
       <TasksSection />
       <CasesSection />
       <ContactSection />

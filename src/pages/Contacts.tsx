@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import SEO from '@/components/SEO';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 
 const SEND_CONTACT_URL = 'https://functions.poehali.dev/2f79de75-180a-47a0-9030-04a1278ac281';
 
@@ -56,6 +57,7 @@ const Contacts = () => {
         keywords="пумори телефон екатеринбург, пумори контакты круглосуточно, связаться с пумори, офис пумори адрес, консультация инженер металлообработка, экстренная связь ремонт станков"
         canonical="https://pumori360.online/contacts"
       />
+      <LocalBusinessSchema />
       <Header />
 
       <div className="bg-gray-50 py-3 border-b">
